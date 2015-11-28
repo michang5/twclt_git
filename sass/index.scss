@@ -1,0 +1,80 @@
+@import 'compass';
+@import 'base/fonts';
+@import 'base/style';
+@import 'base/media';
+//@import 'base/css3-mixins';
+
+body {
+}
+#intro.section{
+	background: image-url("index_bg.jpg") center top no-repeat;
+	@include background-size(cover);
+	padding: 12% 0 18%;
+	h2 {
+		font-size: $l-font;
+	}
+	h3 {
+		font-size: $m-font;
+		text-align: justify;
+	}
+	.menu {
+		text-align: center;
+		margin: 10px;
+		li {
+			@include inline-block;
+			vertical-align: top;
+			background: image-url("index_menu.png") no-repeat;
+			@include background-size(contain);
+			a {
+				display: block;
+				&:hover, &:focus { 
+					padding-top: 5px;
+				}
+			}
+		}
+	}
+	@include respond-to (lg-screen){
+		.menu {
+			margin: 10px 0;
+			li {
+				width: 140px;
+			}
+		}
+	}
+	@include respond-to (only-device){
+		background-position: 75% 0;
+		.col-md-6 {
+			margin: 20px auto;
+			text-align: center;
+		}
+		h2 {
+			text-align: center;
+			font-size: $xl-font;
+		}
+		h3 {
+			padding: 20px;
+			font-size: $l-font;
+		}
+	}
+	@include respond-to (only-mobile){
+		margin-top: 0;
+	}
+	@include respond-to (all-mobile){
+		padding-top: 22%;
+		h2 {
+			text-align: center;
+			font-size: $l-font;
+		}
+		h3 {
+			font-size: $m-font;
+		}
+		.menu {
+			margin: 10px 0;
+			li {
+				width: 110px;
+			}
+		}
+	}
+	
+}
+

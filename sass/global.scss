@@ -1,0 +1,633 @@
+@import 'compass';
+@import 'screen';
+@import 'base/fonts';
+@import 'base/style';
+@import 'base/media';
+//@import 'base/css3-mixins';
+
+
+/*-------------------------------base*/
+body, html {
+	min-height: 100%!important;
+	height: 100%;
+}
+body {
+	font-family: 'Roboto', sans-serif,'arial', "微軟正黑體", "Microsoft JhengHei";
+	font-size: 100%;
+	word-wrap: break-word;
+	word-break: normal;
+	line-height: 1.75;
+	background: $black;
+}
+//h-style
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	letter-spacing: 0;
+	line-height: 1.8;
+}
+h2 { font-size: $xxl-font; }
+h3 { font-size: $xl-font; }
+h5 { font-size: $l-font; }
+//p
+p { font-size: $m-font;}
+a {
+	color: $primary-color;
+	@include transition(color, .5s, ease-in);
+	&:hover, &:focus { 
+		text-decoration: none;
+	}
+}
+.clearfix {
+	@include clearfix;
+}
+//color
+.red {
+	color: $red;
+}
+.yellow {
+	color: $yellow;
+}
+//form-control
+input[type="text"], button.btn {
+	@include border-radius(40px);
+	border: 0;
+	box-shadow: none;
+}
+//btn
+i.fa {
+	margin: 0 5px;
+}
+
+/* ------- Navigation ------------ */
+.fixed {
+ 	position: fixed;
+	top: 0;
+	padding: 0;
+	@include transition(all ,.5s, ease-in-out);
+	@include transparent($dark-brown,.8);
+}
+.none {
+ 	display: none;
+}
+.absolute {
+	position: absolute;
+}
+#navigation {
+	width:100%;
+	z-index: 999;
+	position: fixed;
+//	@include transparent($red,.8);
+	//logo
+	header {
+		background: $black;
+		h2.logo {
+			padding: 30px 0;
+			background: $black;
+			img {
+				margin: 0 auto;
+			}
+		}
+	}
+	//nav
+	nav {
+		&.navbar {
+			margin-bottom: 0;
+			@include transparent($red,.8);
+		}
+		.navbar-header {}
+		.navbar-collapse {
+			ul.navbar-nav {
+				width: 100%;
+				float: none;
+				text-align: center;
+				>li {
+					float: none;
+					border: none;
+					cursor: pointer;
+					margin-left: -4px;
+					@include inline-block;
+					> a {
+						color: $white;
+						font-size: $m-font;
+						padding: 18px 30px;
+						&:hover, &:focus {
+							@include transparent($black,.2);
+							color: $white;
+						}
+					}
+				}
+				.dropdown-menu {
+					font-size: $m-font;
+					border: none;
+					min-width: auto;
+					@include box-shadow($black,0 0 10px);
+					@include border-radius(0);
+					&.drop-about {
+						width: 166px;
+					}
+					&.drop-theater {
+						width: 134px;
+					}
+					li {
+						display: block;
+						margin: 0;
+					}
+					a {
+						color: $black;
+						display: block;
+						padding: 15px 30px;
+						&:hover, &:focus, &.active {
+							color: $black;
+							background: $light-grey;
+						}
+					}
+				}
+			}
+			.nav {
+				.open {
+					@include transition(all ,.5s, ease-in-out);
+				}
+				.open > a {
+					@include transparent($black,.2);
+					border: none;
+					&:hover, &:focus {}
+				}
+				li.active {
+				}
+			}
+		}
+	}
+	//language //social media
+	.visible-xs-block > ul {
+		cursor: default;
+		padding: 10px;
+		margin-bottom: 1px;
+		> li {
+			vertical-align: top;
+			overflow: hidden;
+			@include inline-block;
+			@include border-radius(16px);
+			a {
+				color: $white;
+				width: 32px;
+				height: 32px;
+				line-height: 32px;
+				padding: 0;
+				font-size: $s-font;
+				display: block;
+				text-align: center;
+				
+				@include transparent($black,.7);
+				&:hover, &:focus, &:active {
+					background: $yellow;
+				}
+			}
+			&.line {
+				a {
+				}
+			}
+		}
+	}
+	i.fa-line {
+		background: image-url('icon_line.png') bottom no-repeat;
+		@include background-size(contain);
+		width: 18px;
+		height: 25px;
+		display: block;
+		margin: 0 auto;
+	}
+	#search-xs {
+		padding: 10px 20px;
+	}
+	@include respond-to (md-screen){
+		nav {
+			#main-nav {
+				ul.navbar-nav {
+					>li {
+						> a {
+							font-size: $m-font;
+							padding: 18px 20px;
+						}
+					}
+					.dropdown-menu {
+						&.drop-about {
+							width: 146px;
+						}
+						&.drop-theater {
+							width: 114px;
+						}
+						a {
+							padding: 12px 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	@include respond-to (only-device){
+		nav {
+			#main-nav {
+				ul.navbar-nav {
+					>li {
+						> a {
+							font-size: $m-font;
+							padding: 18px 20px;
+						}
+					}
+					.dropdown-menu {
+						&.drop-about {
+							width: 146px;
+						}
+						&.drop-theater {
+							width: 114px;
+						}
+						a {
+							padding: 12px 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include respond-to (only-mobile){
+		header {
+			width: 60%;
+			position: absolute;
+			@include transparent($black,0);
+			h2.logo {
+				position: relative;
+				z-index: 99;
+				padding: 8% 20px;
+//				width: 50%;
+				@include transparent($black,0);
+				@include inline-block;
+			}
+		}
+		nav {
+//			margin-top: -60px;
+			#main-nav {
+				ul.navbar-nav {
+					overflow-y: auto;
+					width: auto;
+					>li {
+						display: block;
+						margin: 0;
+						a {
+							text-align: center;
+						}
+					}
+					.dropdown-menu {
+						width: auto!important;
+						@include transparent($black,.2);
+						a {
+							color: $white;
+							&:hover, &:focus {
+								color: $white;
+								@include transparent($black,.2);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include respond-to (all-mobile){
+	}
+	@include respond-to (xxs-device){
+	}
+}
+.section {
+	@include full-screen;
+	@include clearfix;
+}
+.section-page {
+	height: 620px;
+}
+/* --- modal --- */
+a[data-toggle=modal] {
+	cursor: pointer;
+}
+.modal-content {
+	background: image-url("modal_bg.jpg");
+	padding: 20px;
+	margin-bottom: 80px;
+	@include box-shadow(0 0 20px rgba($brown,1));
+	@include respond-to (only-device){
+		padding: 80px 10px;
+	}
+}
+.modal-backdrop {
+	background: $white;
+		&.in {
+			opacity: .8;
+		}
+}
+.modal-dialog {
+//	width: 100%!important;
+	padding: 40px auto 0;
+	height: 100%;
+//	margin: 50px auto;
+	position: relative;
+	@include clearfix;
+//	width: 90%;
+	@include respond-to (only-desktop){
+		width: 900px;
+	}
+	@include respond-to (md-screen){
+		width: 780px;
+	}
+	@include respond-to (only-device){
+//		width: 760px;
+	}
+}
+.modal-body {
+	padding: 8px;
+	@include clearfix;
+}
+.carousel {
+	width: 80%;
+	margin: 0 auto;
+	.carousel-inner{
+		padding: 0;
+		margin: 0;
+	}
+	@include respond-to (only-device){
+		margin: 20px auto 40px;
+	}
+}
+.carousel-info {
+	ul {
+		margin: 0 auto;
+		padding: 6px;
+		width: 80%;
+		li {
+			display: block;
+			margin: 0 auto;
+			span {
+				display: inline-block;
+				vertical-align: top;
+			}
+			span:nth-of-type(1) {
+				width: 80px;
+				text-align: right;
+			}
+			span:nth-of-type(2) {
+				width: 70%;
+			}
+		}
+	}
+	@include respond-to (only-device){
+		ul { width: 100%; }
+	}
+}
+//footer
+footer {
+	color: $white;
+	font-size: $s-font;
+	text-align: center;
+	line-height: 2;
+	padding: 20px 0;
+	.index & {
+		background: $red;
+	}
+	.Equipment & , .Media & , .Train &{
+		background: image-url("page_footer.jpg") no-repeat;
+		@include background-size(cover);
+		min-height: 130px;
+	}
+	a {
+		color: $white;
+			&:hover {
+				color: $white
+				}
+	}
+	p > span {
+			display: block;
+		}
+	.col-sm-8 {
+		text-align: left;
+	}
+	.col-sm-4 {
+		text-align: right;
+	}
+	@include respond-to (only-device){
+		.col-sm-8,.col-sm-4 {
+			text-align: center;
+		}
+		.col-sm-4 {
+			margin-top: 12px;
+		}
+		
+	}
+}
+//icon
+.fix-icon {
+	position: fixed;
+	right: 0;
+	width: 60px;
+	height: 90px;
+	padding: 10px;
+	text-align: center;
+	font-size: $m-font;
+	line-height: $xl-font;
+	z-index: 1000;
+	@include transparent($dark-pink,.8);
+	a {
+		display: block;
+		color: $white;
+	}
+	i {
+		font-size: $l-font;
+	}
+	&.donate {
+		bottom: 100px;
+	}
+	&.top {
+		bottom: 200px;
+		height: 50px;
+		i {
+			font-size: $xxl-font;
+		}
+	}
+	@include respond-to (only-device){
+		width: 50px;
+		padding: 4px;
+		text-align: center;
+		font-size: $s-font;
+		&.donate {
+			bottom: 10px;
+			height: 70px;
+		}
+		&.top {
+			bottom: 90px;
+			height: 36px;
+			i {
+				font-size: $xxl-font;
+			}
+		}
+	}
+}
+.close {
+	position: absolute;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	opacity: 1;
+	overflow: hidden;
+	display: inline-block;
+	z-index: 9999;
+	cursor: pointer;
+	top: 12px;
+	right: 12px;
+	&:hover {
+		&::before, &::after {
+			background: $white;
+		}
+	}
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		top: 50%;
+		left: 0;
+		margin-top: -1px;
+		background: $white;
+	}
+	&::before {
+		@include transform(rotate(45deg));
+	}
+	&::after {
+		@include transform(rotate(-45deg));
+	}
+	&.hairline {
+		&::before, &::after {
+			height: 1px;
+		}
+	}
+}
+button.close {
+	@include transparent($orange,.8);
+	&:hover, &:focus {
+		@include transparent($green,.8);
+		opacity: 1;
+	}
+}
+.arrow {
+	display: block;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	position: absolute;
+	top: 37.5%;
+	@include transparent ($pink,.9);
+	@include border-radius (100%);
+	&:hover,&:focus {
+		background: rgba($dark-pink,.7);
+	}
+	&::before {
+		@include transform(rotate(45deg));
+		position: relative;
+		width: 20px;
+		height: 20px;
+		top: 15px;
+		content: "";
+		display: inline-block;
+		margin-right: 0.5em;
+	}
+	&.ar-right {
+		right: -100px;
+		&::before {
+			border-right: 2px solid $white;
+			border-top: 2px solid $white;
+			left: 10px;
+		}
+	}
+	&.ar-left {
+		left: -100px;
+		&::before {
+			border-left: 2px solid $white;
+			border-bottom: 2px solid $white;
+			left: 20px;
+		}
+	}
+	@include respond-to (only-device){
+		top: 50%;
+		&.ar-right {
+			right: -70px;
+		}
+		&.ar-left {
+			left: -70px;
+		}
+	}
+	@include respond-to (only-mobile){
+		width: 40px;
+		height: 40px;
+		background: rgba($red,.5);
+		top: 32.5%;
+		&::before {
+			width: 16px;
+			height: 16px;
+			top: 8px;
+		}
+		&.ar-right {
+			right: -50px;
+			&::before {
+				left: 8px;
+			}
+		}
+		&.ar-left {
+			left: -50px;
+			&::before {
+				left: 15px;
+			}
+		}
+	}
+	@include respond-to (xxs-device){
+		&.ar-right {
+			right: -40px;
+		}
+		&.ar-left {
+			left: -40px;
+		}
+	}
+}
+//video
+.video {
+	position: relative;
+	margin-bottom: 40px;
+	video {
+		@include box-shadow(0 0 20px rgba($brown,1));
+		background: $black;
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+		height: auto!important;
+		.modal-body & {
+			width: 100%;
+		}
+	}
+	@include respond-to (only-device){
+		video { 
+			width: 90%;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.btn-search {
+    padding: 3px;
+	border-left: solid 1px #ccc;
+	background: $white;
+	padding: 7px 8px 8px;
+	
+}
+
+
+#search-xs button:hover{
+    border: 0;
+    box-shadow: none;
+    
+}

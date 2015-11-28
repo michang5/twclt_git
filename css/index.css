@@ -1,0 +1,67 @@
+#intro.section {
+  background: url('../images/index_bg.jpg') center top no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding: 12% 0 18%;
+}
+#intro.section h2 {
+  font-size: 1.25em;
+}
+#intro.section h3 {
+  font-size: 1em;
+  text-align: justify;
+}
+#intro.section .menu {
+  text-align: center;
+  margin: 10px;
+}
+#intro.section .menu li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: top;
+  background: url('../images/index_menu.png') no-repeat;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+#intro.section .menu li a {
+  display: block;
+}
+#intro.section .menu li a:hover, #intro.section .menu li a:focus {
+  padding-top: 5px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  #intro.section .menu {
+    margin: 10px 0;
+  }
+  #intro.section .menu li {
+    width: 140px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #intro.section {
+    background-position: 75% 0;
+  }
+  #intro.section .col-md-6 {
+    margin: 20px auto;
+    text-align: center;
+  }
+  #intro.section h2 {
+    text-align: center;
+    font-size: 1.5em;
+  }
+  #intro.section h3 {
+    padding: 20px;
+    font-size: 1.25em;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #intro.section {
+    margin-top: 0;
+  }
+}

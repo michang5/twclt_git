@@ -1,0 +1,58 @@
+@import 'compass';
+@import 'base/fonts';
+@import 'base/style';
+@import 'base/media';
+//@import 'base/css3-mixins';
+
+body {
+}
+//main-content
+#main-content {
+	background: image-url('page_bg.jpg') left top repeat-y;
+	@include background-size(contain);
+	padding: 5% 0;
+}
+#intro.section-page {
+	background: image-url("page_header.jpg") center center;
+	@include background-size(cover);
+	padding-top: 200px;
+	margin-top: -70px;
+	header {
+		margin-bottom: 20px;
+		.btn-pink {
+			margin: 16px 0 0;
+		}
+	}
+	h1 {
+		@include inline-block;
+		vertical-align: top;
+		width: 70%;
+		margin: 0 10px 0 0;
+		line-height: 0;
+	}
+	h3 {
+		font-size: $xm-font;
+		@include stronger-lighting;
+		text-align: justify;
+	}
+	@include respond-to (only-mobile){
+		margin-top: 0;
+	}
+	@include respond-to (all-mobile){
+		padding-top: 120px; 
+		header {
+			text-align: center;
+		}
+	}
+}
+.section2, .section3, .section4, .section5, .section6, .section7 {
+	margin: 30px auto;
+	h2 {
+		margin: 20px auto;
+	}
+	@include respond-to (all-mobile){
+		h2 {
+			width: 90%;
+		}
+	}
+}
