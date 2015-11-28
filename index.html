@@ -31,20 +31,56 @@
 	
 	<!-- Navigation -->
 	<div id="navigation">
-<!--
-		<header>
-			<h2 class="logo">
-				<a href="#index"><img src="images/logo.png" alt="當代傳奇劇場" title="當代傳奇劇場" width="312" height="55" class="img-responsive"></a>
-			</h2>
-		</header>
--->
 		<nav class="navbar navbar-fixed-top clearfix" role="navigation">
 			<header>
+				<div class="top-nav">
+					<ul>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="search-menu" aria-expanded="false"><i class="fa fa-search"></i></a>
+							<ul class="dropdown-menu search" aria-labelledby="search-menu">
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="搜尋"/>
+									<span class="input-group-btn">
+										<div class="btn btn-search" type="button">
+											<i class="fa fa-search"></i>
+										</div>
+									</span>
+								</div>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="share-menu" aria-expanded="false"><i class="fa fa-share-alt"></i></a>
+							
+							<ul class="dropdown-menu social-media" aria-labelledby="share-menu">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="line"><a href="#"><i class="fa-line"></i></a></li>
+								<li><a href="#"><i class="fa fa-weixin"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+								<li><a href="#"><i class="fa fa-weibo"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="language-menu" aria-expanded="false">中</a>
+							<ul class="dropdown-menu language" aria-labelledby="language-menu">
+								<li><a href="index.html">中</a></li>
+								<li><a href="#">簡</a></li>
+								<li><a href="#">EN</a></li>
+							</ul>
+						</li>
+						<li data-toggle="modal" data-target="#member"><a href="#"><i class="fa fa-user"></i></a></li>
+					</ul>
+				</div>
 				<h2 class="logo">
 					<a href="#index"><img src="images/logo.png" alt="當代傳奇劇場" title="當代傳奇劇場" width="312" height="55" class="img-responsive"></a>
 				</h2>
 			</header>
 			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+					<i class="fa fa-bars"></i>
+				</button>
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
 					<i class="fa fa-bars"></i>
 				</button>
@@ -84,7 +120,7 @@
 						</ul>
 					</li>
 					<li><a href="#">訊息發佈</a></li>
-					<li><a href="#">購票資訊</a></li>
+					<li><a href="#"><span class="yellow">購票資訊</span></a></li>
 					<li><a href="#">當代之友</a></li>
 					<li><a href="#">影音精選</a></li>
 					<li class="visible-xs-block">
@@ -100,6 +136,7 @@
 							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 							<li class="line"><a href="#"><i class="fa-line"></i></a></li>
 							<li><a href="#"><i class="fa fa-weixin"></i></a></li>
+							<br>
 							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 							<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
 							<li><a href="#"><i class="fa fa-weibo"></i></a></li>
@@ -112,67 +149,47 @@
 	</div>
 	<!-- /.Navigation -->
 	
-	<!-- Intro Section -->
-	<div id="intro" class="section">
-		<header class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<h1><img src="images/index_maintitle.png" alt="天國文化 門訓列國 帶下天國的能力、同在、文化在全亞洲" title="天國文化 門訓列國 帶下天國的能力、同在、文化在全亞洲" width="500" height="94" class="img-responsive"></h1>
-					<ul class="menu">
-						<li>
-							<a href="equipment.html"><img src="images/index_menu1.png" alt="" class="img-responsive"></a>
-						</li>
-						<li>
-							<a href="media.html"><img src="images/index_menu2.png" alt="" class="img-responsive"></a>
-						</li>
-						<li>
-							<a href="train.html"><img src="images/index_menu3.png" alt="" class="img-responsive"></a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-6">
-<!--					<div class="btn-pink"><a href="">觀看影片<i class="fa fa-play-circle"></i></a></div>-->
-					<h2><span style="padding-right:16px;">一個運動終會停止</span><span class="br-xs">唯有文化帶下轉化本質</span></h2>
-					<h3>Asia for JESUS的核心異象是「天國文化‧門訓列國」，團隊所有事工皆為此效力。我們相信，一個運動終會停止，唯有文化能帶下真實的轉化。因此，Asia for JESUS渴望透過各樣事工的推動，使每個基督徒的靈命、財務、婚姻、家庭、工作等各個層面，都能擁有如耶穌般屬天的生活方式，能釋放神國的大能、接待神的同在，從而使天國文化在全地實現，長遠深刻地轉化列國！
-					<br>
-					Asia for JESUS透過三種形態的事工來實踐異象，分別為：裝備系統推動、媒體經營、特會培訓。</h3>
-				</div>
-			</div>
-		</header>
+	<!-- wrapper -->
+	
+	<div id="wrapper">
+		123
 	</div>
-
+	
 	<!-- footer	-->
 	<footer>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8">
-					<p>
-						<span><a href="+886-2-2708-5007">TEL：&#32+886-2-2708-5007</a>
-								<span class="br-xs">（上班時間：週一至週五 9:30-12:00，13:00-18:30）</span></span>
-						<span>FAX：&#32+886-2-2708-5045</span>
-						<span class="br-xs"><a href="mailto:asiaforjesus@asiaforjesus.net">EMAIL： asiaforjesus@asiaforjesus.net</a></span>
-						<span>地址：106 台北市建國南路二段 201 號 12 樓</span>
-					</p>
+					
 				</div>
 				<div class="col-sm-4">
-					<p>
-						<a href="http://www.asiaforjesus.net/web/?menu=editor&menu_id=11" target="_blank">使用條款及隱私權政策</a>
-						<br> 國度豐收協會 版權所有
-					</p>
+					
 				</div>
 			</div>
 		</div>
 	</footer>
 	<!-- /.footer	-->
 	
-	<div class="fix-icon donate"><a href="http://www.asiaforjesus.net/web/?menu=partner_v2&menu_id=7&utm_source=2016Vision_Offering&utm_medium=visionwebsite&utm_campaign=2016Vision" target="_blank">我要奉獻<i class="fa fa-heart"></i></a></div>
+	<div class="modal fade" id="member" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<button type="button" class="close hairline" data-dismiss="modal"></button>
+				<div class="modal-body">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="fix-icon top"><a href="#index" target="_blank"><i class="fa fa-angle-up"></i></a></div>
 
 	<!--jQuery--> 
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
 	<script type="text/javascript" src="js/touchswipe.min.js" ></script>
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
-<!--	<script type="text/javascript" src="js/main.js"></script>-->
+	<script type="text/javascript" src="js/main.js"></script>
 	
 </body>
 </html>

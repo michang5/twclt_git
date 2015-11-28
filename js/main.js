@@ -27,40 +27,11 @@ $(function(){
 		
 		return false;
 	});
-
-	$win.scroll(function(){
-		var _none = $menu.hasClass('none'),
-		    _fixed = $menu.hasClass('fixed');
-		
-		if($win.scrollTop() >= _menuOffset.top){
-			if(!_fixed){
-				$menu.addClass('fixed').css('left', _menuOffset.left);
-				$menuA.addClass('white');
-//				$content.css('margin-top', _menuOuterHeight);
-			}
-		} else {
-			if(_fixed){
-				$menu.removeClass('fixed').css('left', 0);
-				$menuA.removeClass('white');
-//				navMain.addClass('absolute');
-//				$content.css('margin-top', 0);
-			}
-		}
-	});	
 });
 (function ($) {
-//	$(window).load(function(){
-//      $("#navigation").sticky({ topSpacing: 0 });
-//    });
-//	
-//	//jQuery to collapse the navbar on scroll
-//	$(window).scroll(function() {
-//		if ($(".navbar").offset().top > 50) {
-//			$(".navbar-fixed-top").addClass("top-nav-collapse");
-//		} else {
-//			$(".navbar-fixed-top").removeClass("top-nav-collapse");
-//		}
-//	});
+	$('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+        e.stopPropagation();
+    });
 	
 	//jQuery for page scrolling feature - requires jQuery Easing plugin
 	$(function() {
