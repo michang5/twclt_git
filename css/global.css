@@ -81,15 +81,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  font-size: 1.75em;
-}
-
-h3 {
   font-size: 1.5em;
 }
 
-h5 {
+h3 {
   font-size: 1.25em;
+}
+
+h5 {
+  font-size: 1.125em;
 }
 
 p {
@@ -254,13 +254,13 @@ a[data-toggle=modal] {
   color: #fff;
 }
 .fix-icon i {
-  font-size: 1.25em;
+  font-size: 1.125em;
 }
 .fix-icon.top {
   bottom: 100px;
 }
 .fix-icon.top i {
-  font-size: 1.75em;
+  font-size: 1.5em;
 }
 
 .close {
@@ -497,7 +497,7 @@ a[data-toggle=modal] {
   height: 32px;
   line-height: 32px;
   padding: 0;
-  font-size: 1.25em;
+  font-size: 1.125em;
   display: block;
   text-align: center;
 }
@@ -531,7 +531,7 @@ a[data-toggle=modal] {
   text-align: center;
 }
 #navigation header .top-nav ul > li .dropdown-menu.language li a:hover {
-  background: #e9e9e9;
+  background: #d2d2d2;
 }
 #navigation header .top-nav ul > li .dropdown-menu.language::before {
   left: 21px;
@@ -542,6 +542,9 @@ a[data-toggle=modal] {
   background-color: rgba(185, 15, 0, 0.8);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCB90F00,endColorstr=#CCB90F00);
   zoom: 1;
+  -moz-box-shadow: #000 0 0 10px;
+  -webkit-box-shadow: #000 0 0 10px;
+  box-shadow: #000 0 0 10px;
 }
 #navigation nav .navbar-header i {
   color: #fff;
@@ -604,7 +607,7 @@ a[data-toggle=modal] {
 }
 #navigation nav .navbar-collapse ul.navbar-nav .dropdown-menu a:hover, #navigation nav .navbar-collapse ul.navbar-nav .dropdown-menu a:focus, #navigation nav .navbar-collapse ul.navbar-nav .dropdown-menu a.active {
   color: #000;
-  background: #e9e9e9;
+  background: #d2d2d2;
 }
 #navigation nav .navbar-collapse .nav .open {
   -moz-transition: all, 0.5s, ease-in-out;
@@ -642,7 +645,7 @@ a[data-toggle=modal] {
   height: 42px;
   line-height: 42px;
   padding: 0;
-  font-size: 1.25em;
+  font-size: 1.125em;
   display: block;
   text-align: center;
   background-color: transparent;
@@ -769,30 +772,117 @@ a[data-toggle=modal] {
 
 footer {
   background: #b90f00;
-  height: 400px;
   margin-top: -100px;
-  color: #fff;
-  font-size: 0.9em;
-  text-align: center;
-  line-height: 2;
 }
-footer a {
-  color: #fff;
+footer .container {
+  display: table;
 }
-footer a:hover {
-  color: #fff;
+footer .container .row {
+  display: table-row;
 }
-footer p > span {
-  display: block;
+footer .col-md-8, footer .col-md-4 {
+  display: table-cell;
+  height: 100%;
+  vertical-align: top;
+  padding: 30px 15px;
 }
-footer .col-sm-4 {
+footer .col-md-8.no-float, footer .col-md-4.no-float {
+  float: none;
+}
+footer .col-md-4 {
   background: #940C00;
 }
-@media only screen and (max-width: 768px) {
-  footer .col-sm-8, footer .col-sm-4 {
-    text-align: center;
+footer .col-md-4 p {
+  color: #fff;
+  line-height: 2.5em;
+}
+footer .col-md-4 p span {
+  font-size: 0.9em;
+  color: #d2d2d2;
+  display: block;
+}
+footer .footer-menu {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: top;
+  margin-right: 20px;
+  text-align: left;
+}
+footer .footer-menu h5 {
+  color: #d2d2d2;
+  font-size: 1.125em;
+  margin-bottom: 16px;
+}
+footer .footer-menu h5 a {
+  color: #d2d2d2;
+}
+footer .footer-menu h5 a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+footer .footer-menu a {
+  color: #fff;
+}
+footer .footer-menu > ul {
+  padding-left: 4px;
+  margin: 0 0 10px 10px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: top;
+}
+footer .footer-menu > ul > li {
+  padding: 10px 0;
+  margin-bottom: 4px;
+  color: #fff;
+  font-size: 1em;
+}
+footer .footer-menu > ul > li a {
+  display: block;
+  padding: 0 0 0 10px;
+  border-left: 4px solid #fff;
+  line-height: 1;
+}
+footer .footer-menu > ul > li a:hover {
+  color: #f8b31c;
+  border-left: 4px solid #f8b31c;
+}
+footer .footer-menu > ul > ul {
+  padding-left: 20px;
+  margin-top: -10px;
+}
+footer .footer-menu > ul > ul li {
+  font-size: 0.9em;
+  line-height: 2.5em;
+  border-bottom: 1px solid #e8999d;
+  padding: 0 6px;
+  margin-bottom: 4px;
+  -moz-transition: color, 0.5s, ease-in;
+  -o-transition: color, 0.5s, ease-in;
+  -webkit-transition: color, 0.5s, ease-in;
+  transition: color, 0.5s, ease-in;
+}
+footer .footer-menu > ul > ul li a:hover {
+  color: #f8b31c;
+}
+footer .footer-menu > ul > ul li:hover {
+  border-bottom: 1px solid #f8b31c;
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  footer .container {
+    width: 100%;
+    padding: 0;
   }
-  footer .col-sm-4 {
-    margin-top: 12px;
+  footer .col-md-8, footer .col-md-4 {
+    display: block;
+    padding: 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer .col-md-8, footer .col-md-4 {
+    display: block;
   }
 }

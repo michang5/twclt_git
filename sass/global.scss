@@ -402,7 +402,7 @@ a[data-toggle=modal] {
 								text-align: center;
 								
 								&:hover {
-									background: $light-grey;
+									background: $light-gray;
 								}
 							}
 						}
@@ -420,6 +420,7 @@ a[data-toggle=modal] {
 		&.navbar {
 			margin-bottom: 0;
 			@include transparent($red,.8);
+			@include box-shadow ($black 0 0 10px);
 		}
 		.navbar-header {
 			i {
@@ -470,7 +471,7 @@ a[data-toggle=modal] {
 						padding: 15px 30px;
 						&:hover, &:focus, &.active {
 							color: $black;
-							background: $light-grey;
+							background: $light-gray;
 						}
 					}
 				}
@@ -525,7 +526,7 @@ a[data-toggle=modal] {
 			}
 		}
 		&.social-media {
-			border-top: 1px solid $light-red;
+			border-top: 1px solid $medium-red;
 			margin-top: 5px;
 			padding-top: 20px;
 		}
@@ -625,7 +626,6 @@ a[data-toggle=modal] {
 		}
 		nav {
 			.navbar-collapse {
-//				padding-bottom: 20px;
 				ul.navbar-nav {
 					width: auto;
 					>li {
@@ -654,34 +654,116 @@ a[data-toggle=modal] {
 //footer
 footer {
 	background: $red;
-	height: 400px;
 	margin-top: -100px;
-	color: $white;
-	font-size: $s-font;
-	text-align: center;
-	line-height: 2;
-	a {
-		color: $white;
-			&:hover {
-				color: $white
-				}
-	}
-	p > span {
-			display: block;
+	.container {
+		display:table;
+		.row {
+			display: table-row;
 		}
-	.col-sm-8 {
-		
 	}
-	.col-sm-4 {
+	.col-md-8, .col-md-4 {
+		display: table-cell;
+		height: 100%;
+		vertical-align: top;
+		padding: 30px 15px;
+		&.no-float {
+			float: none;
+		}
+	}
+	.col-md-4 {
 		background: $dark-red;
+		p {
+			color: $white;
+			line-height: $xxxxxl-font;
+			span {
+				font-size: $s-font;
+				color: $light-gray;
+				display: block;
+			}
+		}
+	}
+	.footer-menu {
+		@include inline-block;
+		vertical-align: top;
+		margin-right: 20px;
+		text-align: left;
+		h5 {
+			color: $light-gray;
+			font-size: $l-font;
+			margin-bottom: 16px;
+			a {
+				color: $light-gray;
+				&:hover {
+					color: $white;
+					text-decoration: underline;
+				}
+			}
+		}
+		a {
+			color: $white;
+		}
+		> ul {
+			padding-left: 4px;
+			margin: 0 0 10px 10px;
+			@include inline-block;
+			vertical-align: top;
+			> li {
+				padding: 10px 0;
+				margin-bottom: 4px;
+				color: $white;
+				font-size: $m-font;
+				a {
+					display: block;
+					padding: 0 0 0 10px;
+					border-left: 4px solid $white;
+					line-height: 1;
+					&:hover {
+						color: $yellow;
+						border-left: 4px solid $yellow;
+					}
+				}
+			}
+			> ul {
+				padding-left: 20px;
+				margin-top: -10px;
+				li {
+					font-size: $s-font;
+					line-height: $xxxxxl-font;
+					border-bottom: 1px solid $light-red;
+					padding: 0 6px;
+					margin-bottom: 4px;
+					@include transition(color, .5s, ease-in);
+					a {
+						&:hover {
+							color: $yellow;
+						}
+					}
+					&:hover {
+						border-bottom: 1px solid $yellow;
+					}
+				}
+			}
+		}
+	}
+	@include respond-to (md-screen){
+		.container {
+			width: 100%;
+			padding: 0;
+		}
+		.col-md-8, .col-md-4 {
+			display: block;
+			padding: 30px;
+		}
+		.col-md-4 {
+//			padding: 30px 0;
+		}
 	}
 	@include respond-to (only-device){
-		.col-sm-8,.col-sm-4 {
-			text-align: center;
+		.col-md-8, .col-md-4 {
+			display: block;
 		}
-		.col-sm-4 {
-			margin-top: 12px;
-		}
+	}
+	@include respond-to (only-device){
 		
 	}
 }
