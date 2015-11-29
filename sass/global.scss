@@ -90,6 +90,11 @@ a[data-toggle=modal] {
 		padding: 8px;
 		@include clearfix;
 	}
+	iframe {
+		display: table-cell;
+		height: 100%;
+		width: 100%;
+	}
 	@include respond-to (xlg-screen){
 		.modal-content { 
 			width: 1000px;
@@ -148,6 +153,7 @@ a[data-toggle=modal] {
 	line-height: 50px;
 	z-index: 1000;
 	@include transparent($dark-red,.8);
+	@include box-shadow($black 0 0 10px);
 	a {
 		display: block;
 		color: $white;
@@ -423,6 +429,10 @@ a[data-toggle=modal] {
 			@include box-shadow ($black 0 0 10px);
 		}
 		.navbar-header {
+			button {
+				margin: 8px 5px;
+				padding: 12px 5px;
+			}
 			i {
 				color: $white;
 			}
@@ -619,7 +629,7 @@ a[data-toggle=modal] {
 			h2.logo {
 				position: relative;
 				z-index: 99;
-				padding: 3% 20px;
+				padding: 12px 15px;
 				width: 80%;
 				@include transparent($black,0);
 			}
@@ -647,6 +657,20 @@ a[data-toggle=modal] {
 						}
 					}
 				}
+			}
+		}
+	}
+	@include respond-to (xxs-mobile){
+		.navbar-header {
+			button {
+				margin: 5px;
+				padding: 6px 5px;
+			}
+		}
+		header {
+			h2.logo {
+				padding: 18px 15px;
+				width: 65%;
 			}
 		}
 	}
@@ -724,7 +748,7 @@ footer {
 				}
 			}
 			> ul {
-				padding-left: 20px;
+				padding-left: 10px;
 				margin-top: -10px;
 				li {
 					font-size: $s-font;
@@ -759,6 +783,10 @@ footer {
 		}
 	}
 	@include respond-to (only-device){
+		.container {
+			width: 100%;
+			padding: 0;
+		}
 		.col-md-8, .col-md-4 {
 			display: block;
 		}
