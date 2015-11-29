@@ -6,15 +6,22 @@
 body {
 	background: $white;
 }
-.member-login {
+.member {
+	h2 {
+		color: $red;
+	}
 	text-align: center;
-	.col-sm-6 {
+	a {
+		text-decoration: underline;
+		padding: 0 3px;
+		font-size: $s-font;
+	}
+	.member-block {
 		margin: 30px 0;
 		&:first-of-type {
 			border-right: 1px solid $light-gray;
 			span a {
 				margin: 0 10px;
-				font-size: $s-font;
 			}
 			section:first-of-type .btn-fb,  {
 				display: block;
@@ -30,14 +37,9 @@ body {
 				}
 			}
 			.checkbox {
-//				float:left;
 				text-align: left;
 				font-size: $s-font;
 				line-height: $xxl-font;
-				a {
-					text-decoration: underline;
-					padding: 0 3px;
-				}
 			}
 		}
 		@include respond-to (only-device){
@@ -51,6 +53,9 @@ body {
 					font-size: $s-font;
 				}
 			}
+		}
+		&.col-sm-12 {
+			border: none;
 		}
 	}
 }
@@ -69,6 +74,39 @@ body {
 		}
 	}
 }
-h2 {
+
+.nav-tabs  {
+	text-align: left;
+	border-bottom: none;
+	margin: 20px auto;
+	> li {
+		margin-bottom: 0;
+		width: 100%;
+		> a {
+			color: $gray;
+			display: block;
+			@include border-radius(0);
+			text-decoration: none;
+			border-bottom: 1px solid $light-gray;
+			&:hover, &:focus {
+				color: $red;
+				@include transparent($medium-gray,.6);
+				border: 0;
+				border-bottom: 1px solid $light-gray;
+			}
+		}
+		&.active {
+			> a {
+				color: $red;
+				border: 0;
+				border-bottom: 1px solid $light-gray;
+				&:hover, &:focus {
+					color: $red;
+					border: 0;
+					border-bottom: 1px solid $light-gray;
+				}
+			}
+		}
+	}
 }
 

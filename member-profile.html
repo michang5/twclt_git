@@ -33,29 +33,27 @@
 	
 	<div id="wrapper" class="member container">
 		<div class="row">
-			<h2>請登入會員或加入會員</h2>
-			<div class="col-sm-6 member-block">
+			<div class="col-sm-2">
+				<img src="images/member.png" alt="" class="img-responsive">
+				<p><span>Mimi 您好</span></p>
+				<p>
+					<span><a href="#">登出</a></span>
+					<span><a href="#">會員等級</a></span>
+				</p>
 				<section>
-					<h3>登入會員</h3>
-					<div class="form-group">
-						<button class="btn btn-fb btn-lg" type="submit">
-							<i class="fa fa-facebook"></i>
-							<span>用 Facebook 登入</span>
-						</button>
-						<button class="btn btn-yh btn-lg" type="submit">
-							<i class="fa fa-yahoo-custom"></i>
-							<span>用 Yahoo 登入</span>
-						</button>
-					</div>
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a href="#profile" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-pencil-square-o"></i>我的個人資料</a></li>
+						<li role="presentation"><a href="#collect" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-heart"></i>我的收藏</a></li>
+						<li role="presentation"><a href="#qrcode" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-qrcode"></i>我的二維條碼</a></li>
+					</ul>
 				</section>
-				<hr>
+			</div>
+			<div class="col-sm-9 member-block">
 				<section>
-					<h3>使用當代傳奇劇場帳號登入</h3>
-					<div class="form-group">
-						<input type="email" class="form-control" id="Email" placeholder="帳號 (Email)">
-						<input type="password" class="form-control" id="password" placeholder="密碼">
-						<button type="button" class="btn btn-primary">登入</button>
-						<span><a href="pwd-reset.html">忘記密碼？</a></span>
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="profile">1</div>
+						<div role="tabpanel" class="tab-pane" id="collect">2</div>
+						<div role="tabpanel" class="tab-pane" id="qrcode">3</div>
 					</div>
 				</section>
 			</div>
