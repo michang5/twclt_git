@@ -1,0 +1,64 @@
+body {
+  background: #fff;
+}
+
+.member-login {
+  text-align: center;
+}
+.member-login .col-sm-6 {
+  margin: 30px 0;
+}
+.member-login .col-sm-6:first-of-type {
+  border-right: 1px solid #d2d2d2;
+}
+.member-login .col-sm-6:first-of-type span a {
+  margin: 0 10px;
+  font-size: 0.9em;
+}
+.member-login .col-sm-6:first-of-type section:first-of-type .btn-fb {
+  display: block;
+  margin: 10px auto;
+}
+.member-login .col-sm-6 section {
+  width: 80%;
+  margin: 0 auto;
+}
+.member-login .col-sm-6 section .form-group input[type="email"], .member-login .col-sm-6 section .form-group input[type="password"] {
+  width: 200px;
+}
+.member-login .col-sm-6 section .checkbox {
+  text-align: left;
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+.member-login .col-sm-6 section .checkbox a {
+  text-decoration: underline;
+  padding: 0 3px;
+}
+@media only screen and (max-width: 768px) {
+  .member-login .col-sm-6:first-of-type {
+    border-right: 0;
+    border-bottom: 1px solid #b90f00;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+  }
+  .member-login .col-sm-6:first-of-type span a {
+    margin: 0 10px;
+    font-size: 0.9em;
+  }
+}
+
+.btn-fb span, .btn-yh span {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  line-height: 22px;
+  margin-top: 0;
+  vertical-align: top;
+}
+.btn-fb span:before, .btn-yh span:before {
+  border-left: 1px solid #fff;
+  padding-left: 10px;
+  content: "";
+}
