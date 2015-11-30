@@ -1,67 +1,107 @@
-#intro.section {
-  background: url('../images/index_bg.jpg') center top no-repeat;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  padding: 12% 0 18%;
+.key-visual {
+  margin-top: 114px;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
 }
-#intro.section h2 {
-  font-size: 1.125em;
+.key-visual img {
+  margin: 0 auto;
 }
-#intro.section h3 {
-  font-size: 1em;
-  text-align: justify;
+.key-visual .content {
+  position: absolute;
+  width: 440px;
+  right: 5%;
+  top: 50%;
+  *zoom: 1;
 }
-#intro.section .menu {
-  text-align: center;
-  margin: 10px;
+.key-visual .content:after, .key-visual .content:before {
+  content: "";
+  display: table;
 }
-#intro.section .menu li {
-  display: -moz-inline-stack;
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  vertical-align: top;
-  background: url('../images/index_menu.png') no-repeat;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  -webkit-background-size: contain;
-  background-size: contain;
+.key-visual .content:after {
+  clear: both;
 }
-#intro.section .menu li a {
-  display: block;
+.key-visual .content h2 {
+  font-size: 1.5em;
+  color: #fff;
 }
-#intro.section .menu li a:hover, #intro.section .menu li a:focus {
-  padding-top: 5px;
+.key-visual .content p {
+  color: #fff;
 }
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  #intro.section .menu {
-    margin: 10px 0;
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .key-visual {
+    margin-top: 50px;
+    padding-bottom: 20px;
   }
-  #intro.section .menu li {
-    width: 140px;
+  .key-visual .content {
+    width: 80%;
+    position: static;
+    margin: 0 auto;
   }
 }
 @media only screen and (max-width: 768px) {
-  #intro.section {
-    background-position: 75% 0;
+  .key-visual {
+    margin-top: 50px;
+    padding-bottom: 20px;
   }
-  #intro.section .col-md-6 {
-    margin: 20px auto;
-    text-align: center;
-  }
-  #intro.section h2 {
-    text-align: center;
-    font-size: 1.25em;
-  }
-  #intro.section h3 {
-    padding: 20px;
-    font-size: 1.125em;
+  .key-visual .content {
+    width: 90%;
+    position: static;
+    margin: 0 auto;
   }
 }
-@media only screen and (max-width: 767px) {
-  #intro.section {
-    margin-top: 0;
+
+.ad-block img {
+  margin: 20px auto 0;
+}
+
+.series {
+  position: relative;
+  *zoom: 1;
+}
+.series:after, .series:before {
+  content: "";
+  display: table;
+}
+.series:after {
+  clear: both;
+}
+.series img {
+  margin: 0 auto;
+}
+.series .content {
+  position: absolute;
+  text-align: center;
+  padding: 4px 0;
+  min-height: 110px;
+  width: 100%;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+  bottom: 0;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(50%, #000000), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), #000000, rgba(0, 0, 0, 0));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #000000, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #000000, rgba(0, 0, 0, 0));
+}
+.series .content h3 {
+  font-size: 2em;
+}
+.series .content h4 {
+  font-weight: normal;
+  font-size: 1.5em;
+}
+@media only screen and (max-width: 768px) {
+  .series .content {
+    min-height: auto;
+  }
+  .series .content h3 {
+    font-size: 1.25em;
+    line-height: 1.5em;
+  }
+  .series .content h4 {
+    font-size: 1em;
+    line-height: 1.5em;
   }
 }

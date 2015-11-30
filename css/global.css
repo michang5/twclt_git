@@ -197,6 +197,20 @@ button.btn {
   transition: color, 0.5s, ease-in;
 }
 
+button.btn-normal {
+  color: #000;
+  padding: 8px 20px;
+  float: right;
+  margin: 0 20px;
+  border: 3px solid #d2d2d2;
+  background: #fff;
+}
+button.btn-normal:hover, button.btn-normal:focus {
+  background: #b90f00;
+  color: #fff;
+  border: 3px solid #b90f00;
+}
+
 .btn-custom, .btn-fb, .btn-yh {
   margin: 4px;
   color: #fff;
@@ -351,17 +365,6 @@ button.btn {
 .card .content p {
   line-height: 1.75em;
 }
-.card button {
-  color: #000;
-  padding: 8px 20px;
-  float: right;
-  margin: 0 20px;
-}
-.card button:hover, .card button:focus {
-  background: #b90f00;
-  color: #fff;
-  border: 3px solid #b90f00;
-}
 
 .isotope {
   width: 800px;
@@ -486,16 +489,19 @@ a[data-toggle=modal] {
 
 .fix-icon {
   position: fixed;
-  right: 0;
+  right: 10px;
   width: 50px;
   height: 50px;
   text-align: center;
   font-size: 1em;
   line-height: 50px;
   z-index: 1000;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
   background-color: transparent;
-  background-color: rgba(148, 12, 0, 0.8);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC940C00,endColorstr=#CC940C00);
+  background-color: rgba(185, 15, 0, 0.9);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6B90F00,endColorstr=#E6B90F00);
   zoom: 1;
   -moz-box-shadow: #000 0 0 10px;
   -webkit-box-shadow: #000 0 0 10px;
@@ -504,15 +510,40 @@ a[data-toggle=modal] {
 .fix-icon a {
   display: block;
   color: #fff;
+  height: 50px;
 }
 .fix-icon i {
   font-size: 1.125em;
 }
 .fix-icon.top {
-  bottom: 100px;
+  bottom: 200px;
 }
 .fix-icon.top i {
   font-size: 1.5em;
+}
+.fix-icon.series-icon {
+  bottom: 260px;
+}
+.fix-icon.series-icon img {
+  margin: 11px 4px;
+}
+.fix-icon.series-icon .dropdown-menu {
+  width: 100px;
+  min-width: auto;
+  left: -40px;
+  top: -230px;
+  background-color: transparent;
+  background-color: rgba(185, 15, 0, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCB90F00,endColorstr=#CCB90F00);
+  zoom: 1;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.fix-icon.series-icon .dropdown-menu li a {
+  color: #fff;
+  line-height: 2em;
+  height: auto;
 }
 
 .close {
@@ -1035,6 +1066,9 @@ a[data-toggle=modal] {
 footer {
   background: #b90f00;
   margin-top: -100px;
+}
+#index footer {
+  margin-top: 2px;
 }
 footer .container {
   display: table;

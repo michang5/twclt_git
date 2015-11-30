@@ -2,79 +2,88 @@
 @import 'base/fonts';
 @import 'base/style';
 @import 'base/media';
-//@import 'base/css3-mixins';
 
-body {
-}
-#intro.section{
-	background: image-url("index_bg.jpg") center top no-repeat;
-	@include background-size(cover);
-	padding: 12% 0 18%;
-	h2 {
-		font-size: $l-font;
+.key-visual {
+	margin-top: 114px;
+	max-width: 1280px;
+	margin: 0 auto;
+	position: relative;
+	img {
+		margin: 0 auto;
 	}
-	h3 {
-		font-size: $m-font;
-		text-align: justify;
-	}
-	.menu {
-		text-align: center;
-		margin: 10px;
-		li {
-			@include inline-block;
-			vertical-align: top;
-			background: image-url("index_menu.png") no-repeat;
-			@include background-size(contain);
-			a {
-				display: block;
-				&:hover, &:focus { 
-					padding-top: 5px;
-				}
-			}
+	.content {
+		position: absolute;
+		width: 440px;
+		right: 5%;
+		top: 50%;
+		@include clearfix;
+		h2 {
+			font-size: $xxl-font;
+			color: $white;
+		}
+		p {
+			color: $white;
 		}
 	}
-	@include respond-to (lg-screen){
-		.menu {
-			margin: 10px 0;
-			li {
-				width: 140px;
-			}
+	@include respond-to (md-screen){
+		margin-top: 50px;
+		padding-bottom: 20px;
+		.content {
+			width: 80%;
+			position: static;
+			margin: 0 auto;
 		}
 	}
 	@include respond-to (only-device){
-		background-position: 75% 0;
-		.col-md-6 {
-			margin: 20px auto;
-			text-align: center;
-		}
-		h2 {
-			text-align: center;
-			font-size: $xl-font;
-		}
-		h3 {
-			padding: 20px;
-			font-size: $l-font;
+		margin-top: 50px;
+		padding-bottom: 20px;
+		.content {
+			width: 90%;
+			position: static;
+			margin: 0 auto;
 		}
 	}
-	@include respond-to (only-mobile){
-		margin-top: 0;
+}
+.ad-block {
+	img {
+		margin: 20px auto 0;
 	}
-	@include respond-to (all-mobile){
-		padding-top: 22%;
-		h2 {
-			text-align: center;
-			font-size: $l-font;
-		}
+}
+.series {
+	position: relative;
+	@include clearfix;
+	img {
+		margin: 0 auto;
+	}
+	.content {
+		position: absolute;
+		text-align: center;
+		padding: 4px 0;
+		min-height: 110px;
+		width: 100%;
+		color: $white;
+		text-shadow: 0 0 5px $black;
+		bottom: 0;
+  		@include background-image(linear-gradient(to right, rgba($black, 0) ,rgba($black, 1), rgba($black, 0)));
 		h3 {
-			font-size: $m-font;
+			font-size: $xxxxl-font;
 		}
-		.menu {
-			margin: 10px 0;
-			li {
-				width: 110px;
+		h4 {
+			font-weight: normal;
+			font-size: $xxl-font;
+		}
+	}
+	@include respond-to (only-device){
+		.content {
+			min-height: auto;
+			h3 {
+				font-size: $xl-font;
+				line-height: $xxl-font;
+			}
+			h4 {
+				font-size: $m-font;
+				line-height: $xxl-font;
 			}
 		}
 	}
-	
 }
-
