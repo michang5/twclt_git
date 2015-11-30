@@ -6,12 +6,19 @@
 body {
 	background: $white;
 }
+.col-sm-3, .col-sm-9, .container {
+	@include respond-to (only-mobile){
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+}
+//login + reset pwd
 .member {
 	h2 {
 		color: $red;
 	}
 	text-align: center;
-	a {
+	span a {
 		text-decoration: underline;
 		padding: 0 3px;
 		font-size: $s-font;
@@ -32,8 +39,9 @@ body {
 			width: 80%;
 			margin: 0 auto;
 			.form-group {
-				input[type="email"], input[type="password"] {
+				input[type="text"], input[type="tel"], input[type="email"], input[type="password"], select {
 					width: 200px;
+					display: block;
 				}
 			}
 			.checkbox {
@@ -74,12 +82,22 @@ body {
 		}
 	}
 }
-
+//reset pwd
+.pwd {
+	p {
+		padding: 20px 0;
+	}
+}
+//profile
 .nav-tabs  {
 	text-align: left;
 	border-bottom: none;
-	margin: 20px auto;
+	margin: 30px auto;
 	> li {
+		* {
+			border: none!important;	
+		}
+		border-bottom: 1px solid $light-gray!important;
 		margin-bottom: 0;
 		width: 100%;
 		> a {
@@ -87,26 +105,140 @@ body {
 			display: block;
 			@include border-radius(0);
 			text-decoration: none;
-			border-bottom: 1px solid $light-gray;
 			&:hover, &:focus {
 				color: $red;
-				@include transparent($medium-gray,.6);
-				border: 0;
-				border-bottom: 1px solid $light-gray;
+				@include transparent($lighter-gray,.6);
 			}
 		}
 		&.active {
+			border: 0;
 			> a {
 				color: $red;
-				border: 0;
-				border-bottom: 1px solid $light-gray;
 				&:hover, &:focus {
 					color: $red;
-					border: 0;
-					border-bottom: 1px solid $light-gray;
 				}
 			}
 		}
 	}
+	@include respond-to (only-device){
+		text-align: center;
+		padding-left: 20px;
+		> li {
+			width: 30%;
+			@include inline-block;
+			> a {
+				padding: 12px;
+				color: $gray;
+				display: block;
+				@include border-radius(8px 8px 0 0);
+				text-decoration: none;
+				&:hover, &:focus {
+					color: $red;
+					@include transparent($lighter-gray,.6);
+				}
+			}
+			&.active {
+				border: 0;
+				> a {
+					color: $red;
+					@include transparent($lighter-gray,.6);
+					@include border-radius(8px 8px 0 0);
+					&:hover, &:focus {
+						color: $red;
+						@include transparent($lighter-gray,.6);
+						@include border-radius(8px 8px 0 0);
+					}
+				}
+			}
+		}
+	}
+	@include respond-to (normal-mobile){
+		> li {
+			> a {
+				height: 68px;
+			}
+			i {
+				display: none;
+			}
+			span {
+				display: block;
+			}
+		}
+	}
 }
-
+.tab-content, .tab-pane {
+	@include clearfix;
+}
+.profile-sider {
+//	border-right: 1px solid $light-gray;
+	img {
+		width: 50px;
+		height: 50px;
+		overflow: hidden;
+		margin: 10px auto;
+		@include border-radius(50px);
+	}
+}
+.profile {
+	.member-block {
+		min-height: 500px;
+		border-left: 1px solid $light-gray;
+		section {
+			width: 100%;
+			.form-group {
+				input[type="text"], input[type="tel"], input[type="email"], input[type="password"], select {
+					@include inline-block;
+				}
+			}
+		}
+		.profile-photo {
+			width: 180px;
+			height: 180px;
+			margin: 10px 0 40px;
+			position: relative;
+			span {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				@include transparent ($white,.6);
+				text-align: center;
+				font-size: $s-font;
+				a {
+					color: $white;
+				}
+			}
+		}
+		.form-group {
+			text-align: left;
+			margin-bottom: 0;
+			span, div {
+				@include inline-block;
+				width: 70px;
+			}
+		}
+		.col-sm-12 {
+			.checkbox {
+				@include transparent ($light-gray,.3);
+				text-align: center;
+				padding: 20px 0;
+				margin-bottom: 20px;
+			}
+			
+		}
+	}
+	@include respond-to (only-device){
+		.member-block {
+			border-left: 0;
+			.profile-photo {
+				margin: 10px auto 40px;
+			}
+		}
+	}
+	.qrcode {
+		width: 200px;
+		margin: 10px auto;
+	}
+}
