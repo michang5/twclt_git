@@ -32,10 +32,13 @@ $(function(){
 	$('.dropdown-menu input, .dropdown-menu label').click(function(e) {
         e.stopPropagation();
     });
-	
+	$('.carousel').carousel({
+		pause: true,
+		interval: false
+	});
 	//jQuery for page scrolling feature - requires jQuery Easing plugin
 	$(function() {
-		$('.train-menu a, .fix-icon a').bind('click', function(event) {
+		$('.fix-icon a').bind('click', function(event) {
 			var $anchor = $(this);
 			var nav = $($anchor.attr('href'));
 			if (nav.length) {
@@ -121,3 +124,4 @@ $( document ).ready( function() {
     });
   });
 });
+

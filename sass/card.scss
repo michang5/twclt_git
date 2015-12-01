@@ -1,0 +1,114 @@
+@import 'compass';
+@import 'base/fonts';
+@import 'base/style';
+@import 'base/media';
+
+.card, .card-content {
+	span {
+		z-index: 9;
+		text-align: center;
+		&.cate-tab {
+			position: absolute;
+			width: 60px;
+			height: 60px;
+			padding: 10px;
+			line-height: $xl-font;
+			background: $purple;
+			@include border-radius(0 0 6px 6px);
+			color: $white;
+		}
+	}
+	.content {
+		padding: 20px;
+		@include clearfix;
+	}
+	h3 {
+		color: $red;
+		line-height: $xl-font;
+	}
+	h4 {
+		font-weight: normal;
+		span {
+			padding-right: 4px;
+			font-size: $s-font;
+			color: $medium-gray;
+		}
+	}
+}
+.card {
+	position: relative;
+	width: 300px;
+	height: 500px;
+	background: $white;
+	text-align: left;
+	margin: 10px;
+	float: left;
+	@include inline-block;
+	@include box-shadow ($gray 0 0 10px);
+	span {
+		&.cate-tab {
+			left: 0;
+		}
+		&.collect {
+			position: absolute;
+			right: 4px;
+			top: 4px;
+		}
+	}
+	.pic {
+		width: 300px;
+		height: 240px;
+		position: relative;
+		img {
+			height: 240px;
+			left: -70px;
+			position: absolute;
+			clip: rect(0px,370px,240px,70px);
+		}
+	}
+	.content {
+		max-height: 210px;
+		overflow: hidden;
+		p {
+			line-height: $xxl-font;
+		}
+	}
+}
+.card-content {
+	width: 100%;
+	padding: 10px;
+	.content {
+		p {
+			line-height: $xxxl-font;
+		}
+	}
+	.title-group {
+		margin-left: 68px;
+		margin-bottom: 12px;
+		h3 {
+			font-size: $xxxl-font;
+			line-height: $m-font;
+		}
+		h4 {
+			line-height: $xxxxl-font + $s-font;
+		}
+	}
+	img {
+		margin: 0 auto;
+	}
+}
+.isotope {
+	width: 800px;
+	@include respond-to (md-screen){
+		width: 600px;
+	}
+	@include respond-to (only-device){
+		width: 320px;
+		margin: 0 auto;
+	}
+}
+.isotope:after {
+  content: '';
+  display: block;
+  clear: both;
+}

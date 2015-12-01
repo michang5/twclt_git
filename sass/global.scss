@@ -65,13 +65,11 @@ i.fa-line {
 }
 i.fa-yahoo-custom {
 	background: image-url('icon_yahoo.png') bottom no-repeat;
+	@include background-size(contain);
 	width: 30px;
 	height: 19px;
 	margin-top: 2px;
 	@include inline-block;
-}
-i.fa-line, i.fa-yahoo-custom {
-//	@include background-size(contain);
 }
 //form-control
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="tel"], button.btn {
@@ -177,109 +175,6 @@ button.btn-normal {
 		color: $white;
 	}
 }
-.card {
-	width: 300px;
-	height: 500px;
-	background: $white;
-	text-align: left;
-	margin: 10px;
-	position: relative;
-	float: left;
-	@include inline-block;
-	@include box-shadow ($gray 0 0 10px);
-	span {
-		z-index: 9;
-		text-align: center;
-		&.cate-tab {
-			position: absolute;
-			left: 0;
-			width: 60px;
-			height: 60px;
-			padding: 10px;
-			line-height: $xl-font;
-			background: $purple;
-			@include border-radius(0 0 6px 6px);
-			color: $white;
-		}
-		&.collect {
-			position: absolute;
-			right: 4px;
-			top: 4px;
-			width: 40px;
-			height: 40px;
-			line-height: 40px;
-			display: block;
-			@include border-radius(20px);
-			overflow: hidden;
-			a {
-				color: $white;
-				display: block;
-				@include text-shadow(0 0 2px $dark-red);
-				@include transparent($red,.4);
-				&:hover {
-					@include transparent($red,.9);
-				}
-				&.collected {
-					@include transparent($red,1);
-					text-shadow: none;
-				}
-			}
-		}
-	}
-	
-		
-	
-	.pic {
-		width: 300px;
-		height: 220px;
-		position: relative;
-		img {
-			width: 300px;
-			left: 0;
-			position: absolute;
-			clip: rect(0px,300px,220px,0px);
-		}
-	}
-	.content {
-		padding: 20px;
-		max-height: 210px;
-		overflow: hidden;
-		@include clearfix;
-		h3 {
-			color: $red;
-			line-height: $xl-font;
-		}
-		h4 {
-			font-weight: normal;
-			span {
-				padding-right: 4px;
-				font-size: $s-font;
-				color: $medium-gray;
-			}
-		}
-		p {
-			line-height: $xxxl-font;
-		}
-	}
-}
-.isotope {
-	width: 800px;
-	@include respond-to (md-screen){
-		width: 600px;
-	}
-	@include respond-to (only-device){
-		width: 320px;
-		margin: 0 auto;
-	}
-}
-
-
-/* clear fix */
-.isotope:after {
-  content: '';
-  display: block;
-  clear: both;
-}
 
 /* ------------ elements ------------ */
 //modal
@@ -287,10 +182,6 @@ a[data-toggle=modal] {
 	cursor: pointer;
 }
 .modal-backdrop {
-//	background: $white;
-//	.crazyad & {
-//		background: $black;
-//	}
 	&.in {
 		opacity: 1;
 	}
@@ -306,7 +197,7 @@ a[data-toggle=modal] {
 		width: 100%;
 		height: 100%;
 		margin: 0 auto;
-		padding: 5%;
+		padding: 5% 0;
 		box-shadow: none;
 		border: 0;
 		@include border-radius(0);
@@ -319,7 +210,7 @@ a[data-toggle=modal] {
 		}
 	}
 	.modal-body {
-		padding: 8px;
+		padding: 0;
 		height: 100%;
 		@include clearfix;
 	}
@@ -420,6 +311,9 @@ a[data-toggle=modal] {
 					color: $white;
 					line-height: $xxxxl-font;
 					height: auto;
+					&:hover {
+						@include transparent($black,.3);
+					}
 				}
 			}
 		}
@@ -482,89 +376,69 @@ a[data-toggle=modal] {
 }
 .arrow {
 	display: block;
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 100px;
 	cursor: pointer;
 	position: absolute;
 	top: 37.5%;
-	@include transparent ($red,.9);
-	@include border-radius (100%);
+	@include transparent ($red,.7);
 	&:hover,&:focus {
-		background: rgba($dark-red,.7);
+		background: $red;
 	}
 	&::before {
 		@include transform(rotate(45deg));
 		position: relative;
 		width: 20px;
 		height: 20px;
-		top: 15px;
+		top: 38px;
+		
 		content: "";
 		display: inline-block;
 		margin-right: 0.5em;
 	}
-	&.ar-right {
-		right: -100px;
+	&.arrow-right {
+		right: 0;
 		&::before {
 			border-right: 2px solid $white;
 			border-top: 2px solid $white;
-			left: 10px;
+			left: 6px;
 		}
 	}
-	&.ar-left {
-		left: -100px;
+	&.arrow-left {
+		left: 0;
 		&::before {
 			border-left: 2px solid $white;
 			border-bottom: 2px solid $white;
-			left: 20px;
-		}
-	}
-	@include respond-to (only-device){
-		top: 50%;
-		&.ar-right {
-			right: -70px;
-		}
-		&.ar-left {
-			left: -70px;
-		}
-	}
-	@include respond-to (only-mobile){
-		width: 40px;
-		height: 40px;
-		background: rgba($red,.5);
-		top: 32.5%;
-		&::before {
-			width: 16px;
-			height: 16px;
-			top: 8px;
-		}
-		&.ar-right {
-			right: -50px;
-			&::before {
-				left: 8px;
-			}
-		}
-		&.ar-left {
-			left: -50px;
-			&::before {
-				left: 15px;
-			}
-		}
-	}
-	@include respond-to (xxs-mobile){
-		&.ar-right {
-			right: -40px;
-		}
-		&.ar-left {
-			left: -40px;
+			left: 17px;
 		}
 	}
 }
 .btn-search {
-    padding: 3px;
+	padding: 3px;
 	background: $white;
 	padding: 7px 8px 8px;
 }
-
+.collect {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	display: block;
+	@include border-radius(20px);
+	overflow: hidden;
+	a {
+		color: $white;
+		display: block;
+		@include text-shadow(0 0 2px $dark-red);
+		@include transparent($red,.4);
+		&:hover {
+			@include transparent($red,.9);
+		}
+		&.collected {
+			@include transparent($red,1);
+			text-shadow: none;
+		}
+	}
+}
 //video
 .video {
 	position: relative;
@@ -610,7 +484,7 @@ a[data-toggle=modal] {
 			position: absolute;
 			right: 10%;
 			top: 10px;
-			ul > li {
+			> ul > li {
 				@include inline-block;
 				width: 32px;
 				height: 32px;
@@ -623,34 +497,10 @@ a[data-toggle=modal] {
 				.dropdown-menu {
 					padding: 6px;
 					&.social-media {
-						padding: 12px 10px 6px;
-						width: 260px;
-						left: -68px;
 						li {
-							@include inline-block;
-							width: 110px;
-							margin: 2px;
-							text-align: left;
 							a {
-								@include inline-block;
-								padding: 2px;
-								width: 100px;
 								color: $black;
-								i {
-									@include border-radius(16px);
-									color: $white;
-									width: 26px;
-									height: 26px;
-									line-height: 26px;
-									padding: 0;
-									font-size: $l-font;
-//									display: block;
-									text-align: center;
-								}
 							}
-						}
-						&::before {
-							left: 80px;
 						}
 					}
 					&.search {
@@ -665,12 +515,10 @@ a[data-toggle=modal] {
 					&.language {
 						padding: 5px 0;
 						width: 60px;
-						left: -13px;
+						left: -11px;
 						min-width: auto;
 						li {
 							display: block;
-							width: auto;
-							height: auto;
 							margin: 0;
 							a {
 								font-size: $s-font;
@@ -815,63 +663,6 @@ a[data-toggle=modal] {
 	#search-xs {
 		padding: 10px 20px;
 	}
-	.dropdown-menu.social-media, .visible-xs-block .social-media {
-		li {
-			@include box-shadow(0 0 3px $white);
-			&.copy-link {
-				display: block;
-			}
-			&:nth-of-type(1) i {
-				background: $facebook;
-			}
-			&:nth-of-type(2) i {
-				background: #55acee;
-			}
-			&:nth-of-type(4) i {
-				background: #7bb32e;
-			}
-			&:nth-of-type(5) i {
-				background: #dc4e41;
-			}
-			&:nth-of-type(6) i {
-				background: #bd081c;
-			}
-			&:nth-of-type(7) i {
-				background: #d52b2b;
-			}
-			&:nth-of-type(8) i {
-				background: #0077b5;
-			}
-			&.copy-link {
-				width: auto!important;
-				height: 50px;
-				.btn, input {
-					@include inline-block;
-					vertical-align: middle;
-				}
-				input {
-					width: 190px;
-				}
-				.btn {
-					padding: 0;
-					color: $black;
-					height: 32px;
-					line-height: 30px;
-					text-align: center;
-					background: $lighter-gray;
-					a {
-						padding: 2px;
-						width: 32px;
-						height: 32px;
-						i {
-							width: auto;
-							color: $gray;
-						}
-					}
-				}
-			}
-		}
-	}
 	.visible-xs-block .social-media {
 		li {
 			@include box-shadow(0 0 3px $white);
@@ -900,22 +691,6 @@ a[data-toggle=modal] {
 				}
 			}
 		}				
-	}
-	@include respond-to (only-desktop){
-		.dropdown {
-			ul.dropdown-menu {
-				&::before {
-					content: "";
-					border-bottom: 6px solid #fff;
-					border-right: 6px solid transparent;
-					border-left: 6px solid transparent;
-					position: absolute;
-					top: -6px;
-					left: 45%;
-					z-index: 10;
-				}
-			}
-		}
 	}
 	@include respond-to (md-screen){
 		nav {
@@ -1024,6 +799,125 @@ a[data-toggle=modal] {
 		}
 	}
 }
+
+.dropdown-menu {
+	@include respond-to (only-desktop){
+		#navigation & , &.social-media {
+			&::after {
+				content: "";
+				position: absolute;
+				width: 0;
+				height: 0;
+				margin-left: -0.5em;
+				top: 0;
+				left: 49.8%;
+				box-sizing: border-box;
+				border: 3px solid $white;
+				border-color: $white $white transparent transparent ;
+				transform-origin: 0 0;
+				transform: rotate(-45deg);
+				box-shadow: 1px -1px 1px 0 rgba($black, 0.4);
+ 			}
+		}
+	}
+	&.social-media {
+		padding: 12px 10px 6px;
+		width: 260px;
+		left: -108px;
+		li {
+			@include inline-block;
+			width: 110px;
+			margin: 2px;
+			text-align: left;
+			a {
+				@include inline-block;
+				padding: 2px;
+				width: 100px;
+				color: $black;
+				i {
+					@include border-radius(16px);
+					color: $white;
+					width: 26px;
+					height: 26px;
+					line-height: 26px;
+					padding: 0;
+					font-size: $l-font;
+					text-align: center;
+				}
+			}
+		}
+		&::before {
+			left: 80px;
+		}
+		.content & {
+			left: -168px;
+			&::after {
+				left: 188px;
+ 			}
+		}
+	}
+}
+.dropdown-menu.social-media,
+.visible-xs-block .social-media {
+	li {
+		@include box-shadow(0 0 3px $white);
+		&.copy-link {
+			display: block;
+		}
+		&:nth-of-type(1) i {
+			background: $facebook;
+		}
+		&:nth-of-type(2) i {
+			background: #55acee;
+		}
+		&:nth-of-type(4) i {
+			background: #7bb32e;
+		}
+		&:nth-of-type(5) i {
+			background: #dc4e41;
+		}
+		&:nth-of-type(6) i {
+			background: #bd081c;
+		}
+		&:nth-of-type(7) i {
+			background: #d52b2b;
+		}
+		&:nth-of-type(8) i {
+			background: #0077b5;
+		}
+		&.copy-link {
+			width: auto!important;
+			height: 50px;
+			.btn,
+			input {
+				@include inline-block;
+				vertical-align: middle;
+			}
+			input {
+				width: 190px;
+			}
+			.btn {
+				padding: 0;
+				color: $black;
+				height: 32px;
+				line-height: 30px;
+				text-align: center;
+				background: $lighter-gray;
+				a {
+					padding: 2px;
+					width: 32px;
+					height: 32px;
+					i {
+						width: auto;
+						color: $gray;
+					}
+				}
+			}
+		}
+	}
+}
+
+
 //footer
 footer {
 	background: $red;

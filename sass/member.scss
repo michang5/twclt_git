@@ -3,15 +3,6 @@
 @import 'base/style';
 @import 'base/media';
 
-body {
-	background: $white;
-}
-.col-sm-3, .col-sm-9, .container {
-	@include respond-to (only-mobile){
-		padding-left: 6px;
-		padding-right: 6px;
-	}
-}
 //login + reset pwd
 .member {
 	h2 {

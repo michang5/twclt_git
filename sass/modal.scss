@@ -1,0 +1,49 @@
+@import 'compass';
+@import 'base/fonts';
+@import 'base/style';
+@import 'base/media';
+
+body {
+	background: $white;
+}
+.col-sm-3, .col-sm-9, .container {
+	@include respond-to (only-mobile){
+		padding-left: 6px;
+		padding-right: 6px;
+	}
+}
+.content {
+	position: relative;
+	.collect, .social-share {
+		position: absolute;
+		top: 12px;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		display: block;
+		text-align: center;
+		> a {
+			color: $white;
+			display: block;
+			color: $red;
+			@include border-radius(20px);
+			@include transparent($light-gray,.3);
+			&:hover {
+				color: $white;
+				@include transparent($red,.9);
+				@include border-radius(20px);
+			}
+			&.collected {
+				color: $white;
+				@include transparent($red,1);
+				text-shadow: none;
+			}
+		}
+	}
+	.social-share {
+		right: 58px;
+	}
+	.collect {
+		right: 10px;
+	}
+}

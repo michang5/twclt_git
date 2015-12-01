@@ -1,0 +1,125 @@
+.card span, .card-content span {
+  z-index: 9;
+  text-align: center;
+}
+.card span.cate-tab, .card-content span.cate-tab {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  line-height: 1.25em;
+  background: #6d3c78;
+  -moz-border-radius: 0 0 6px 6px;
+  -webkit-border-radius: 0;
+  border-radius: 0 0 6px 6px;
+  color: #fff;
+}
+.card .content, .card-content .content {
+  padding: 20px;
+  *zoom: 1;
+}
+.card .content:after, .card .content:before, .card-content .content:after, .card-content .content:before {
+  content: "";
+  display: table;
+}
+.card .content:after, .card-content .content:after {
+  clear: both;
+}
+.card h3, .card-content h3 {
+  color: #b90f00;
+  line-height: 1.25em;
+}
+.card h4, .card-content h4 {
+  font-weight: normal;
+}
+.card h4 span, .card-content h4 span {
+  padding-right: 4px;
+  font-size: 0.9em;
+  color: #7a7a7a;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  background: #fff;
+  text-align: left;
+  margin: 10px;
+  float: left;
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  -moz-box-shadow: #545454 0 0 10px;
+  -webkit-box-shadow: #545454 0 0 10px;
+  box-shadow: #545454 0 0 10px;
+}
+.card span.cate-tab {
+  left: 0;
+}
+.card span.collect {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+.card .pic {
+  width: 300px;
+  height: 240px;
+  position: relative;
+}
+.card .pic img {
+  height: 240px;
+  left: -70px;
+  position: absolute;
+  clip: rect(0px, 370px, 240px, 70px);
+}
+.card .content {
+  max-height: 210px;
+  overflow: hidden;
+}
+.card .content p {
+  line-height: 1.5em;
+}
+
+.card-content {
+  width: 100%;
+  padding: 10px;
+}
+.card-content .content p {
+  line-height: 1.75em;
+}
+.card-content .title-group {
+  margin-left: 68px;
+  margin-bottom: 12px;
+}
+.card-content .title-group h3 {
+  font-size: 1.75em;
+  line-height: 1em;
+}
+.card-content .title-group h4 {
+  line-height: 2.9em;
+}
+.card-content img {
+  margin: 0 auto;
+}
+
+.isotope {
+  width: 800px;
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .isotope {
+    width: 600px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .isotope {
+    width: 320px;
+    margin: 0 auto;
+  }
+}
+
+.isotope:after {
+  content: '';
+  display: block;
+  clear: both;
+}

@@ -1,5 +1,5 @@
 .key-visual {
-  margin-top: 114px;
+  padding-top: 114px;
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
@@ -35,7 +35,7 @@
 }
 @media only screen and (min-width: 769px) and (max-width: 991px) {
   .key-visual {
-    margin-top: 50px;
+    padding-top: 50px;
     padding-bottom: 20px;
   }
   .key-visual .content {
@@ -46,7 +46,7 @@
 }
 @media only screen and (max-width: 768px) {
   .key-visual {
-    margin-top: 50px;
+    padding-top: 50px;
     padding-bottom: 20px;
   }
   .key-visual .content {

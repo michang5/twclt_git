@@ -1,0 +1,59 @@
+body {
+  background: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  .col-sm-3, .col-sm-9, .container {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
+.content {
+  position: relative;
+}
+.content .collect, .content .social-share {
+  position: absolute;
+  top: 12px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  text-align: center;
+}
+.content .collect > a, .content .social-share > a {
+  color: #fff;
+  display: block;
+  color: #b90f00;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  background-color: transparent;
+  background-color: rgba(210, 210, 210, 0.3);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4DD2D2D2,endColorstr=#4DD2D2D2);
+  zoom: 1;
+}
+.content .collect > a:hover, .content .social-share > a:hover {
+  color: #fff;
+  background-color: transparent;
+  background-color: rgba(185, 15, 0, 0.9);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6B90F00,endColorstr=#E6B90F00);
+  zoom: 1;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+.content .collect > a.collected, .content .social-share > a.collected {
+  color: #fff;
+  background-color: transparent;
+  background-color: #b90f00;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFB90F00,endColorstr=#FFB90F00);
+  zoom: 1;
+  text-shadow: none;
+}
+.content .social-share {
+  right: 58px;
+}
+.content .collect {
+  right: 10px;
+}
