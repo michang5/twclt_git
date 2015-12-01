@@ -102,24 +102,3 @@
 .card-content img {
   margin: 0 auto;
 }
-
-.isotope {
-  width: 800px;
-}
-@media only screen and (min-width: 769px) and (max-width: 991px) {
-  .isotope {
-    width: 600px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .isotope {
-    width: 320px;
-    margin: 0 auto;
-  }
-}
-
-.isotope:after {
-  content: '';
-  display: block;
-  clear: both;
-}

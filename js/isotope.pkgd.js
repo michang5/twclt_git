@@ -4254,4 +4254,3 @@ var getText = docElem.textContent ?
   return Isotope;
 
 }));
-

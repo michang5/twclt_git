@@ -1,0 +1,76 @@
+@import 'compass';
+@import 'base/fonts';
+@import 'base/style';
+@import 'base/media';
+
+.top-banner {
+	padding-top: 172px;
+	max-width: 1280px;
+	margin: 0 auto;
+	img {
+		margin: 0 auto;
+	}
+	@include respond-to (md-screen){
+		padding-top: 50px;
+	}
+	@include respond-to (only-device){
+		padding-top: 70px;
+		.content {
+			width: 90%;
+			position: static;
+			margin: 0 auto;
+		}
+	}
+}
+.breadcrumbs {
+	height: $xxxxl-font+$l-font;
+	border-bottom: 1px solid $red;
+	border-top: 1px solid $red;
+	li {
+		@include inline-block;
+		padding: 0 4px;
+		color: $white;
+		a {
+			color: $white;
+			@include inline-block;
+			line-height: $xxxxl-font + $l-font;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		&:after {
+			content: ('\003E');
+			padding: 0 4px 0 7px;
+		}
+		&:nth-last-of-type(1) {
+			&:after {
+				content: ('');
+			}
+		}
+	}
+}
+.main-content {
+	color: $white;
+	margin-bottom: 150px;
+	padding-top: 30px;
+	@include clearfix;
+	h1 {
+		font-size: $xxxxxl-font;
+	}
+	h2 {
+		font-size: $xxl-font;
+	}
+	p {
+		padding-bottom: 30px;
+		font-size: $m-font;
+	}
+	img {
+		padding: 16px;
+	}
+	@include respond-to (only-device){
+		.pull-right {
+			float: none!important;
+			margin: 0 auto;
+		}
+	}
+}
