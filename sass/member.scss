@@ -8,8 +8,8 @@ body {
 }
 .col-sm-3, .col-sm-9, .container {
 	@include respond-to (only-mobile){
-		padding-left: 2px;
-		padding-right: 2px;
+		padding-left: 6px;
+		padding-right: 6px;
 	}
 }
 //login + reset pwd
@@ -156,6 +156,7 @@ body {
 		> li {
 			> a {
 				height: 68px;
+				font-size: $s-font;
 			}
 			i {
 				display: none;
@@ -223,7 +224,7 @@ body {
 			.checkbox {
 				@include transparent ($light-gray,.3);
 				text-align: center;
-				padding: 20px 0;
+				padding: 20px;
 				margin-bottom: 20px;
 			}
 			

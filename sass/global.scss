@@ -55,11 +55,13 @@ i.fa {
 	margin: 0 5px;
 }
 i.fa-line {
-	background: image-url('icon_line.png') bottom no-repeat;
-	width: 20px;
-	height: 31px;
-	display: block;
-	margin: 0 auto;
+	background: #00c300 image-url('icon_line.png') center center no-repeat;
+	@include background-size(60%);
+	width: 26px;
+	height: 26px;
+	@include inline-block;
+	vertical-align: middle;
+	margin: 0 5px;
 }
 i.fa-yahoo-custom {
 	background: image-url('icon_yahoo.png') bottom no-repeat;
@@ -69,10 +71,10 @@ i.fa-yahoo-custom {
 	@include inline-block;
 }
 i.fa-line, i.fa-yahoo-custom {
-	@include background-size(contain);
+//	@include background-size(contain);
 }
 //form-control
-input[type="text"], input[type="email"], input[type="password"], input[type="tel"], button.btn, select.form-control {
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="tel"], button.btn {
 	@include border-radius(40px);
 	box-shadow: none;
 }
@@ -148,6 +150,9 @@ button.btn-normal {
 	padding: 10px 0;
 	border-bottom: 1px solid $light-gray;
 	text-align: left;
+	@include respond-to (only-mobile){
+		text-align: center;
+	}
 }
 .tab {
 	@include border-radius(6px);
@@ -156,7 +161,7 @@ button.btn-normal {
 	background: $lighter-gray;
 	border: 1px solid $lighter-gray;
 	overflow: hidden;
-	margin: 0 3px;
+	margin: 3px;
 	color: $black;
 	padding: 4px 10px;
 	width: 90px;
@@ -182,18 +187,48 @@ button.btn-normal {
 	float: left;
 	@include inline-block;
 	@include box-shadow ($gray 0 0 10px);
-	span.cate-tab {
-		position: absolute;
-		left: 0;
+	span {
 		z-index: 9;
-		width: 60px;
-		height: 60px;
-		padding: 10px;
-		line-height: $xl-font;
-		background: $purple;
-		color: $white;
-		@include border-radius(0 0 6px 6px);
+		text-align: center;
+		&.cate-tab {
+			position: absolute;
+			left: 0;
+			width: 60px;
+			height: 60px;
+			padding: 10px;
+			line-height: $xl-font;
+			background: $purple;
+			@include border-radius(0 0 6px 6px);
+			color: $white;
+		}
+		&.collect {
+			position: absolute;
+			right: 4px;
+			top: 4px;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			display: block;
+			@include border-radius(20px);
+			overflow: hidden;
+			a {
+				color: $white;
+				display: block;
+				@include text-shadow(0 0 2px $dark-red);
+				@include transparent($red,.4);
+				&:hover {
+					@include transparent($red,.9);
+				}
+				&.collected {
+					@include transparent($red,1);
+					text-shadow: none;
+				}
+			}
+		}
 	}
+	
+		
+	
 	.pic {
 		width: 300px;
 		height: 220px;
@@ -233,7 +268,7 @@ button.btn-normal {
 		width: 600px;
 	}
 	@include respond-to (only-device){
-		width: 360px;
+		width: 320px;
 		margin: 0 auto;
 	}
 }
@@ -247,15 +282,18 @@ button.btn-normal {
 }
 
 /* ------------ elements ------------ */
-modal
+//modal
 a[data-toggle=modal] {
 	cursor: pointer;
 }
 .modal-backdrop {
-	background: $white;
-		&.in {
-			opacity: 1;
-		}
+//	background: $white;
+//	.crazyad & {
+//		background: $black;
+//	}
+	&.in {
+		opacity: 1;
+	}
 }
 .modal-dialog {
 	width: 100%!important;
@@ -271,6 +309,11 @@ a[data-toggle=modal] {
 		padding: 5%;
 		box-shadow: none;
 		border: 0;
+		@include border-radius(0);
+		.crazyad & {
+			background: $black;
+			padding: 0;
+		}
 		@include respond-to (only-device){
 			padding: 50px 0 10px;
 		}
@@ -355,13 +398,13 @@ a[data-toggle=modal] {
 		font-size: $l-font;
 	}
 	&.top {
-		bottom: 200px;
+		bottom: 20px;
 		i {
 			font-size: $xxl-font;
 		}
 	}
 	&.series-icon {
-		bottom: 260px;
+		bottom: 80px;
 		img {
 			margin: 11px 4px;
 		}
@@ -413,6 +456,17 @@ a[data-toggle=modal] {
 		left: 0;
 		margin-top: -1px;
 		background: $black;
+	}
+	.crazyad & {
+		top: 0;
+		right: 0;
+		width: 22px;
+		height: 22px;
+		background: $red;
+		&::before,
+		&::after {
+			background: $white;
+		}
 	}
 	&::before {
 		@include transform(rotate(45deg));
@@ -569,33 +623,34 @@ a[data-toggle=modal] {
 				.dropdown-menu {
 					padding: 6px;
 					&.social-media {
-						padding: 12px 12px 6px;
-						width: 170px;
+						padding: 12px 10px 6px;
+						width: 260px;
 						left: -68px;
-						text-align: center;
 						li {
-							vertical-align: top;
-							overflow: hidden;
 							@include inline-block;
-							@include border-radius(16px);
-							margin-bottom: 6px;
+							width: 110px;
+							margin: 2px;
+							text-align: left;
 							a {
-								background: $red;
-								color: $white;
-								width: 32px;
-								height: 32px;
-								line-height: 32px;
-								padding: 0;
-								font-size: $l-font;
-								display: block;
-								text-align: center;
+								@include inline-block;
+								padding: 2px;
+								width: 100px;
+								color: $black;
+								i {
+									@include border-radius(16px);
+									color: $white;
+									width: 26px;
+									height: 26px;
+									line-height: 26px;
+									padding: 0;
+									font-size: $l-font;
+//									display: block;
+									text-align: center;
+								}
 							}
 						}
 						&::before {
 							left: 80px;
-						}
-						i.fa-line {
-							height: 26px;
 						}
 					}
 					&.search {
@@ -633,7 +688,6 @@ a[data-toggle=modal] {
 							left: 21px;
 						}
 					}
-					
 				}
 			}
 		}
@@ -685,7 +739,7 @@ a[data-toggle=modal] {
 					&.drop-about {
 						width: 166px;
 					}
-					&.drop-theater {
+					&.drop-products {
 						width: 134px;
 					}
 					li {
@@ -698,7 +752,7 @@ a[data-toggle=modal] {
 						padding: 15px 30px;
 						&:hover, &:focus, &.active {
 							color: $black;
-							background: $light-gray;
+							background: $lighter-gray;
 						}
 					}
 				}
@@ -728,32 +782,28 @@ a[data-toggle=modal] {
 			@include inline-block;
 			@include border-radius(21px);
 			margin: 0 4px 10px;
-			a {
+			> a {
 				color: $white;
 				width: 42px;
 				height: 42px;
-				line-height: 42px;
 				padding: 0;
 				font-size: $l-font;
 				display: block;
 				text-align: center;
-				@include transparent($black,.7);
-				&:hover, &:focus, &:active {
-					background: $yellow;
-				}
-			}
-			&.line {
-				a {
-				}
 			}
 		}
 		&.language {
 			li a {
 				font-size: $s-font;
+				line-height: 42px;
+				@include transparent($black,.7);
+				&:hover, &:focus, &:active {
+					background: $yellow;
+				}
 			}
 		}
 		&.social-media {
-			border-top: 1px solid $medium-red;
+			border-top: 1px solid $dark-red;
 			margin-top: 5px;
 			padding-top: 20px;
 		}
@@ -764,6 +814,92 @@ a[data-toggle=modal] {
 	}
 	#search-xs {
 		padding: 10px 20px;
+	}
+	.dropdown-menu.social-media, .visible-xs-block .social-media {
+		li {
+			@include box-shadow(0 0 3px $white);
+			&.copy-link {
+				display: block;
+			}
+			&:nth-of-type(1) i {
+				background: $facebook;
+			}
+			&:nth-of-type(2) i {
+				background: #55acee;
+			}
+			&:nth-of-type(4) i {
+				background: #7bb32e;
+			}
+			&:nth-of-type(5) i {
+				background: #dc4e41;
+			}
+			&:nth-of-type(6) i {
+				background: #bd081c;
+			}
+			&:nth-of-type(7) i {
+				background: #d52b2b;
+			}
+			&:nth-of-type(8) i {
+				background: #0077b5;
+			}
+			&.copy-link {
+				width: auto!important;
+				height: 50px;
+				.btn, input {
+					@include inline-block;
+					vertical-align: middle;
+				}
+				input {
+					width: 190px;
+				}
+				.btn {
+					padding: 0;
+					color: $black;
+					height: 32px;
+					line-height: 30px;
+					text-align: center;
+					background: $lighter-gray;
+					a {
+						padding: 2px;
+						width: 32px;
+						height: 32px;
+						i {
+							width: auto;
+							color: $gray;
+						}
+					}
+				}
+			}
+		}
+	}
+	.visible-xs-block .social-media {
+		li {
+			@include box-shadow(0 0 3px $white);
+			i {
+				width: 42px;
+				height: 42px;
+				display: block;
+				margin: 0;
+				line-height: 42px;
+			}
+			&.copy-link {
+				display: block;
+				@include box-shadow(none);
+				.btn {
+					width: 32px;
+					background: $black;
+					a {
+						padding: 0;
+						i {
+							margin: 0 5px;
+							height: 32px;
+							line-height: 32px;
+							color: $white;
+						}
+					}
+				}
+			}
+		}				
 	}
 	@include respond-to (only-desktop){
 		.dropdown {
@@ -895,6 +1031,13 @@ footer {
 	#index & {
 		margin-top: 2px;
 	}
+	a {
+		color: $white;
+		&:hover {
+			color: $white;
+			text-decoration: none;
+		}
+	}
 	.container {
 		display:table;
 		.row {
@@ -1011,5 +1154,3 @@ footer {
 		
 	}
 }
-
-

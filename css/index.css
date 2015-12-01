@@ -10,6 +10,8 @@
 .key-visual .content {
   position: absolute;
   width: 440px;
+  max-height: 440px;
+  overflow: hidden;
   right: 5%;
   top: 50%;
   *zoom: 1;
@@ -27,6 +29,9 @@
 }
 .key-visual .content p {
   color: #fff;
+}
+.key-visual .content button {
+  margin-top: 10px;
 }
 @media only screen and (min-width: 769px) and (max-width: 991px) {
   .key-visual {
@@ -73,7 +78,6 @@
   position: absolute;
   text-align: center;
   padding: 4px 0;
-  min-height: 110px;
   width: 100%;
   color: #fff;
   text-shadow: 0 0 5px #000;
@@ -103,5 +107,39 @@
   .series .content h4 {
     font-size: 1em;
     line-height: 1.5em;
+  }
+}
+
+#crazyad-img .modal-body {
+  display: table;
+  width: 100%;
+}
+#crazyad-img .ad-content {
+  display: table-cell;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+}
+#crazyad-img .ad-content .content {
+  position: absolute;
+  width: 80%;
+  top: 65%;
+  left: 10%;
+  padding: 20px;
+  color: #fff;
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+  zoom: 1;
+}
+#crazyad-img img {
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  #crazyad-img .ad-content .content {
+    position: static;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
   }
 }

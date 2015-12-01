@@ -14,6 +14,8 @@
 	.content {
 		position: absolute;
 		width: 440px;
+		max-height: 440px;
+		overflow: hidden;
 		right: 5%;
 		top: 50%;
 		@include clearfix;
@@ -23,6 +25,9 @@
 		}
 		p {
 			color: $white;
+		}
+		button {
+			margin-top: 10px;
 		}
 	}
 	@include respond-to (md-screen){
@@ -59,7 +64,6 @@
 		position: absolute;
 		text-align: center;
 		padding: 4px 0;
-		min-height: 110px;
 		width: 100%;
 		color: $white;
 		text-shadow: 0 0 5px $black;
@@ -83,6 +87,42 @@
 			h4 {
 				font-size: $m-font;
 				line-height: $xxl-font;
+			}
+		}
+	}
+}
+#crazyad-img {
+	.modal-body {
+		display: table;
+		width: 100%;
+	}
+	.ad-content {
+		display: table-cell;
+		position: relative;
+		vertical-align: middle;
+		width: 100%;
+		.content {
+			
+			position: absolute;
+			width: 80%;
+			top: 65%;
+			left: 10%;
+			padding: 20px;
+			color: $white;
+			@include transparent ($black,.6)
+				
+		}
+	}
+	img {
+		width: 100%;
+	}
+	@include respond-to (only-device){
+		.ad-content {
+			.content {
+				position: static;
+				width: 90%;
+				margin: 0 auto;
+				padding: 20px;
 			}
 		}
 	}

@@ -4,8 +4,8 @@ body {
 
 @media only screen and (max-width: 767px) {
   .col-sm-3, .col-sm-9, .container {
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
   }
 }
 
@@ -173,6 +173,7 @@ body {
 @media only screen and (max-width: 480px) {
   .nav-tabs > li > a {
     height: 68px;
+    font-size: 0.9em;
   }
   .nav-tabs > li i {
     display: none;
@@ -256,7 +257,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4DD2D2D2,endColorstr=#4DD2D2D2);
   zoom: 1;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px;
   margin-bottom: 20px;
 }
 @media only screen and (max-width: 768px) {
