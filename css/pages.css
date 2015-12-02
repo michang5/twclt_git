@@ -56,7 +56,7 @@
 
 .main-content {
   color: #fff;
-  margin-bottom: 150px;
+  margin-bottom: 200px;
   padding-top: 30px;
   *zoom: 1;
 }
@@ -81,8 +81,14 @@
   padding: 16px;
 }
 @media only screen and (max-width: 768px) {
+  .main-content {
+    margin-bottom: 160px;
+  }
   .main-content .pull-right {
     float: none !important;
     margin: 0 auto;
+  }
+  .main-content h1 {
+    font-size: 2em;
   }
 }

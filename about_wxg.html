@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!--share info-->
+	<meta property="og:title" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content="">
+
+	<title>當代傳奇劇場</title>
+
+	<!--css-->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/global.css" rel="stylesheet">
+	<link href="css/pages.css" rel="stylesheet">
+	<link href="css/about.css" rel="stylesheet">
+	<link href="css/card.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/html5shiv.min.js"></script>
+		<script type="text/javascript" src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body id="about">
+	
+	<!-- Navigation -->
+	<div id="navigation">
+		<nav class="navbar navbar-fixed-top clearfix" role="navigation">
+			<header>
+				<div class="top-nav">
+					<ul>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="search-menu" aria-expanded="false"><i class="fa fa-search"></i></a>
+							<ul class="dropdown-menu search" aria-labelledby="search-menu">
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="搜尋"/>
+									<span class="input-group-btn">
+										<div class="btn btn-search" type="button">
+											<i class="fa fa-search"></i>
+										</div>
+									</span>
+								</div>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="share-menu" aria-expanded="false"><i class="fa fa-share-alt"></i></a>
+							
+							<ul class="dropdown-menu social-media" aria-labelledby="share-menu">
+								<li><a href="#"><i class="fa fa-facebook"></i>facebook</a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i>twitter</a></li>
+								<li class="line"><a href="#"><i class="fa-line"></i>Line</a></li>
+								<li><a href="#"><i class="fa fa-weixin"></i>We Chat</a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i>Google plus</a></li>
+								<li><a href="#"><i class="fa fa-pinterest-p"></i>Pinterest</a></li>
+								<li><a href="#"><i class="fa fa-weibo"></i>Weibo</a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i>Linkedin</a></li>
+								<li class="copy-link">
+									<input type="url" class="form-control" placeholder="http://xxxxxx.com"/>
+									<div class="btn">
+										<a href="#"><i class="fa fa-clipboard"></i></a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="language-menu" aria-expanded="false">中</a>
+							<ul class="dropdown-menu language" aria-labelledby="language-menu">
+								<li><a href="index.html">中</a></li>
+								<li><a href="#">簡</a></li>
+								<li><a href="#">EN</a></li>
+							</ul>
+						</li>
+						<li><a href="#" data-toggle="modal" data-target="#member"><i class="fa fa-user"></i></a></li>
+					</ul>
+				</div>
+				<h2 class="logo">
+					<a href="#index"><img src="images/logo.png" alt="當代傳奇劇場" title="當代傳奇劇場" width="312" height="55" class="img-responsive"></a>
+				</h2>
+			</header>
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+					<i class="fa fa-bars"></i>
+				</button>
+				<button type="button" class="navbar-toggle" data-toggle="modal" data-target="#member" >
+					<i class="fa fa-user"></i>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="main-nav">
+				<ul class="nav navbar-nav text-center">
+					<li id="search-xs" class="visible-xs-block">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="搜尋"/>
+							<span class="input-group-btn">
+								<button class="btn btn-search" type="button">
+									<i class="fa fa-search"></i>
+								</button>
+							</span>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="about" aria-expanded="false">關於當代傳奇<span class="caret"></span></a>
+						<ul class="dropdown-menu drop-about" aria-labelledby="about">
+							<li><a href="history.html">團史</a></li>
+							<li><a href="events.html">大事紀</a></li>
+							<li><a href="about_wxg.html">認識吳興國</a></li>
+							<li><a href="about_lsw.html">認識林秀偉</a></li>
+							<li><a href="artist.html">合作藝術家</a></li>
+							<li><a href="review.html">當代好評</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="products" aria-expanded="false">經典劇作<span class="caret"></span></a>
+						<ul class="dropdown-menu drop-products" aria-labelledby="products">
+							<li><a href="Shakespeares.html">莎士比亞</a></li>
+							<li><a href="Ggreek-Tragedies.html">希臘悲劇</a></li>
+							<li><a href="Western-Literature.html">西方文學</a></li>
+							<li><a href="Legend-Operas.html">傳奇戲曲</a></li>
+							<li><a href="Oriental-Operas.html">東方歌劇</a></li>
+							<li><a href="Youth.html">傳奇青年</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="news" aria-expanded="false">訊息發佈<span class="caret"></span></a>
+						<ul class="dropdown-menu drop-products" aria-labelledby="news">
+							<li><a href="recommend.html">推薦新訊</a></li>
+							<li><a href="performance.html">演出新訊</a></li>
+							<li><a href="activity.html">活動新訊</a></li>
+							<li><a href="reports.html">媒體報導</a></li>
+						</ul>
+					</li>
+					
+					<li><a href="tickets.html"><span class="yellow">購票資訊</span></a></li>
+					<li><a href="fansclub.html">當代之友</a></li>
+					<li><a href="videos.html">影音精選</a></li>
+					<li class="visible-xs-block">
+						<ul class="language">
+							<li><a href="index.html">中</a></li>
+							<li><a href="sch">簡</a></li>
+							<li><a href="en">EN</a></li>
+						</ul>
+					</li>
+					<li class="visible-xs-block">
+						<ul class="social-media">
+							<li><a href="#"><i class="fa fa-facebook"></i>facebook</a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i>twitter</a></li>
+							<li class="line"><a href="#"><i class="fa-line"></i>Line</a></li>
+							<li><a href="#"><i class="fa fa-weixin"></i>We Chat</a></li>
+							<br>
+							<li><a href="#"><i class="fa fa-google-plus"></i>Google plus</a></li>
+							<li><a href="#"><i class="fa fa-pinterest-p"></i>Pinterest</a></li>
+							<li><a href="#"><i class="fa fa-weibo"></i>Weibo</a></li>
+							<li><a href="#"><i class="fa fa-linkedin"></i>Linkedin</a></li>
+							<li class="copy-link">
+								<input type="url" class="form-control" placeholder="http://xxxxxx.com"/>
+								<div class="btn">
+									<a href="#"><i class="fa fa-clipboard"></i></a>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<!-- /.Navigation -->
+	
+	<!-- wrapper -->
+	<div id="wrapper">
+		<div class="top-banner">
+			<img src="images/banner.jpg" alt="大事紀" title="大事紀" width="1280" height="400" class="img-responsive">
+		</div>
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul>
+					<li><a href="#">關於當代傳奇</a></li>
+					<li><a href="about_wxg.html">認識吳興國</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="main-content container">
+			<h1>認識吳興國</h1>
+			<ul id="menu" class="tabs clearfix" data-tabgroup="first-tab-group">
+				<li><a href="#tab1" class="active">簡介</a></li>
+				<li><a href="#tab2">作品</a></li>
+				<li><a href="#tab3">事紀</a></li>
+				<li><a href="#tab4">媒體<span>報導</span></a></li>
+				<li><a href="#tab5">影音</a></li>
+			</ul>
+			<section id="first-tab-group" class="tabgroup">
+				<div id="tab1" class="tab-content">
+					<img src="images/about_wxg.jpg" alt="吳興國" title="吳興國" width="392" height="588" class="pull-right img-responsive">
+					<h2>吳興國<span>藝術總監．導演．主演</span></h2>
+					<p>生於高雄市旗津區，原名吳國秋，台灣演員、劇作家、導演；當代傳奇劇場藝術總監；乃少數橫跨電影、電視、傳統戲曲、現代劇場以及舞蹈之表演藝術家。吳目前於國立台灣藝術大學表演藝術研究所專任教授；曾獲美國傅爾‧布萊特獎學金、亞洲文化協會獎學金。 
+吳曾獲2005年台北文化獎；2010年榮獲第14屆國家文藝獎（表演藝術類）；2011年法國文化部頒發「法國文化藝術騎士勳章（Ordre des Arts et des Lettres-Chevalier）」等重要獎項得主。
+電影方面，曾榮獲台灣電影金馬獎最佳男主角提名和香港電影金像獎最佳新人獎；並連續三度在台灣京劇大賽榮獲文藝金像獎最佳生角獎。電影代表作有：《十八》、《誘僧》、《青蛇》、《賭神2》、《宋家皇朝》、《特務迷城》……等。 
+1986年創立當代傳奇劇場，創團作品《慾望城國》廣受國際邀約，成為戲曲藝術發展創新的先鋒人物，所創作戲曲作品跨越中西、古今，共超過二十五部作品，受近二十多國邀演，是台灣唯一進入世界三大藝術節的表演團隊。 
+吳受到英國泰晤士報褒揚：「他使我們想起英國著名演員勞倫斯．奧立佛」；英國衛報報導：「吳興國是台灣的奧森．威爾斯！」；美國華爾街日報：「他的作品具史詩般偉大！」2001年他在《李爾在此》中一人分飾十角，大獲肯定； 2006年受邀與多明哥同台演出《秦始皇》歌劇； 2007年又推出《水滸 108》和《夢蝶》。2007.2008兩度受邀至紐約大都會歌劇院，與世界三大男高音之一的多明哥同台演出歌劇《秦始皇》，所飾陰陽師一角受到各界高度讚譽。2010年改編俄國文學家契訶夫 14篇短篇小說製作音樂歌舞劇－《歡樂時光—契訶夫傳奇》， 2011年率團赴英國愛丁堡出演《李爾在此》、2013年再次受邀以科技藝術為題之《蛻變》，贏得世界媒體美譽：「成果卓越，這是愛丁堡藝術節最為驚人的一次表現。」
+</p>
+				</div>
+				<div id="tab2" class="tab-content">
+					<h2>作品內容</h2>
+					<p>生於高雄市旗津區，原名吳國秋，台灣演員、劇作家、導演；當代傳奇劇場藝術總監；乃少數橫跨電影、電視、傳統戲曲、現代劇場以及舞蹈之表演藝術家。吳目前於國立台灣藝術大學表演藝術研究所專任教授；曾獲美國傅爾‧布萊特獎學金、亞洲文化協會獎學金。 
+吳曾獲2005年台北文化獎；2010年榮獲第14屆國家文藝獎（表演藝術類）；2011年法國文化部頒發「法國文化藝術騎士勳章（Ordre des Arts et des Lettres-Chevalier）」等重要獎項得主。
+電影方面，曾榮獲台灣電影金馬獎最佳男主角提名和香港電影金像獎最佳新人獎；並連續三度在台灣京劇大賽榮獲文藝金像獎最佳生角獎。電影代表作有：《十八》、《誘僧》、《青蛇》、《賭神2》、《宋家皇朝》、《特務迷城》……等。 
+1986年創立當代傳奇劇場，創團作品《慾望城國》廣受國際邀約，成為戲曲藝術發展創新的先鋒人物，所創作戲曲作品跨越中西、古今，共超過二十五部作品，受近二十多國邀演，是台灣唯一進入世界三大藝術節的表演團隊。 
+吳受到英國泰晤士報褒揚：「他使我們想起英國著名演員勞倫斯．奧立佛」；英國衛報報導：「吳興國是台灣的奧森．威爾斯！」；美國華爾街日報：「他的作品具史詩般偉大！」2001年他在《李爾在此》中一人分飾十角，大獲肯定； 2006年受邀與多明哥同台演出《秦始皇》歌劇； 2007年又推出《水滸 108》和《夢蝶》。2007.2008兩度受邀至紐約大都會歌劇院，與世界三大男高音之一的多明哥同台演出歌劇《秦始皇》，所飾陰陽師一角受到各界高度讚譽。2010年改編俄國文學家契訶夫 14篇短篇小說製作音樂歌舞劇－《歡樂時光—契訶夫傳奇》， 2011年率團赴英國愛丁堡出演《李爾在此》、2013年再次受邀以科技藝術為題之《蛻變》，贏得世界媒體美譽：「成果卓越，這是愛丁堡藝術節最為驚人的一次表現。」
+</p>
+				</div>
+				<div id="tab3" class="tab-content">
+					<div class="row">
+						<div class="col-sm-2">
+
+							<div id="menu" class="collapse-menu">
+								<div class="collapse-panel">
+									<header class="collapse-heading">
+										2011~2015
+									</header>
+									<div class="collapse-body">
+										<ul>
+											<li><a href="#2015">2015</a></li>
+											<li><a href="#2014">2014</a></li>
+											<li><a href="#2013">2013</a></li>
+											<li><a href="#2012">2012</a></li>
+											<li><a href="#2011">2011</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="collapse-panel">
+									<header class="collapse-heading">
+										2006~2010
+									</header>
+									<div class="collapse-body">
+										<ul>
+											<li><a href="#2010">2010</a></li>
+											<li><a href="#2009">2009</a></li>
+											<li><a href="#2008">2008</a></li>
+											<li><a href="#2007">2007</a></li>
+											<li><a href="#2006">2006</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="collapse-panel">
+									<header class="collapse-heading">
+										2001~2005
+									</header>
+									<div class="collapse-body">
+										<ul>
+											<li><a href="#2005">2005</a></li>
+											<li><a href="#2004">2004</a></li>
+											<li><a href="#2003">2003</a></li>
+											<li><a href="#2002">2002</a></li>
+											<li><a href="#2001">2001</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="collapse-panel">
+									<header class="collapse-heading">
+										1996~2000
+									</header>
+									<div class="collapse-body">
+										<ul>
+											<li><a href="#2000">2005</a></li>
+											<li><a href="#1999">1999</a></li>
+											<li><a href="#1998">1998</a></li>
+											<li><a href="#1997">1997</a></li>
+											<li><a href="#1996">1996</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="collapse-panel">
+									<header class="collapse-heading">
+										1991~1995
+									</header>
+									<div class="collapse-body">
+										<ul>
+											<li><a href="#2000">1995</a></li>
+											<li><a href="#1999">1994</a></li>
+											<li><a href="#1998">1993</a></li>
+											<li><a href="#1997">1992</a></li>
+											<li><a href="#1996">1991</a></li>
+										</ul>
+									</div>
+								</div>
+							</div> 
+						</div>
+						<div class="col-sm-10">
+							<div id="timeline">
+								<div class="timeline-item year-circle">
+									<div class="timeline-icon year" id="2015">
+										2015
+									</div>
+								</div>
+								<div class="timeline-item">
+									<div class="timeline-icon">
+										Sep
+									</div>
+									<div class="timeline-content">
+										<h2>吳興國事紀1</h2>
+										<img src="images/event1.jpg" alt="大事紀" title="大事紀" width="351" height="195" class="img-responsive">
+										<p>興國老師和秀偉老師接受中國文聯舞蹈協會邀請，參加青年編導菁英工作坊的計劃，師資皆是國際和兩岸的名家。</p>
+									</div>
+								</div>
+								<div class="timeline-item">
+									<div class="timeline-icon">
+										Jul
+									</div>
+									<div class="timeline-content right">
+										<h2>吳興國事紀2</h2>
+										<img src="images/event1.jpg" alt="大事紀" title="大事紀" width="351" height="195" class="img-responsive">
+										<p>興國老師和秀偉老師接受中國文聯舞蹈協會邀請，參加青年編導菁英工作坊的計劃，師資皆是國際和兩岸的名家。</p>
+									</div>
+								</div>
+								<div class="timeline-item year-circle">
+									<div class="timeline-icon year" id="2014">
+										2014
+									</div>
+								</div>
+								<div class="timeline-item">
+									<div class="timeline-icon">
+										Jul
+									</div>
+									<div class="timeline-content">
+										<h2>吳興國事紀3</h2>
+										<img src="images/event1.jpg" alt="大事紀" title="大事紀" width="351" height="195" class="img-responsive">
+										<p>興國老師和秀偉老師接受中國文聯舞蹈協會邀請，參加青年編導菁英工作坊的計劃，師資皆是國際和兩岸的名家。</p>
+									</div>
+								</div>
+								<div class="timeline-item">
+									<div class="timeline-icon">
+										Jul
+									</div>
+									<div class="timeline-content right">
+										<h2>吳興國事紀4</h2>
+										<img src="images/event1.jpg" alt="大事紀" title="大事紀" width="351" height="195" class="img-responsive">
+										<p>興國老師和秀偉老師接受中國文聯舞蹈協會邀請，參加青年編導菁英工作坊的計劃，師資皆是國際和兩岸的名家。</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="tab4" class="tab-content">
+					<div class="tab-body">
+						<h2>吳興國、魏海敏合演音樂劇「仲夏夜之夢」</h2>
+						<p>多次將西方經典融入傳統戲曲的當代傳奇劇場，25日宣告將再度挑戰莎士比亞名著「仲夏夜之夢」，由藝術總監吳興國和京劇名伶魏海敏合力演出一齣帶有京劇元素的時尚音樂劇。吳興國表示，當代傳奇劇場過去30年大多演悲劇作品，這次端出喜劇新菜，希望帶給大家更多幸福感。#央廣記者江昭倫</p>
+						<button class="btn btn-normal" onclick="location.href=''">閱讀更多</button>
+					</div>
+					<div class="tab-body">
+						<h2>吳興國、魏海敏合演音樂劇「仲夏夜之夢」</h2>
+						<p>多次將西方經典融入傳統戲曲的當代傳奇劇場，25日宣告將再度挑戰莎士比亞名著「仲夏夜之夢」，由藝術總監吳興國和京劇名伶魏海敏合力演出一齣帶有京劇元素的時尚音樂劇。吳興國表示，當代傳奇劇場過去30年大多演悲劇作品，這次端出喜劇新菜，希望帶給大家更多幸福感。#央廣記者江昭倫</p>
+						<button class="btn btn-normal" onclick="location.href=''">閱讀更多</button>
+					</div>
+					<div class="tab-body">
+						<h2>吳興國、魏海敏合演音樂劇「仲夏夜之夢」</h2>
+						<p>多次將西方經典融入傳統戲曲的當代傳奇劇場，25日宣告將再度挑戰莎士比亞名著「仲夏夜之夢」，由藝術總監吳興國和京劇名伶魏海敏合力演出一齣帶有京劇元素的時尚音樂劇。吳興國表示，當代傳奇劇場過去30年大多演悲劇作品，這次端出喜劇新菜，希望帶給大家更多幸福感。#央廣記者江昭倫</p>
+						<button class="btn btn-normal" onclick="location.href=''">閱讀更多</button>
+					</div>
+				</div>
+				<div id="tab5" class="tab-content text-center">
+					<div class="card youtube">
+						<span class="cate-tab">吳興國</span>
+						<span class="collect"><a href="#" class="collected"><i class="fa fa-heart"></i></a></span>
+						<div class="pic">
+							<i class="fa fa-youtube-play"></i>
+							<a data-toggle="modal" data-target="#video"></a>
+							<img src="http://img.youtube.com/vi/9f-hBV_KSuc/sddefault.jpg" alt="" title="">		
+						</div>
+						<div class="content">
+							<h3>2015.06.05《名人牀頭書》完整版　吳興國：苦功可以讓自己站更穩。化為藝術更動人…</h3>
+							<h4><span>媒體單位</span><span>2015/09/05</span></h4>
+							<p>身披20公斤軟甲，腳蹬京劇厚底鞋，三公尺高的高台後空翻一躍而下，這是當代傳奇劇場­「慾望城國」的經典橋段，演出者是名揚國際的吳興國...《名人頭書》相信閱讀，看見閱讀的力量。每週五晚間23:30敬請鎖定CH52中天-­新聞台。</p>
+						</div>
+						<button class="btn btn-normal" onclick="location.href='card-content.html'">閱讀更多</button>
+					</div>
+					<div class="card youtube">
+						<span class="cate-tab">吳興國</span>
+						<span class="collect"><a href="#" class="collected"><i class="fa fa-heart"></i></a></span>
+						<div class="pic">
+							<i class="fa fa-youtube-play"></i>
+							<a data-toggle="modal" data-target="#video"></a>
+							<img src="http://img.youtube.com/vi/IJ4MVrhesaA/sddefault.jpg" alt="" title="">		
+						</div>
+						<div class="content">
+							<h3>蛻變：吳興國 (Hsing-Kuo Wu) at TEDxTaipei 2013</h3>
+							<h4><span>媒體單位</span><span>2015/09/05</span></h4>
+							<p>京劇大師、當代傳奇劇場總監具備導演、編劇、表演等多方才華，為台灣少數橫跨電影、電視、傳統戲曲、現代劇場以及舞蹈界之全方位表演藝術家。</p>
+						</div>
+						<button class="btn btn-normal" onclick="location.href='card-content.html'">閱讀更多</button>
+					</div>
+					<div class="card youtube">
+						<span class="cate-tab">吳興國</span>
+						<span class="collect"><a href="#" class="collected"><i class="fa fa-heart"></i></a></span>
+						<div class="pic">
+							<i class="fa fa-youtube-play"></i>
+							<a data-toggle="modal" data-target="#video"></a>
+							<img src="http://img.youtube.com/vi/9f-hBV_KSuc/sddefault.jpg" alt="" title="">		
+						</div>
+						<div class="content">
+							<h3>2015.06.05《名人牀頭書》完整版　吳興國：苦功可以讓自己站更穩。化為藝術更動人…</h3>
+							<h4><span>媒體單位</span><span>2015/09/05</span></h4>
+							<p>身披20公斤軟甲，腳蹬京劇厚底鞋，三公尺高的高台後空翻一躍而下，這是當代傳奇劇場­「慾望城國」的經典橋段，演出者是名揚國際的吳興國...《名人頭書》相信閱讀，看見閱讀的力量。每週五晚間23:30敬請鎖定CH52中天-­新聞台。</p>
+						</div>
+						<button class="btn btn-normal" onclick="location.href='card-content.html'">閱讀更多</button>
+					</div>
+					<div class="card youtube">
+						<span class="cate-tab">吳興國</span>
+						<span class="collect"><a href="#" class="collected"><i class="fa fa-heart"></i></a></span>
+						<div class="pic">
+							<i class="fa fa-youtube-play"></i>
+							<a data-toggle="modal" data-target="#video"></a>
+							<img src="http://img.youtube.com/vi/IJ4MVrhesaA/sddefault.jpg" alt="" title="">		
+						</div>
+						<div class="content">
+							<h3>蛻變：吳興國 (Hsing-Kuo Wu) at TEDxTaipei 2013</h3>
+							<h4><span>媒體單位</span><span>2015/09/05</span></h4>
+							<p>京劇大師、當代傳奇劇場總監具備導演、編劇、表演等多方才華，為台灣少數橫跨電影、電視、傳統戲曲、現代劇場以及舞蹈界之全方位表演藝術家。</p>
+						</div>
+						<button class="btn btn-normal" onclick="location.href='card-content.html'">閱讀更多</button>
+					</div>
+					<div class="card youtube">
+						<span class="cate-tab">吳興國</span>
+						<span class="collect"><a href="#" class="collected"><i class="fa fa-heart"></i></a></span>
+						<div class="pic">
+							<i class="fa fa-youtube-play"></i>
+							<a data-toggle="modal" data-target="#video"></a>
+							<img src="http://img.youtube.com/vi/9f-hBV_KSuc/sddefault.jpg" alt="" title="">		
+						</div>
+						<div class="content">
+							<h3>2015.06.05《名人牀頭書》完整版　吳興國：苦功可以讓自己站更穩。化為藝術更動人…</h3>
+							<h4><span>媒體單位</span><span>2015/09/05</span></h4>
+							<p>身披20公斤軟甲，腳蹬京劇厚底鞋，三公尺高的高台後空翻一躍而下，這是當代傳奇劇場­「慾望城國」的經典橋段，演出者是名揚國際的吳興國...《名人頭書》相信閱讀，看見閱讀的力量。每週五晚間23:30敬請鎖定CH52中天-­新聞台。</p>
+						</div>
+						<button class="btn btn-normal" onclick="location.href='card-content.html'">閱讀更多</button>
+					</div>
+					<div class="card youtube">
+						<span class="cate-tab">吳興國</span>
+						<span class="collect"><a href="#" class="collected"><i class="fa fa-heart"></i></a></span>
+						<div class="pic">
+							<i class="fa fa-youtube-play"></i>
+							<a data-toggle="modal" data-target="#video"></a>
+							<img src="http://img.youtube.com/vi/IJ4MVrhesaA/sddefault.jpg" alt="" title="">		
+						</div>
+						<div class="content">
+							<h3>蛻變：吳興國 (Hsing-Kuo Wu) at TEDxTaipei 2013</h3>
+							<h4><span>媒體單位</span><span>2015/09/05</span></h4>
+							<p>京劇大師、當代傳奇劇場總監具備導演、編劇、表演等多方才華，為台灣少數橫跨電影、電視、傳統戲曲、現代劇場以及舞蹈界之全方位表演藝術家。</p>
+						</div>
+						<button class="btn btn-normal" onclick="location.href='card-content.html'">閱讀更多</button>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	
+	<!-- footer	-->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 no-float">
+					<div class="footer-menu">
+						<h5>關於當代傳奇</h5>
+						<ul>
+							<li><a href="history.html">團史</a></li>
+							<li><a href="events.html">大事紀</a></li>
+							<li><a href="about_wxg.html">認識吳興國</a></li>
+							<li><a href="about_lsw.html">認識林秀偉</a></li>
+							<li><a href="artist.html">合作藝術家</a></li>
+							<li><a href="review.html">當代好評</a></li>
+						</ul>
+					</div>
+					<div class="footer-menu">
+						<h5>經典劇作</h5>
+						<ul>
+							<li><a href="">系列</a></li>
+							<ul>
+								<li><a href="Shakespeares.html">莎士比亞</a></li>
+								<li><a href="Ggreek-Tragedies.html">希臘悲劇</a></li>
+								<li><a href="Western-Literature.html">西方文學</a></li>
+								<li><a href="Legend-Operas.html">傳奇戲曲</a></li>
+								<li><a href="Oriental-Operas.html">東方歌劇</a></li>
+								<li><a href="Youth.html">傳奇青年</a></li>
+							</ul>
+						</ul>
+						<ul>
+							<li><a href="">劇作</a></li>
+							<ul>
+								<li><a href="#">節目簡介</a></li>
+								<li><a href="#">演出與製作</a></li>
+								<li><a href="#">媒體報評</a></li>
+							</ul>
+						</ul>
+					</div>
+					<div class="footer-menu">
+						<h5>訊息發佈</h5>
+						<ul>
+							<li><a href="recommend.html">推薦新訊</a></li>
+							<li><a href="performance.html">演出新訊</a></li>
+							<li><a href="activity.html">活動新訊</a></li>
+							<li><a href="reports.html">媒體報導</a></li>
+						</ul>
+					</div>
+					<div class="footer-menu">
+						<h5><a href="fansclub.html">當代之友</a></h5>
+						<ul>
+							<li><a href="#">一般</a></li>
+							<li><a href="#">雅士</a></li>
+						</ul>
+						<h5><a href="videos.html">影音精選</a></h5>
+						<h5><a href="tickets.html">購票資訊</a></h5>
+					</div>
+				</div>
+				<div class="col-md-4 no-float clearfix">
+					<div class="col-md-12 col-sm-2">
+						<img src="images/logo_stamp.png" alt="">
+					</div>
+					<div class="col-md-12 col-sm-4">
+						<p>
+						電話：+886 2 2392-3868 <br>
+						傳真：+886 2 2392-3867 
+						</p>
+					</div>
+					<div class="col-md-12 col-sm-6">
+						<p>
+						信箱：<a mailto="admin@clt.tw">admin@clt.tw</a><br>
+						地址：台北市10075寧波西街72號
+						<span class="note">Copyright © 2015 Contemporary Legend Theater</span>
+						</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- /.footer	-->
+
+	<!-- fix icon -->
+	<div class="fix-icon top"><a href="#" target="_blank"><i class="fa fa-angle-up"></i></a></div>
+	
+	<!-- member -->
+	<div class="modal fade" id="member" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<button type="button" class="close hairline" data-dismiss="modal"></button>
+				<div class="modal-body">
+					<iframe src="member-profile.html" frameborder="0" allowfullscreen></iframe>	
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- video -->
+	<div class="modal fade video-stack" id="video" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<button type="button" class="close hairline" data-dismiss="modal"></button>
+				<div class="modal-body">
+					<iframe width="853" height="480" src="https://www.youtube.com/embed/9f-hBV_KSuc" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--jQuery--> 
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="js/touchswipe.min.js" ></script>
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="js/pages.js"></script>
+		
+	<script type="text/javascript" src="js/main.js"></script>
+	
+</body>
+</html>

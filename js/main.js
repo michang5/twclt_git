@@ -9,7 +9,7 @@ $(function(){
 	});
 	//jQuery for page scrolling feature - requires jQuery Easing plugin
 	$(function() {
-		$('.fix-icon a').bind('click', function(event) {
+		$('#menu a,.fix-icon a').bind('click', function(event) {
 			var $anchor = $(this);
 			var nav = $($anchor.attr('href'));
 			if (nav.length) {

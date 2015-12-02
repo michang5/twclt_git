@@ -177,16 +177,12 @@ button.btn-normal {
 }
 .isotope {
 	width: 800px;
-	@include respond-to (md-screen){
-		width: 600px;
-	}
-	@include respond-to (only-device){
+	@include respond-to (tablet-landscape){
 		width: 640px;
 		margin: 0 auto;
 	}
 	@include respond-to (only-mobile){
 		width: 320px;
-		margin: 0 auto;
 	}
 }
 .isotope:after {
@@ -223,6 +219,9 @@ a[data-toggle=modal] {
 			background: $black;
 			padding: 0;
 		}
+		.video-stack & {
+			background: $black;
+		}
 		@include respond-to (only-device){
 			padding: 50px 0 10px;
 		}
@@ -236,13 +235,6 @@ a[data-toggle=modal] {
 		display: table-cell;
 		height: 100%;
 		width: 100%;
-	}
-	@include respond-to (xlg-screen){
-		.modal-content { 
-//			width: 1000px;
-		}
-	}
-	@include respond-to (md-screen){
 	}
 }
 
@@ -368,6 +360,10 @@ a[data-toggle=modal] {
 		left: 0;
 		margin-top: -1px;
 		background: $black;
+	}
+	.video-stack & {
+		background: $red;
+		color: $white;
 	}
 	.crazyad & {
 		top: 0;
@@ -711,33 +707,7 @@ a[data-toggle=modal] {
 			}
 		}				
 	}
-	@include respond-to (md-screen){
-		nav {
-			#main-nav {
-				ul.navbar-nav {
-					>li {
-						> a {
-							font-size: $m-font;
-							padding: 18px 20px;
-						}
-					}
-					.dropdown-menu {
-						&.drop-about {
-							width: 146px;
-						}
-						&.drop-theater {
-							width: 114px;
-						}
-						a {
-							padding: 12px 20px;
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	@include respond-to (only-device){
+	@include respond-to (tablet-landscape){
 		nav {
 			#main-nav {
 				ul.navbar-nav {
@@ -1041,7 +1011,7 @@ footer {
 			}
 		}
 	}
-	@include respond-to (md-screen){
+	@include respond-to (tablet-landscape){
 		.container {
 			width: 100%;
 			padding: 0;
@@ -1050,20 +1020,5 @@ footer {
 			display: block;
 			padding: 30px;
 		}
-		.col-md-4 {
-//			padding: 30px 0;
-		}
-	}
-	@include respond-to (only-device){
-		.container {
-			width: 100%;
-			padding: 0;
-		}
-		.col-md-8, .col-md-4 {
-			display: block;
-		}
-	}
-	@include respond-to (only-device){
-		
 	}
 }

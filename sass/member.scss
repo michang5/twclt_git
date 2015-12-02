@@ -111,7 +111,7 @@
 			}
 		}
 	}
-	@include respond-to (only-device){
+	@include respond-to (tablet-landscape){
 		text-align: center;
 		padding-left: 20px;
 		> li {

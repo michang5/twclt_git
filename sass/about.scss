@@ -107,7 +107,7 @@
 	}
 	@include respond-to (only-device){
 		width: 80%;
-		margin: 0 auto;
+		margin: 0 0 0 12px;
 		&:before {
 			left: 0;
 		}
@@ -130,103 +130,27 @@
 					border-right: 7px solid $red;
 				}
 			}
-
 			.timeline-icon {
-				left: -10px;
-				width: 40px;
-				height: 40px;
-				line-height: 40px;
+				left: -2px;
+				width: 32px;
+				height: 32px;
+				line-height: 32px;
+				font-size: $s-font;
 					&.year {
-						width: 60px;
-						height: 60px;
-						line-height: 60px;
-						margin-left: -29px;
-						font-size: $xl-font;
+						width: 50px;
+						height: 50px;
+						line-height: 50px;
+						margin-left: -31px;
+						font-size: $l-font;
 				}
 			}
 		}
 	}
+	@include respond-to (xxs-mobile){
+		width: 80%;
+		margin: 0 0 0 6px;
+	}
 }
-.fixed {
-	position: fixed;
-	top: 0;
-}
-//.year-menu {
-//	top: 200px;
-//	z-index: 1000;
-////	position: absolute;
-//    >li {
-//		background: none;
-//		width: auto;
-//		margin-bottom: 0;
-//		@include border-radius(0);
-//		&.panel {
-//			> a {
-//				text-align: center;
-//				border-bottom: 1px solid $gray;
-//				color: $white;
-//				padding: 5px;
-//				font-size: $xl-font;
-//				&:hover, &:focus {
-//					background: $red;
-//				}
-//			}
-//			> ul {
-//				margin-top: 1px solid white;
-//				font-size: $s-font;
-//				text-align: right;
-//				li {
-//					margin: 4px 0;
-//				}
-//				a {
-//					padding: 0 14px;
-//					line-height: $xxxxl-font;
-//					color: $white;
-//					&:hover, &:focus {
-//						background: $gray;
-//					}
-//				}
-//			}
-//    	}
-//		a {
-//    	    display: block;
-//    	}
-//	}
-//	@include respond-to (only-device){
-//		text-align: center;
-//		>li {
-//			@include inline-block;
-//			vertical-align: top;
-//			margin: 0 3px;
-//			width: 90px;
-//			&.panel {
-//				position: relative;
-//				> a {
-//					font-size: $s-font;
-//					background: $red;
-//				}
-//				> ul {
-//					width: auto;
-//					position: absolute;
-//					@include transparent($black,.8);
-//					z-index: 9;
-//					width: 90px;
-//					li {
-//						margin: 4px 0;
-//					}
-//					a {
-//						padding: 0 14px;
-//						line-height: $xxxxl-font;
-//						color: $white;
-//						&:hover, &:focus {
-//							background: $gray;
-//						}
-//					}
-//				}
-//    		}
-//		}
-//	}
-//}
 .collapse-panel {
 	margin-bottom: 10px;
 	.collapse-heading {
@@ -248,6 +172,10 @@
 			display: block;
 			padding: 2px 10px;
 			text-align: right;
+			
+			&:hover, &.selected {
+				background: $yellow;
+			}
 		}
 	}
 	@include respond-to (md-screen){
@@ -285,6 +213,7 @@
 	}
 }
 .collapse-menu {
+	@include transparent($black,.8);
 	@include respond-to (only-device){
 		@include transparent($black,.6);
 		width: 110px;
@@ -293,20 +222,108 @@
 	}
 	@include respond-to (normal-mobile){
 		width: 90px;
-//		right: -6px;
 	}
 }
 #menu  {
+}
+.fixed {
 	z-index: 999;
-	li {
-		a {
-			&:hover, &.selected {
-				background: $yellow;
+	position: fixed;
+	
+	&.collapse-menu {
+		top: 350px;
+	}
+	&.tabs {
+		top: 200px;
+		width: 78%;
+	}
+	@include respond-to (normal-mobile){
+		.collapse-heading {
+			width: 90px;
+		}
+		&.tabs {
+			top: 80px;
+			width: 96%;
+			left: 2.5%;
+		}
+	}
+}
+.tabgroup {
+	padding: 30px 0;
+}
+.tabs {
+//	@include transparent($black,.6);
+	padding: 0;
+	border-bottom: none;
+	width: 100%;
+	> li {
+		* {
+			border: none!important;	
+		}
+		text-align: center;
+		border-bottom: none;
+		width: 19.6%;
+		float: left;
+		margin-right: 1px;
+		padding: 0;
+		&:first-of-type {
+			margin-left: 0;
+		}
+		> a {
+			display: block;
+			padding: 8px;
+			color: $white;
+			@include transparent($gray,.7);
+			@include border-radius(0);
+			text-decoration: none;
+			&.active, &:active, &:hover, &:focus {
+				@include transparent($red,.7);
+			}
+		}
+		&.active {
+			border: 0;
+			> a {
+				color: $white;
+				@include transparent($red,.7);
+				&:hover, &:focus {
+					color: $white;
+					@include transparent($red,.7);
+				}
+			}
+		}
+	}
+	.row {
+		padding: 0;
+	}
+	@include respond-to (normal-mobile){
+		> li {
+			a { 
+				padding: 10px;
+				height: 72px;
+				line-height: 52px;
+			}
+			&:nth-of-type(4) {
+				a {
+					line-height: 26px;
+				}
+			}
+			span {
+				display: block;
 			}
 		}
 	}
 }
-.fixed {
-        position: fixed;
-		top: 180px;
+.tab-body {
+	padding: 14px 0;
+	@include clearfix;
+	p {
+		padding-bottom: 10px;
+	}
+}
+h2 {
+	span {
+		font-size: $xxl-font - $xs-font;
+		font-weight: normal;
+		padding: 0 10px;
+	}
 }

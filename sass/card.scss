@@ -14,7 +14,7 @@
 			padding: 10px;
 			line-height: $xl-font;
 			background: $purple;
-			@include border-radius(0 0 6px 6px);
+			@include border-radius(0 0 6px 0);
 			color: $white;
 		}
 	}
@@ -45,6 +45,13 @@
 	float: left;
 	@include inline-block;
 	@include box-shadow ($gray 0 0 10px);
+	.main-content & {
+		width: 340px;
+		height: 520px;
+		margin: 10px 16px;
+		float: none;
+		@include inline-block;
+	}
 	span {
 		&.cate-tab {
 			left: 0;
@@ -55,6 +62,11 @@
 			top: 4px;
 		}
 	}
+	button {
+		position: absolute;
+		right: 0;
+		bottom: 16px;
+	}
 	.pic {
 		width: 300px;
 		height: 240px;
@@ -64,13 +76,79 @@
 			left: -70px;
 			position: absolute;
 			clip: rect(0px,370px,240px,70px);
+			padding: 0;
+		}
+	}
+	&.youtube {
+		.pic {
+			position: relative;
+			width: 340px;
+			height: 272px;
+			img {
+				height: 365px;
+				left: -72px;
+				top: -47px;
+				clip: rect(47px,412px,319px,72px);
+			}
+			a {
+				display: block;
+				height: 240px;
+				@include transparent($black,.2);
+				position: relative;
+				z-index: 4;
+				&:hover {
+					@include transparent($black,0);
+				}
+			}
+			i {
+				position: absolute;
+				top: 45%;
+				left: 125px;
+				z-index: 3;
+				color: $white;
+				background: $red;
+				display: block;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				@include border-radius(100%);
+				text-align: center;
+				font-size: $xxxl-font;
+			}
 		}
 	}
 	.content {
 		max-height: 210px;
 		overflow: hidden;
+		h3, p {
+			overflow: hidden;
+		}
+		h3 {
+			font-size: $xl-font;
+			max-height: 50px;
+		}
 		p {
+			color: $black;
+			max-height: 92px;
 			line-height: $xxl-font;
+		}
+	}
+	@include respond-to (normal-mobile){
+		.main-content & {
+			width: 300px;
+			height: 500px;
+		}
+		&.youtube {
+			.pic {
+				width: 300px;
+				height: 240px;
+				img {
+					height: 320px;
+					left: -64px;
+					top: -40px;
+					clip: rect(40px,364px,280px,64px);
+				}
+			}
 		}
 	}
 }

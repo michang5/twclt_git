@@ -129,7 +129,7 @@
 @media only screen and (max-width: 768px) {
   #timeline {
     width: 80%;
-    margin: 0 auto;
+    margin: 0 0 0 12px;
   }
   #timeline:before {
     left: 0;
@@ -155,23 +155,25 @@
     border-right: 7px solid #b90f00;
   }
   #timeline .timeline-item .timeline-icon {
-    left: -10px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
+    left: -2px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 0.9em;
   }
   #timeline .timeline-item .timeline-icon.year {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    margin-left: -29px;
-    font-size: 1.25em;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin-left: -31px;
+    font-size: 1.125em;
   }
 }
-
-.fixed {
-  position: fixed;
-  top: 0;
+@media only screen and (max-width: 320px) {
+  #timeline {
+    width: 80%;
+    margin: 0 0 0 6px;
+  }
 }
 
 .collapse-panel {
@@ -197,6 +199,9 @@
   display: block;
   padding: 2px 10px;
   text-align: right;
+}
+.collapse-panel .collapse-body a:hover, .collapse-panel .collapse-body a.selected {
+  background: #f8b31c;
 }
 @media only screen and (min-width: 769px) and (max-width: 991px) {
   .collapse-panel .collapse-heading {
@@ -238,6 +243,12 @@
   }
 }
 
+.collapse-menu {
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000,endColorstr=#CC000000);
+  zoom: 1;
+}
 @media only screen and (max-width: 768px) {
   .collapse-menu {
     background-color: transparent;
@@ -255,14 +266,121 @@
   }
 }
 
-#menu {
+.fixed {
   z-index: 999;
+  position: fixed;
 }
-#menu li a:hover, #menu li a.selected {
-  background: #f8b31c;
+.fixed.collapse-menu {
+  top: 350px;
+}
+.fixed.tabs {
+  top: 200px;
+  width: 78%;
+}
+@media only screen and (max-width: 480px) {
+  .fixed .collapse-heading {
+    width: 90px;
+  }
+  .fixed.tabs {
+    top: 80px;
+    width: 96%;
+    left: 2.5%;
+  }
 }
 
-.fixed {
-  position: fixed;
-  top: 180px;
+.tabgroup {
+  padding: 30px 0;
+}
+
+.tabs {
+  padding: 0;
+  border-bottom: none;
+  width: 100%;
+}
+.tabs > li {
+  text-align: center;
+  border-bottom: none;
+  width: 19.6%;
+  float: left;
+  margin-right: 1px;
+  padding: 0;
+}
+.tabs > li * {
+  border: none !important;
+}
+.tabs > li:first-of-type {
+  margin-left: 0;
+}
+.tabs > li > a {
+  display: block;
+  padding: 8px;
+  color: #fff;
+  background-color: transparent;
+  background-color: rgba(84, 84, 84, 0.7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3545454,endColorstr=#B3545454);
+  zoom: 1;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  text-decoration: none;
+}
+.tabs > li > a.active, .tabs > li > a:active, .tabs > li > a:hover, .tabs > li > a:focus {
+  background-color: transparent;
+  background-color: rgba(185, 15, 0, 0.7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3B90F00,endColorstr=#B3B90F00);
+  zoom: 1;
+}
+.tabs > li.active {
+  border: 0;
+}
+.tabs > li.active > a {
+  color: #fff;
+  background-color: transparent;
+  background-color: rgba(185, 15, 0, 0.7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3B90F00,endColorstr=#B3B90F00);
+  zoom: 1;
+}
+.tabs > li.active > a:hover, .tabs > li.active > a:focus {
+  color: #fff;
+  background-color: transparent;
+  background-color: rgba(185, 15, 0, 0.7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3B90F00,endColorstr=#B3B90F00);
+  zoom: 1;
+}
+.tabs .row {
+  padding: 0;
+}
+@media only screen and (max-width: 480px) {
+  .tabs > li a {
+    padding: 10px;
+    height: 72px;
+    line-height: 52px;
+  }
+  .tabs > li:nth-of-type(4) a {
+    line-height: 26px;
+  }
+  .tabs > li span {
+    display: block;
+  }
+}
+
+.tab-body {
+  padding: 14px 0;
+  *zoom: 1;
+}
+.tab-body:after, .tab-body:before {
+  content: "";
+  display: table;
+}
+.tab-body:after {
+  clear: both;
+}
+.tab-body p {
+  padding-bottom: 10px;
+}
+
+h2 span {
+  font-size: 0.7em;
+  font-weight: normal;
+  padding: 0 10px;
 }

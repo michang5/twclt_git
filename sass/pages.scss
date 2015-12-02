@@ -51,7 +51,7 @@
 }
 .main-content {
 	color: $white;
-	margin-bottom: 150px;
+	margin-bottom: 200px;
 	padding-top: 30px;
 	@include clearfix;
 	h1 {
@@ -68,9 +68,13 @@
 		padding: 16px;
 	}
 	@include respond-to (only-device){
+		margin-bottom: 160px;
 		.pull-right {
 			float: none!important;
 			margin: 0 auto;
+		}
+		h1 {
+			font-size: $xxxxl-font;
 		}
 	}
 }

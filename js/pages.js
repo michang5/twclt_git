@@ -1,6 +1,6 @@
 $(function () {
 	var $win = $(window),
-		$menu = $('#menu'),
+		$menu = $('#menu, .tabs'),
 		_menuOffset = $menu.offset(),
 		$menuA = $menu.find('a'),
 		$content = $('#content');
@@ -13,13 +13,11 @@ $(function () {
 		$(this).addClass('selected');
 
 		$('html, body').stop().animate({
-			scrollTop: $(_href).offset().top - 60
+			scrollTop: $(_href).offset().top 
 		});
 
 		return false;
 	});
-
-
 
 	$win.scroll(function () {
 		var _fixed = $menu.hasClass('fixed');
@@ -56,15 +54,32 @@ $(function () {
 		$('.selected').removeClass('selected');
 	});
 });
+$(function () {
+	$('.tabgroup > div').hide();
+	$('.tabgroup > div:first-of-type').show();
+	$('.tabs a').click(function (e) {
+		e.preventDefault();
+		var $this = $(this),
+			tabgroup = '#' + $this.parents('.tabs').data('tabgroup'),
+			others = $this.closest('li').siblings().children('a'),
+			target = $this.attr('href');
+		others.removeClass('active');
+		$this.addClass('active');
+		$(tabgroup).children('div').hide();
+		$(target).show();
+
+	})
+
+	$('.collapse-heading').click(function () {
+		$('.collapse-body').slideUp();
+
+		if ($(this).next('.collapse-body').css('display') == 'block') {
+			$('.collapse-body').slideUp('open');
+		} else {
+			$(this).next('.collapse-body').slideDown();
+
+		}
+});
 
 
-$('.collapse-heading').click(function () {
-	$('.collapse-body').slideUp();
-	$('.collapse-controls').removeClass('open');
-	if ($(this).next('.collapse-body').css('display') == 'block') {
-		$('.collapse-body').slideUp('open');
-	} else {
-		$(this).next('.collapse-body').slideDown();
-		$(this).children('.collapse-controls').addClass('open');
-	}
 });
