@@ -308,16 +308,46 @@ button.btn-normal:hover, button.btn-normal:focus {
 
 .isotope {
   width: 800px;
+  margin: 0 auto;
 }
 @media only screen and (max-width: 991px) {
   .isotope {
     width: 640px;
-    margin: 0 auto;
   }
 }
 @media only screen and (max-width: 767px) {
   .isotope {
     width: 320px;
+  }
+}
+
+.main-content .isotope {
+  width: 1140px;
+  text-align: center;
+}
+@media only screen and (min-width: 1200px) {
+  .main-content .isotope {
+    width: 1200px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .main-content .isotope {
+    width: 750px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .main-content .isotope {
+    width: 750px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-content .isotope {
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .main-content .isotope {
+    width: 350px;
   }
 }
 

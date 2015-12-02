@@ -143,7 +143,7 @@
 			}
 		}
 	}
-	@include respond-to (normal-mobile){
+	@include respond-to (only-mobile){
 		> li {
 			> a {
 				height: 68px;
@@ -221,11 +221,19 @@
 			
 		}
 	}
+	@include respond-to (md-screen){
+		.member-block {
+			border-left: 0;
+			.profile-photo {
+				margin: 0 auto;
+			}
+		}
+	}
 	@include respond-to (only-device){
 		.member-block {
 			border-left: 0;
 			.profile-photo {
-				margin: 10px auto 40px;
+				margin: 10px 0 40px 20px;
 			}
 		}
 	}

@@ -159,7 +159,7 @@
     border-radius: 8px 8px 0 0;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 767px) {
   .nav-tabs > li > a {
     height: 68px;
     font-size: 0.9em;
@@ -249,12 +249,20 @@
   padding: 20px;
   margin-bottom: 20px;
 }
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .profile .member-block {
+    border-left: 0;
+  }
+  .profile .member-block .profile-photo {
+    margin: 0 auto;
+  }
+}
 @media only screen and (max-width: 768px) {
   .profile .member-block {
     border-left: 0;
   }
   .profile .member-block .profile-photo {
-    margin: 10px auto 40px;
+    margin: 10px 0 40px 20px;
   }
 }
 .profile .qrcode {

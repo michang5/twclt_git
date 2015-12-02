@@ -177,11 +177,30 @@ button.btn-normal {
 }
 .isotope {
 	width: 800px;
+	margin: 0 auto;
 	@include respond-to (tablet-landscape){
 		width: 640px;
-		margin: 0 auto;
 	}
 	@include respond-to (only-mobile){
+		width: 320px;
+	}
+}
+.main-content .isotope {
+	width: 1140px;
+	text-align: center;
+	@include respond-to (xlg-screen){
+		width: 1200px;
+	}
+	@include respond-to (lg-screen){
+		width: 750px;
+	}
+	@include respond-to (tablet-landscape){
+		width: 750px;
+	}
+	@include respond-to (only-mobile){
+		width: 350px;
+	}
+	@include respond-to (xxs-mobile){
 		width: 320px;
 	}
 }

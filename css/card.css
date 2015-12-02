@@ -54,16 +54,6 @@
   -webkit-box-shadow: #545454 0 0 10px;
   box-shadow: #545454 0 0 10px;
 }
-.main-content .card {
-  width: 340px;
-  height: 520px;
-  margin: 10px 16px;
-  float: none;
-  display: -moz-inline-stack;
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-}
 .card span.cate-tab {
   left: 0;
 }
@@ -90,15 +80,14 @@
   padding: 0;
 }
 .card.youtube .pic {
-  position: relative;
-  width: 340px;
-  height: 272px;
+  width: 300px;
+  height: 240px;
 }
 .card.youtube .pic img {
-  height: 365px;
-  left: -72px;
-  top: -47px;
-  clip: rect(47px, 412px, 319px, 72px);
+  height: 320px;
+  left: -65px;
+  top: -40px;
+  clip: rect(40px, 365px, 280px, 65px);
 }
 .card.youtube .pic a {
   display: block;
@@ -133,6 +122,68 @@
   text-align: center;
   font-size: 1.75em;
 }
+.main-content .card {
+  width: 340px;
+  height: 540px;
+  margin: 16px;
+  float: none;
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+.main-content .card .pic {
+  width: 340px;
+  height: 272px;
+}
+.main-content .card .pic img {
+  height: 272px;
+  left: -79px;
+  clip: rect(0, 419px, 272px, 79px);
+}
+.main-content .card.youtube .pic {
+  width: 340px;
+  height: 272px;
+}
+.main-content .card.youtube .pic img {
+  height: 365px;
+  left: -72px;
+  top: -47px;
+  clip: rect(47px, 412px, 319px, 72px);
+}
+.main-content .card.youtube .pic a {
+  display: block;
+  height: 240px;
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.2);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000);
+  zoom: 1;
+  position: relative;
+  z-index: 4;
+}
+.main-content .card.youtube .pic a:hover {
+  background-color: transparent;
+  background-color: transparent;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000,endColorstr=#00000000);
+  zoom: 1;
+}
+.main-content .card.youtube .pic i {
+  position: absolute;
+  top: 45%;
+  left: 125px;
+  z-index: 3;
+  color: #fff;
+  background: #b90f00;
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 1.75em;
+}
 .card .content {
   max-height: 210px;
   overflow: hidden;
@@ -149,10 +200,16 @@
   max-height: 92px;
   line-height: 1.5em;
 }
+@media only screen and (max-width: 991px) {
+  .main-content .card {
+    margin: 10px 8px;
+  }
+}
 @media only screen and (max-width: 480px) {
   .main-content .card {
-    width: 300px;
+    width: 286px;
     height: 500px;
+    margin: 10px auto;
   }
   .card.youtube .pic {
     width: 300px;
@@ -160,9 +217,9 @@
   }
   .card.youtube .pic img {
     height: 320px;
-    left: -64px;
+    left: -70px;
     top: -40px;
-    clip: rect(40px, 364px, 280px, 64px);
+    clip: rect(40px, 356px, 280px, 70px);
   }
 }
 

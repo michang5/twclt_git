@@ -58,7 +58,7 @@ $(document).ready(function () {
 	};
 
 	// bind filter button click
-	$('#filters').on('click', '.tab', function () {
+	$('#filters, .filters').on('click', '.tab', function () {
 		var filterValue = $(this).attr('data-filter');
 		// use filterFn if matches value
 		filterValue = filterFns[filterValue] || filterValue;
