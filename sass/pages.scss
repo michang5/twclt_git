@@ -23,7 +23,8 @@
 	}
 }
 .top-banner.slider {
-	height: 420px;
+	height: 450px;
+//	padding-top: 182px;
 	@include box-sizing(content-box);
 }
 .breadcrumbs {
@@ -175,3 +176,55 @@
 	}
 }
 
+//slider
+#carousel-top {
+	height: 450px;
+//	background: red;
+	&.carousel {
+		width: 100%;
+	}
+	.carousel-inner {
+		position: relative;
+		height: 450px;
+		.col-md-7.img-wrapper {
+			height: 420px;
+			background: blue;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.col-md-4.carousel-caption {
+			position: static;
+			text-align: left;
+			span.cate-tab {
+				@include inline-block;
+				padding: 10px 20px;
+				margin-bottom: 10px;
+				line-height: $xxxl-font;
+				background: $purple;
+				@include border-radius(6px);
+				color: $white;
+			}
+			p {
+				height: 170px;
+				overflow: hidden;
+			}
+		}
+		button {
+			position: relative;
+			right: 0;
+			top: 18px;
+		}
+	}
+	.carousel-indicators {
+		left: 93%;
+		width: 200px;
+		li {
+			border: none;
+			background: $gray;
+			&.active {
+				background: $white;
+			}
+		}
+	}
+	
+}
