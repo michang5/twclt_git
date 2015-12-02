@@ -78,3 +78,78 @@
 		}
 	}
 }
+
+//filter
+.collapse-panel {
+	margin-bottom: 10px;
+	.collapse-heading {
+		position: relative;
+		text-align: center;
+		border-bottom: 1px solid $gray;
+		color: $white;
+		padding: 5px;
+		font-size: $xl-font;
+		cursor: pointer;
+		&:hover, &:focus {
+			background: $red;
+		}
+	}
+	.collapse-body {
+		display:none;
+		a {
+			color: $white;
+			display: block;
+			padding: 2px 10px;
+			text-align: right;
+			
+			&:hover, &.selected {
+				background: $yellow;
+			}
+		}
+	}
+	@include respond-to (md-screen){
+		.collapse-heading {
+			font-size: $m-font;
+			line-height: $xxxxxl-font;
+		}
+		.collapse-body {
+			font-size: $s-font;
+			line-height: $xxxxxl-font;
+		}
+	}
+	@include respond-to (only-device){
+		@include inline-block;
+		vertical-align: top;
+		margin-bottom: 1px;
+		.collapse-heading {
+			font-size: $s-font;
+			line-height: $xxxxxl-font;
+			@include transparent($red,.6);
+			border-bottom: 0;
+			width: 110px;
+		}
+		.collapse-body {
+			font-size: $s-font;
+			line-height: $xxxxxl-font;
+		}
+	}
+	@include respond-to (normal-mobile){
+		.collapse-heading {
+			width: 90px;
+		}
+		.collapse-body {
+		}
+	}
+}
+.collapse-menu {
+	@include transparent($black,.8);
+	@include respond-to (only-device){
+		@include transparent($black,.6);
+		width: 110px;
+		position: absolute;
+		right: -6px;
+	}
+	@include respond-to (normal-mobile){
+		width: 90px;
+	}
+}
