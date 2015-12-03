@@ -125,42 +125,42 @@
 			}
 		}
 		&.youtube {
-		.pic {
-			width: 340px;
-			height: 272px;
-			img {
-				height: 365px;
-				left: -72px;
-				top: -47px;
-				clip: rect(47px,412px,319px,72px);
-			}
-			a {
-				display: block;
-				height: 240px;
-				@include transparent($black,.2);
-				position: relative;
-				z-index: 4;
-				&:hover {
-					@include transparent($black,0);
+			.pic {
+				width: 340px;
+				height: 272px;
+				img {
+					height: 365px;
+					left: -72px;
+					top: -47px;
+					clip: rect(47px,412px,319px,72px);
+				}
+				a {
+					display: block;
+					height: 240px;
+					@include transparent($black,.2);
+					position: relative;
+					z-index: 4;
+					&:hover {
+						@include transparent($black,0);
+					}
+				}
+				i {
+					position: absolute;
+					top: 45%;
+					left: 125px;
+					z-index: 3;
+					color: $white;
+					background: $red;
+					display: block;
+					width: 50px;
+					height: 50px;
+					line-height: 50px;
+					@include border-radius(100%);
+					text-align: center;
+					font-size: $xxxl-font;
 				}
 			}
-			i {
-				position: absolute;
-				top: 45%;
-				left: 125px;
-				z-index: 3;
-				color: $white;
-				background: $red;
-				display: block;
-				width: 50px;
-				height: 50px;
-				line-height: 50px;
-				@include border-radius(100%);
-				text-align: center;
-				font-size: $xxxl-font;
-			}
 		}
-	}
 	}
 	.content {
 		max-height: 210px;
@@ -172,7 +172,7 @@
 			font-size: $xl-font;
 			max-height: 50px;
 		}
-		p {
+		> p {
 			color: $black;
 			max-height: 92px;
 			line-height: $xxl-font;
@@ -205,7 +205,7 @@
 }
 .card-content {
 	width: 100%;
-	padding: 10px;
+//	padding: 10px;
 	span {
 		&.cate-tab {
 			@include border-radius(0 0 6px 6px);
@@ -214,6 +214,11 @@
 	.content {
 		p {
 			line-height: $xxxl-font;
+		}
+	}
+	.card {
+		p {
+			line-height: $xxl-font;
 		}
 	}
 	.title-group {
@@ -231,4 +236,36 @@
 		margin: 0 auto;
 	}
 }
-
+.thearter-list {
+	border-top: 1px solid $lighter-gray;
+	margin: 20px auto;
+	padding: 20px 0;
+	@include clearfix;
+	p {
+		margin: 10px auto;
+	}
+	.btn-group {
+		margin: 10px auto;
+		display: block;
+		text-align: center;
+		.btn {
+			@include inline-block;
+			position: static;
+			margin: 0 -1px;
+			padding: 8px 18px;
+			float: none;
+			border: 0;
+			background: $red;
+			color: $white;
+			&:hover, &:active, &:focus {
+				background: $black; 
+			}
+		}
+	}
+	.card {
+//		margin: 16px;
+		@include respond-to (lg-screen){
+			margin: 6px;
+		}
+	}
+}

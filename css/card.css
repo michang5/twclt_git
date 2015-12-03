@@ -195,7 +195,7 @@
   font-size: 1.25em;
   max-height: 50px;
 }
-.card .content p {
+.card .content > p {
   color: #000;
   max-height: 92px;
   line-height: 1.5em;
@@ -225,7 +225,6 @@
 
 .card-content {
   width: 100%;
-  padding: 10px;
 }
 .card-content span.cate-tab {
   -moz-border-radius: 0 0 6px 6px;
@@ -234,6 +233,9 @@
 }
 .card-content .content p {
   line-height: 1.75em;
+}
+.card-content .card p {
+  line-height: 1.5em;
 }
 .card-content .title-group {
   margin-left: 68px;
@@ -248,4 +250,47 @@
 }
 .card-content img {
   margin: 0 auto;
+}
+
+.thearter-list {
+  border-top: 1px solid #e9e9e9;
+  margin: 20px auto;
+  padding: 20px 0;
+  *zoom: 1;
+}
+.thearter-list:after, .thearter-list:before {
+  content: "";
+  display: table;
+}
+.thearter-list:after {
+  clear: both;
+}
+.thearter-list p {
+  margin: 10px auto;
+}
+.thearter-list .btn-group {
+  margin: 10px auto;
+  display: block;
+  text-align: center;
+}
+.thearter-list .btn-group .btn {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  position: static;
+  margin: 0 -1px;
+  padding: 8px 18px;
+  float: none;
+  border: 0;
+  background: #b90f00;
+  color: #fff;
+}
+.thearter-list .btn-group .btn:hover, .thearter-list .btn-group .btn:active, .thearter-list .btn-group .btn:focus {
+  background: #000;
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .thearter-list .card {
+    margin: 6px;
+  }
 }
