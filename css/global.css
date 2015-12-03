@@ -705,15 +705,15 @@ a[data-toggle=modal] {
   height: 0;
   overflow: hidden;
 }
-
-.video-container iframe,
-.video-container object,
-.video-container embed {
+.video-container iframe, .video-container object, .video-container embed {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+.top-banner .video-container iframe, .top-banner .video-container object, .top-banner .video-container embed {
+  height: 91%;
 }
 
 /* ------------ layout ------------ */

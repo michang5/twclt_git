@@ -57,3 +57,9 @@ body {
 .content .collect {
   right: 10px;
 }
+
+@media only screen and (max-width: 991px) {
+  .row.artist {
+    margin-top: 60px;
+  }
+}

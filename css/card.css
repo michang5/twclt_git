@@ -227,6 +227,11 @@
   width: 100%;
   padding: 10px;
 }
+.card-content span.cate-tab {
+  -moz-border-radius: 0 0 6px 6px;
+  -webkit-border-radius: 0;
+  border-radius: 0 0 6px 6px;
+}
 .card-content .content p {
   line-height: 1.75em;
 }
