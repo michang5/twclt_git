@@ -709,10 +709,10 @@ a[data-toggle=modal] {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 90%;
 }
 .top-banner .video-container iframe, .top-banner .video-container object, .top-banner .video-container embed {
-  height: 91%;
+  height: 86%;
 }
 
 /* ------------ layout ------------ */

@@ -477,6 +477,7 @@ a[data-toggle=modal] {
 .video {
 	position: relative;
 	margin-bottom: 40px;
+	
 	video {
 		@include box-shadow($black 0 0 10px);
 		background: $black;
@@ -499,14 +500,16 @@ a[data-toggle=modal] {
 	position: relative;
 	padding-bottom: 56.25%;
 	padding-top: 30px; height: 0; overflow: hidden;
+	
 	iframe, object, embed {
+//		border: 1px solid #fff;
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 100%;
+		height: 90%;
 		.top-banner & {
-			height: 91%;
+			height: 86%;
 		}
 	}
 	

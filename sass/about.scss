@@ -12,7 +12,7 @@
 	width: 100%;
 	margin: 30px auto;
 	position: relative;
-	padding: 0 10px;
+	padding: 0 10px 200px;
 	@include transition(all ,.5s, ease-in-out);
 	&:before {
 		content:"";
@@ -151,7 +151,7 @@
 		margin: 0 0 0 6px;
 	}
 }
-#menu {
+#year-menu {
 	.collapse-panel {
 		.collapse-heading {
 			border-bottom: 1px solid $gray;
@@ -202,31 +202,42 @@
 			}
 		}
 	}
-	.collapse-menu {
+	&.collapse-menu {
 		@include transparent($black,.8);
 		@include respond-to (only-device){
 			@include transparent($black,.6);
 			width: 110px;
-			position: absolute;
+			position: fixed;
 			right: -6px;
+			z-index: 99;
 		}
 		@include respond-to (normal-mobile){
 			width: 90px;
+			bottom: 80px;
 		}
 	}
-}
-#menu  {
 }
 .fixed {
 	z-index: 999;
 	position: fixed;
 	
-	&.collapse-menu {
-		top: 350px;
+	&#year-menu {
+		top: 250px;
+		@include respond-to (only-device){
+			top: 350px;
+		}
+		@include respond-to (normal-mobile){
+			top: auto;
+			bottom: 80px;
+		}
+//		@include respond-to (xxs-mobile){
+//			top: auto;
+//			bottom: 100px;
+//		}
 	}
 	&.tabs {
 		top: 200px;
-		width: 78%;
+		width: 90%;
 	}
 	@include respond-to (normal-mobile){
 		.collapse-heading {

@@ -173,7 +173,7 @@
 
 //slider
 .top-banner.slider {
-	max-height: 450px;
+//	max-height: 450px;
 	@include box-sizing(content-box);
 	@include respond-to (md-screen){
 		padding-top: 172px;
@@ -184,19 +184,20 @@
 	}
 }
 #carousel-top {
-	max-height: 450px;
-//	background: red;
+//	max-height: 450px;
+//	height: 450px;
 	&.carousel {
 		width: 100%;
+		margin-top: 0;
 	}
 	.carousel-inner {
 		position: relative;
-		max-height: 450px;
-		.col-md-7.img-wrapper {
-			height: 420px;
-			background: blue;
+//		max-height: 450px;
+		.col-md-8.img-wrapper, .col-md-8.video-wrapper {
+			height: 440px;
 			padding-left: 0;
 			padding-right: 0;
+			overflow: hidden;
 		}
 		.col-md-4.carousel-caption {
 			position: static;
@@ -239,14 +240,17 @@
 	@include respond-to (lg-screen){
 		.carousel-inner {
 			button {
-				top: 290px;
+				top: 300px;
+			}
+			.col-md-8.img-wrapper, .col-md-8.video-wrapper {
+				height: 375px;
 			}
 		}
 	}
 	@media only screen and (max-width: 1200px) and (min-width: 1100px) {
 		.carousel-inner {
 			button {
-				top: 326px;
+				top: 320px;
 			}
 		}
 	}
@@ -259,6 +263,9 @@
 		}
 		.carousel-inner {
 			max-height: none;
+			.col-md-8.img-wrapper, .col-md-8.video-wrapper {
+				height: auto;
+			}
 			.col-md-4.carousel-caption {
 				span.cate-tab {
 					top: -20px;
@@ -284,6 +291,9 @@
 		.carousel-inner {
 			padding-bottom: 20px;
 			max-height: none;
+			.col-md-8.img-wrapper, .col-md-8.video-wrapper {
+				height: auto;
+			}
 			.col-md-4.carousel-caption {
 				span.cate-tab {
 					top: -18px;

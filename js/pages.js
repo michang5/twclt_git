@@ -1,6 +1,6 @@
 $(function () {
 	var $win = $(window),
-		$menu = $('#menu, .tabs'),
+		$menu = $('#year-menu, #tab-list, .tabs'),
 		_menuOffset = $menu.offset(),
 		$menuA = $menu.find('a'),
 		$content = $('#content');
@@ -80,6 +80,5 @@ $(function () {
 
 		}
 	});
-
 
 });

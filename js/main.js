@@ -1,15 +1,15 @@
 
 $(function(){
-	$('.dropdown-menu input, .dropdown-menu label').click(function(e) {
-        e.stopPropagation();
-    });
+//	$('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+//        e.stopPropagation();
+//    });
 	$('.carousel').carousel({
 		pause: true,
 		interval: false
 	});
 	//jQuery for page scrolling feature - requires jQuery Easing plugin
 	$(function() {
-		$('#menu a,.fix-icon a').bind('click', function(event) {
+		$('.fix-icon a').bind('click', function(event) {
 			var $anchor = $(this);
 			var nav = $($anchor.attr('href'));
 			if (nav.length) {
@@ -24,63 +24,7 @@ $(function(){
 	$(".modal#crazyad-video").on('hidden.bs.modal', function () {
 		$("#crazyad-video iframe").attr("src", $("#crazyad-video iframe").attr("src"));
 	});
-	
-});
-$(document).ready(function () {
-	// init Isotope
-	var $container = $('.isotope').isotope({
-		itemSelector: '.element-item',
-		layoutMode: 'fitRows',
-		getSortData: {
-			name: '.name',
-			symbol: '.symbol',
-			number: '.number parseInt',
-			category: '[data-category]',
-			weight: function (itemElem) {
-				var weight = $(itemElem).find('.weight').text();
-				return parseFloat(weight.replace(/[\(\)]/g, ''));
-			}
-		}
-	});
-
-	// filter functions
-	var filterFns = {
-		// show if number is greater than 50
-		numberGreaterThan50: function () {
-			var number = $(this).find('.number').text();
-			return parseInt(number, 10) > 50;
-		},
-		// show if name ends with -ium
-		ium: function () {
-			var name = $(this).find('.name').text();
-			return name.match(/ium$/);
-		}
-	};
-
-	// bind filter button click
-	$('#filters, .filters').on('click', '.tab', function () {
-		var filterValue = $(this).attr('data-filter');
-		// use filterFn if matches value
-		filterValue = filterFns[filterValue] || filterValue;
-		$container.isotope({
-			filter: filterValue
-		});
-	});
-
-	// bind sort button click
-	$('#sorts').on('click', '.tab', function () {
-		var sortByValue = $(this).attr('data-sort-by');
-		$container.isotope({
-			sortBy: sortByValue
-		});
-	});
-
-	// change is-checked class on buttons
-	$('.tab-group').each(function (i, buttonGroup) {
-		var $buttonGroup = $(buttonGroup);
-		$buttonGroup.on('click', '.tab', function () {
-			$buttonGroup.find('.is-checked').removeClass('is-checked');
-			$(this).addClass('is-checked');
-		});
+	$(".modal#video").on('hidden.bs.modal', function () {
+		$("#video iframe").attr("src", $("#video iframe").attr("src"));
 	});
 });
