@@ -53,9 +53,11 @@ body {
 }
 .content .social-share {
   right: 58px;
+  z-index: 999;
 }
 .content .collect {
   right: 10px;
+  z-index: 999;
 }
 
 @media only screen and (max-width: 991px) {

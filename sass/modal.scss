@@ -42,9 +42,11 @@ body {
 	}
 	.social-share {
 		right: 58px;
+		z-index: 999;
 	}
 	.collect {
 		right: 10px;
+		z-index: 999;
 	}
 }
 .row.artist {

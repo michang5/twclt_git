@@ -43,13 +43,14 @@
   width: 300px;
   height: 500px;
   background: #fff;
-  text-align: left;
+  text-align: justify;
   margin: 10px;
   float: left;
   display: -moz-inline-stack;
   display: inline-block;
   *display: inline;
   zoom: 1;
+  vertical-align: top;
   -moz-box-shadow: #545454 0 0 10px;
   -webkit-box-shadow: #545454 0 0 10px;
   box-shadow: #545454 0 0 10px;
@@ -184,6 +185,18 @@
   text-align: center;
   font-size: 1.75em;
 }
+.card.short {
+  height: 480px;
+}
+.card.short .content h3 {
+  max-height: 25px;
+}
+.card.medium {
+  height: 500px;
+}
+.card.medium .btn-group {
+  margin-top: -10px;
+}
 .card .content {
   max-height: 210px;
   overflow: hidden;
@@ -253,7 +266,6 @@
 }
 
 .thearter-list {
-  border-top: 1px solid #e9e9e9;
   margin: 20px auto;
   padding: 20px 0;
   *zoom: 1;
@@ -280,13 +292,15 @@
   zoom: 1;
   position: static;
   margin: 0 -1px;
-  padding: 8px 18px;
   float: none;
+}
+.thearter-list .btn {
+  padding: 8px 18px;
   border: 0;
   background: #b90f00;
   color: #fff;
 }
-.thearter-list .btn-group .btn:hover, .thearter-list .btn-group .btn:active, .thearter-list .btn-group .btn:focus {
+.thearter-list .btn:hover, .thearter-list .btn:active, .thearter-list .btn:focus {
   background: #000;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {

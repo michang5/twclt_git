@@ -194,7 +194,7 @@
 		position: relative;
 //		max-height: 450px;
 		.col-md-8.img-wrapper, .col-md-8.video-wrapper {
-			height: 440px;
+			height: 420px;
 			padding-left: 0;
 			padding-right: 0;
 			overflow: hidden;
@@ -216,22 +216,34 @@
 				float: right;
 			}
 			p {
-				max-height: 170px;
+				max-height: 196px;
 				overflow: hidden;
 			}
 		}
 		button {
 			position: absolute;
 			right: 0;
-			top: 380px;
+			top: 350px;
+		}
+		&.short  {
+			.col-md-4.carousel-caption {
+				p {
+					max-height: 170px;
+
+				}
+			}
 		}
 	}
 	.carousel-indicators {
-		left: 93%;
+//		border: 1px solid $white;
+		left: 98%;
 		width: 200px;
 		li {
 			border: none;
 			background: $gray;
+			display: block;
+			float: left;
+			margin-right: 6px;
 			&.active {
 				background: $white;
 			}
@@ -260,6 +272,9 @@
 		.carousel-indicators {
 			left: 50%;
 			width: 60%;
+			li {
+				@include inline-block;
+			}
 		}
 		.carousel-inner {
 			max-height: none;

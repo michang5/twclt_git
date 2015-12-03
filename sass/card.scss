@@ -40,10 +40,11 @@
 	width: 300px;
 	height: 500px;
 	background: $white;
-	text-align: left;
+	text-align: justify;
 	margin: 10px;
 	float: left;
 	@include inline-block;
+	vertical-align: top;
 	@include box-shadow ($gray 0 0 10px);
 	span {
 		&.cate-tab {
@@ -162,6 +163,20 @@
 			}
 		}
 	}
+	&.short {
+		height: 480px;
+		.content {
+			h3 {
+				max-height: 25px;
+			}
+		}
+	}
+	&.medium {
+		height: 500px;
+		.btn-group {
+			margin-top: -10px;
+		}
+	}
 	.content {
 		max-height: 210px;
 		overflow: hidden;
@@ -237,7 +252,7 @@
 	}
 }
 .thearter-list {
-	border-top: 1px solid $lighter-gray;
+//	border-top: 1px solid $lighter-gray;
 	margin: 20px auto;
 	padding: 20px 0;
 	@include clearfix;
@@ -252,14 +267,16 @@
 			@include inline-block;
 			position: static;
 			margin: 0 -1px;
-			padding: 8px 18px;
 			float: none;
-			border: 0;
-			background: $red;
-			color: $white;
-			&:hover, &:active, &:focus {
-				background: $black; 
-			}
+		}
+	}
+	.btn {
+		padding: 8px 18px;
+		border: 0;
+		background: $red;
+		color: $white;
+		&:hover, &:active, &:focus {
+			background: $black; 
 		}
 	}
 	.card {

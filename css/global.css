@@ -712,7 +712,7 @@ a[data-toggle=modal] {
   height: 90%;
 }
 .top-banner .video-container iframe, .top-banner .video-container object, .top-banner .video-container embed {
-  height: 86%;
+  height: 82%;
 }
 
 /* ------------ layout ------------ */
@@ -845,10 +845,10 @@ a[data-toggle=modal] {
   border-radius: 0;
 }
 #navigation nav .navbar-collapse ul.navbar-nav .dropdown-menu.drop-about {
-  width: 166px;
+  width: 156px;
 }
 #navigation nav .navbar-collapse ul.navbar-nav .dropdown-menu.drop-products {
-  width: 134px;
+  width: 124px;
 }
 #navigation nav .navbar-collapse ul.navbar-nav .dropdown-menu li {
   display: block;
@@ -1029,6 +1029,12 @@ a[data-toggle=modal] {
   #navigation header h2.logo {
     padding: 18px 15px;
     width: 65%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
   }
 }
 
