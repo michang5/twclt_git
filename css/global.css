@@ -950,9 +950,10 @@ a[data-toggle=modal] {
 #navigation .visible-xs-block .social-media li.copy-link .btn a {
   padding: 0;
 }
-#navigation .visible-xs-block .social-media li.copy-link .btn a i {
-  margin: 0 5px;
+#navigation .visible-xs-block .social-media li.copy-link .btn a > i {
+  margin: 0;
   height: 32px;
+  width: 32px;
   line-height: 32px;
   color: #fff;
 }

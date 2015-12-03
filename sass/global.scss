@@ -725,6 +725,9 @@ a[data-toggle=modal] {
 				display: block;
 				margin: 0;
 				line-height: 42px;
+//				.btn & {
+//					width: 32px;
+//				}
 			}
 			&.copy-link {
 				display: block;
@@ -734,9 +737,10 @@ a[data-toggle=modal] {
 					background: $black;
 					a {
 						padding: 0;
-						i {
-							margin: 0 5px;
+						> i {
+							margin: 0;
 							height: 32px;
+							width: 32px;
 							line-height: 32px;
 							color: $white;
 						}
