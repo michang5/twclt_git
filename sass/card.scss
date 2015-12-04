@@ -175,6 +175,15 @@
 			margin-top: -10px;
 		}
 	}
+	&.ticket {
+		width: 90%;
+		.pic, .content {
+			@include inline-block;
+		}
+		.content {
+			width: auto;
+		}
+	}
 	.content {
 		max-height: 210px;
 		overflow: hidden;
@@ -191,6 +200,7 @@
 			line-height: $xxl-font;
 		}
 	}
+	
 	@include respond-to (tablet-landscape){
 		.main-content & {
 			margin: 10px 8px;
@@ -274,7 +284,8 @@
 		background: $red;
 		color: $white;
 		&:hover, &:active, &:focus {
-			background: $black; 
+			background: $black;
+			border: none;
 		}
 	}
 	.card {

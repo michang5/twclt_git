@@ -1,0 +1,64 @@
+.info li {
+  padding: 6px 0;
+}
+.info li span {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  width: 260px;
+}
+.info li a {
+  color: #fff;
+  text-decoration: underline;
+}
+.info li a:hover {
+  color: #f8b31c;
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .info li {
+    padding: 10px 0;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .info {
+    margin-bottom: 20px;
+  }
+  .info li {
+    padding: 10px 0;
+  }
+}
+
+.form-group span, .form-group input.form-control, .form-group select, .form-group textarea {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: top;
+}
+.form-group span {
+  width: 80px;
+  line-height: 42px;
+}
+.form-group span.captcha {
+  background: #343434;
+  height: 40px;
+  margin: 0 5px;
+  text-align: center;
+  color: #545454;
+}
+.form-group input.form-control, .form-group select {
+  width: 200px;
+  margin: 4px 0;
+}
+.form-group textarea {
+  width: 80%;
+}
+@media only screen and (max-width: 480px) {
+  .form-group:nth-of-type(6) span:nth-of-type(1) {
+    width: 100%;
+  }
+  .form-group:nth-of-type(7) span {
+    display: none;
+  }
+}

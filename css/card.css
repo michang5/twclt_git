@@ -195,6 +195,18 @@
 .card.medium .btn-group {
   margin-top: -10px;
 }
+.card.ticket {
+  width: 90%;
+}
+.card.ticket .pic, .card.ticket .content {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+.card.ticket .content {
+  width: auto;
+}
 .card .content {
   max-height: 210px;
   overflow: hidden;
@@ -300,6 +312,7 @@
 }
 .thearter-list .btn:hover, .thearter-list .btn:active, .thearter-list .btn:focus {
   background: #000;
+  border: none;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .thearter-list .card {
