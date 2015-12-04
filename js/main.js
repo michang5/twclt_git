@@ -24,7 +24,13 @@ $(function(){
 	$(".modal#crazyad-video").on('hidden.bs.modal', function () {
 		$("#crazyad-video iframe").attr("src", $("#crazyad-video iframe").attr("src"));
 	});
+	
 	$(".modal#video").on('hidden.bs.modal', function () {
 		$("#video iframe").attr("src", $("#video iframe").attr("src"));
 	});
+	
+	$(".carousel-indicators li").click(function () {
+		$(".carousel iframe").attr("src", $(".carousel iframe").attr("src"));
+	});
+
 });
