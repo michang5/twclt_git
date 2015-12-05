@@ -41,8 +41,8 @@
 	text-align: justify;
 	margin: 10px;
 	float: left;
-	@include inline-block;
 	vertical-align: top;
+	@include inline-block;
 	@include box-shadow ($gray 0 0 10px);
 	span {
 		&.cate-tab {
@@ -175,13 +175,62 @@
 			margin-top: -10px;
 		}
 	}
+	.thearter-list & , &.ticket {
+		.btn-group {
+			display: block;
+			text-align: center;
+			.btn {
+				@include inline-block;
+				position: static;
+				margin: 0 -1px;
+				float: none;
+			}
+		}
+		.btn {
+			padding: 8px 18px;
+			border: 0;
+			background: $red;
+			color: $white;
+			&:hover, &:active, &:focus {
+				background: $black;
+				border: none;
+			}
+		}
+	}
 	&.ticket {
 		width: 90%;
+		height: auto;
+		text-align: left;
 		.pic, .content {
 			@include inline-block;
+			vertical-align: top;
+		}
+		.pic {
+			width: 420px;
+			height: 230px;
+			float: left;
+			img {
+				height: 230px;
+				left: 0;
+				clip: inherit;
+			}
 		}
 		.content {
-			width: auto;
+			display: block;
+			h4 {
+				margin: 5px 0;
+				span {
+					padding-right: 10px;
+				}
+			}
+			p {
+				padding-bottom: 6px;
+				max-height: none;
+			}
+		}
+		.btn-group {
+			float: right;
+			margin: -13px 26px;
 		}
 	}
 	.content {
@@ -197,10 +246,14 @@
 		> p {
 			color: $black;
 			max-height: 92px;
-			line-height: $xxl-font;
+			line-height: $xxxl-font;
 		}
 	}
-	
+	@include respond-to (lg-screen){
+		.thearter-list & {
+			margin: 6px;
+		}
+	}
 	@include respond-to (tablet-landscape){
 		.main-content & {
 			margin: 10px 8px;
@@ -260,38 +313,10 @@
 	}
 }
 .thearter-list {
-//	border-top: 1px solid $lighter-gray;
 	margin: 20px auto;
 	padding: 20px 0;
 	@include clearfix;
 	p {
 		margin: 10px auto;
-	}
-	.btn-group {
-		margin: 10px auto;
-		display: block;
-		text-align: center;
-		.btn {
-			@include inline-block;
-			position: static;
-			margin: 0 -1px;
-			float: none;
-		}
-	}
-	.btn {
-		padding: 8px 18px;
-		border: 0;
-		background: $red;
-		color: $white;
-		&:hover, &:active, &:focus {
-			background: $black;
-			border: none;
-		}
-	}
-	.card {
-//		margin: 16px;
-		@include respond-to (lg-screen){
-			margin: 6px;
-		}
 	}
 }

@@ -44,11 +44,11 @@
   text-align: justify;
   margin: 10px;
   float: left;
+  vertical-align: top;
   display: -moz-inline-stack;
   display: inline-block;
   *display: inline;
   zoom: 1;
-  vertical-align: top;
   -moz-box-shadow: #545454 0 0 10px;
   -webkit-box-shadow: #545454 0 0 10px;
   box-shadow: #545454 0 0 10px;
@@ -195,17 +195,67 @@
 .card.medium .btn-group {
   margin-top: -10px;
 }
+.thearter-list .card .btn-group, .card.ticket .btn-group {
+  display: block;
+  text-align: center;
+}
+.thearter-list .card .btn-group .btn, .card.ticket .btn-group .btn {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  position: static;
+  margin: 0 -1px;
+  float: none;
+}
+.thearter-list .card .btn, .card.ticket .btn {
+  padding: 8px 18px;
+  border: 0;
+  background: #b90f00;
+  color: #fff;
+}
+.thearter-list .card .btn:hover, .thearter-list .card .btn:active, .thearter-list .card .btn:focus, .card.ticket .btn:hover, .card.ticket .btn:active, .card.ticket .btn:focus {
+  background: #000;
+  border: none;
+}
 .card.ticket {
   width: 90%;
+  height: auto;
+  text-align: left;
 }
 .card.ticket .pic, .card.ticket .content {
   display: -moz-inline-stack;
   display: inline-block;
   *display: inline;
   zoom: 1;
+  vertical-align: top;
+}
+.card.ticket .pic {
+  width: 420px;
+  height: 230px;
+  float: left;
+}
+.card.ticket .pic img {
+  height: 230px;
+  left: 0;
+  clip: inherit;
 }
 .card.ticket .content {
-  width: auto;
+  display: block;
+}
+.card.ticket .content h4 {
+  margin: 5px 0;
+}
+.card.ticket .content h4 span {
+  padding-right: 10px;
+}
+.card.ticket .content p {
+  padding-bottom: 6px;
+  max-height: none;
+}
+.card.ticket .btn-group {
+  float: right;
+  margin: -13px 26px;
 }
 .card .content {
   max-height: 210px;
@@ -221,7 +271,12 @@
 .card .content > p {
   color: #000;
   max-height: 92px;
-  line-height: 1.5em;
+  line-height: 1.75em;
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .thearter-list .card {
+    margin: 6px;
+  }
 }
 @media only screen and (max-width: 991px) {
   .main-content .card {
@@ -289,33 +344,4 @@
 }
 .thearter-list p {
   margin: 10px auto;
-}
-.thearter-list .btn-group {
-  margin: 10px auto;
-  display: block;
-  text-align: center;
-}
-.thearter-list .btn-group .btn {
-  display: -moz-inline-stack;
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  position: static;
-  margin: 0 -1px;
-  float: none;
-}
-.thearter-list .btn {
-  padding: 8px 18px;
-  border: 0;
-  background: #b90f00;
-  color: #fff;
-}
-.thearter-list .btn:hover, .thearter-list .btn:active, .thearter-list .btn:focus {
-  background: #000;
-  border: none;
-}
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .thearter-list .card {
-    margin: 6px;
-  }
 }
