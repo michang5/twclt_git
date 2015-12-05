@@ -310,6 +310,9 @@ button.btn-normal:hover, button.btn-normal:focus {
   width: 800px;
   margin: 0 auto;
 }
+#tickets .isotope {
+  width: 100% !important;
+}
 @media only screen and (max-width: 991px) {
   .isotope {
     width: 640px;

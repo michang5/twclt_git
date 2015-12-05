@@ -49,9 +49,17 @@
   display: inline-block;
   *display: inline;
   zoom: 1;
+  *zoom: 1;
   -moz-box-shadow: #545454 0 0 10px;
   -webkit-box-shadow: #545454 0 0 10px;
   box-shadow: #545454 0 0 10px;
+}
+.card:after, .card:before {
+  content: "";
+  display: table;
+}
+.card:after {
+  clear: both;
 }
 .card span.cate-tab {
   left: 0;
@@ -218,8 +226,25 @@
   background: #000;
   border: none;
 }
+.card .content {
+  max-height: 210px;
+  overflow: hidden;
+}
+.card .content h3, .card .content p {
+  overflow: hidden;
+}
+.card .content h3 {
+  font-size: 1.25em;
+  max-height: 50px;
+}
+.card .content > p {
+  color: #000;
+  max-height: 92px;
+  line-height: 1.75em;
+}
 .card.ticket {
-  width: 90%;
+  width: 100%;
+  margin: 16px 0 !important;
   height: auto;
   text-align: left;
 }
@@ -257,30 +282,85 @@
   float: right;
   margin: -13px 26px;
 }
-.card .content {
-  max-height: 210px;
-  overflow: hidden;
-}
-.card .content h3, .card .content p {
-  overflow: hidden;
-}
-.card .content h3 {
-  font-size: 1.25em;
-  max-height: 50px;
-}
-.card .content > p {
-  color: #000;
-  max-height: 92px;
-  line-height: 1.75em;
-}
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .thearter-list .card {
     margin: 6px;
+  }
+  .card.ticket .pic {
+    width: 300px;
+    height: 240px;
+    float: left;
+  }
+  .card.ticket .pic img {
+    height: 240px;
+    left: -70px;
+    position: absolute;
+    clip: rect(0px, 370px, 240px, 70px);
+    padding: 0;
   }
 }
 @media only screen and (max-width: 991px) {
   .main-content .card {
     margin: 10px 8px;
+  }
+  .card.ticket .pic {
+    width: 300px;
+    height: 240px;
+  }
+  .card.ticket .pic img {
+    height: 240px;
+    left: -70px;
+    position: absolute;
+    clip: rect(0px, 370px, 240px, 70px);
+    padding: 0;
+  }
+  .card.ticket .content p {
+    line-height: 1.5em;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .main-content .card {
+    margin: 10px 8px;
+  }
+  .card.ticket .pic {
+    width: 260px;
+    height: 240px;
+    float: left;
+  }
+  .card.ticket .pic img {
+    height: 240px;
+    left: -90px;
+    position: absolute;
+    clip: rect(0px, 350px, 240px, 90px);
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .card.ticket .content p {
+    line-height: 1.25em;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .card.ticket .pic {
+    width: 100%;
+    height: auto;
+    float: none;
+  }
+  .card.ticket .pic img {
+    height: auto;
+    position: static;
+    width: 100%;
+    clip: inherit;
+  }
+  .card.ticket .content {
+    clear: both;
+    max-height: none;
+  }
+  .card.ticket .content p {
+    line-height: 1.5em;
+  }
+  .card.ticket .btn-group {
+    margin: -5px 26px 20px;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -298,6 +378,14 @@
     left: -70px;
     top: -40px;
     clip: rect(40px, 356px, 280px, 70px);
+  }
+  .card.ticket {
+    width: 100%;
+    height: auto;
+  }
+  .card.ticket .btn-group {
+    float: none;
+    margin: -5px auto 20px;
   }
 }
 

@@ -43,6 +43,7 @@
 	float: left;
 	vertical-align: top;
 	@include inline-block;
+	@include clearfix;
 	@include box-shadow ($gray 0 0 10px);
 	span {
 		&.cate-tab {
@@ -197,8 +198,25 @@
 			}
 		}
 	}
+	.content {
+		max-height: 210px;
+		overflow: hidden;
+		h3, p {
+			overflow: hidden;
+		}
+		h3 {
+			font-size: $xl-font;
+			max-height: 50px;
+		}
+		> p {
+			color: $black;
+			max-height: 92px;
+			line-height: $xxxl-font;
+		}
+	}
 	&.ticket {
-		width: 90%;
+		width: 100%;
+		margin: 16px 0!important;
 		height: auto;
 		text-align: left;
 		.pic, .content {
@@ -233,30 +251,101 @@
 			margin: -13px 26px;
 		}
 	}
-	.content {
-		max-height: 210px;
-		overflow: hidden;
-		h3, p {
-			overflow: hidden;
-		}
-		h3 {
-			font-size: $xl-font;
-			max-height: 50px;
-		}
-		> p {
-			color: $black;
-			max-height: 92px;
-			line-height: $xxxl-font;
-		}
-	}
+	
 	@include respond-to (lg-screen){
 		.thearter-list & {
 			margin: 6px;
+		}
+		&.ticket {
+			.pic {
+				width: 300px;
+				height: 240px;
+				float: left;
+				img {
+					height: 240px;
+					left: -70px;
+					position: absolute;
+					clip: rect(0px,370px,240px,70px);
+					padding: 0;
+				}
+			}
 		}
 	}
 	@include respond-to (tablet-landscape){
 		.main-content & {
 			margin: 10px 8px;
+		}
+		&.ticket {
+			.pic {
+				width: 300px;
+				height: 240px;
+				img {
+					height: 240px;
+					left: -70px;
+					position: absolute;
+					clip: rect(0px,370px,240px,70px);
+					padding: 0;
+				}
+			}
+			.content {
+				p {
+					line-height: $xxl-font;
+				}
+			}
+		}
+	}
+	@include respond-to (md-screen){
+		.main-content & {
+			margin: 10px 8px;
+		}
+		&.ticket {
+			.pic {
+				width: 260px;
+				height: 240px;
+				float: left;
+				img {
+					height: 240px;
+					left: -90px;
+					position: absolute;
+					clip: rect(0px,350px,240px,90px);
+					padding: 0;
+				}
+			}
+		}
+	}
+	@include respond-to (only-device){
+		&.ticket {
+			.content {
+				p {
+					line-height: $xl-font;
+				}
+			}
+		}
+	}
+	@include respond-to (only-mobile){
+		&.ticket {
+			.pic {
+				width: 100%;
+				height: auto;
+				float: none;
+				
+				img {
+					height: auto;
+					position: static;
+					width: 100%;
+					clip: inherit;
+				}
+			}
+			.content {
+				clear: both;
+				max-height: none;
+				p {
+					line-height: $xxl-font;
+				}
+			}
+			.btn-group {
+				margin: -5px 26px 20px;
+			}
 		}
 	}
 	@include respond-to (normal-mobile){
@@ -276,6 +365,17 @@
 					clip: rect(40px,356px,280px,70px);
 				}
 			}
+		}
+		&.ticket {
+			width: 100%;
+			height: auto;
+			.btn-group {
+				float: none;
+				margin: -5px auto 20px;
+			}
+//			.btn-group {
+//				margin: -5px 26px 20px;
+//			}
 		}
 	}
 }

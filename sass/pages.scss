@@ -325,7 +325,6 @@
 		}
 	}
 	.carousel-indicators {
-//		border: 1px solid $white;
 		left: 98%;
 		width: 200px;
 		li {
@@ -392,6 +391,10 @@
 		.carousel-indicators {
 			left: 50%;
 			width: 60%;
+			li {
+				@include inline-block;
+				float: none;
+			}
 		}
 		.carousel-inner {
 			padding-bottom: 20px;

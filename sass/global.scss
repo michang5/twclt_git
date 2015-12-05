@@ -178,8 +178,12 @@ button.btn-normal {
 .isotope {
 	width: 800px;
 	margin: 0 auto;
+	#tickets & {
+		width: 100%!important;	
+	}
 	@include respond-to (tablet-landscape){
 		width: 640px;
+		
 	}
 	@include respond-to (only-mobile){
 		width: 320px;

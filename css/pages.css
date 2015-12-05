@@ -425,6 +425,13 @@
     left: 50%;
     width: 60%;
   }
+  #carousel-top .carousel-indicators li {
+    display: -moz-inline-stack;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    float: none;
+  }
   #carousel-top .carousel-inner {
     padding-bottom: 20px;
     max-height: none;
