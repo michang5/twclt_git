@@ -16,7 +16,7 @@ body {
 	position: relative;
 	.collect, .social-share {
 		position: absolute;
-		top: 12px;
+		top: -45px;
 		width: 40px;
 		height: 40px;
 		line-height: 40px;
@@ -41,6 +41,7 @@ body {
 		}
 	}
 	.social-share {
+		
 		right: 58px;
 		z-index: 999;
 	}

@@ -203,11 +203,11 @@
 .card.medium .btn-group {
   margin-top: -10px;
 }
-.thearter-list .card .btn-group, .card.ticket .btn-group {
+.card.thearter .btn-group, .card.ticket .btn-group {
   display: block;
   text-align: center;
 }
-.thearter-list .card .btn-group .btn, .card.ticket .btn-group .btn {
+.card.thearter .btn-group .btn, .card.ticket .btn-group .btn {
   display: -moz-inline-stack;
   display: inline-block;
   *display: inline;
@@ -216,13 +216,13 @@
   margin: 0 -1px;
   float: none;
 }
-.thearter-list .card .btn, .card.ticket .btn {
+.card.thearter .btn, .card.ticket .btn {
   padding: 8px 18px;
   border: 0;
   background: #b90f00;
   color: #fff;
 }
-.thearter-list .card .btn:hover, .thearter-list .card .btn:active, .thearter-list .card .btn:focus, .card.ticket .btn:hover, .card.ticket .btn:active, .card.ticket .btn:focus {
+.card.thearter .btn:hover, .card.thearter .btn:active, .card.thearter .btn:focus, .card.ticket .btn:hover, .card.ticket .btn:active, .card.ticket .btn:focus {
   background: #000;
   border: none;
 }
@@ -240,7 +240,7 @@
 .card .content > p {
   color: #000;
   max-height: 92px;
-  line-height: 1.75em;
+  line-height: 1.5em;
 }
 .card.ticket {
   width: 100%;
@@ -283,7 +283,7 @@
   margin: -13px 26px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .thearter-list .card {
+  .card.thearter {
     margin: 6px;
   }
   .card.ticket .pic {
@@ -404,8 +404,7 @@
   line-height: 1.5em;
 }
 .card-content .title-group {
-  margin-left: 68px;
-  margin-bottom: 12px;
+  margin: 60px 0 12px 68px;
 }
 .card-content .title-group h3 {
   font-size: 1.75em;

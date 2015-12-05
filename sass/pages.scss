@@ -10,9 +10,9 @@
 	img {
 		margin: 0 auto;
 	}
-	@include respond-to (md-screen){
-		padding-top: 50px;
-	}
+//	@include respond-to (md-screen){
+//		padding-top: 50px;
+//	}
 	@include respond-to (only-device){
 		padding-top: 70px;
 		.content {

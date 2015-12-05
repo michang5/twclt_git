@@ -176,7 +176,7 @@
 			margin-top: -10px;
 		}
 	}
-	.thearter-list & , &.ticket {
+	&.thearter , &.ticket {
 		.btn-group {
 			display: block;
 			text-align: center;
@@ -211,7 +211,7 @@
 		> p {
 			color: $black;
 			max-height: 92px;
-			line-height: $xxxl-font;
+			line-height: $xxl-font;
 		}
 	}
 	&.ticket {
@@ -253,7 +253,7 @@
 	}
 	
 	@include respond-to (lg-screen){
-		.thearter-list & {
+		&.thearter {
 			margin: 6px;
 		}
 		&.ticket {
@@ -398,8 +398,7 @@
 		}
 	}
 	.title-group {
-		margin-left: 68px;
-		margin-bottom: 12px;
+		margin: 60px 0 12px 68px;
 		h3 {
 			font-size: $xxxl-font;
 			line-height: $m-font;

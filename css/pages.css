@@ -6,11 +6,6 @@
 .top-banner img {
   margin: 0 auto;
 }
-@media only screen and (min-width: 769px) and (max-width: 991px) {
-  .top-banner {
-    padding-top: 50px;
-  }
-}
 @media only screen and (max-width: 768px) {
   .top-banner {
     padding-top: 70px;
