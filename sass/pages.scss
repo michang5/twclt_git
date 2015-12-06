@@ -26,6 +26,7 @@
 	height: $xxxxl-font+$l-font;
 	border-bottom: 1px solid $red;
 	border-top: 1px solid $red;
+	overflow: hidden;
 	li {
 		@include inline-block;
 		padding: 0 4px;
@@ -46,6 +47,14 @@
 			&:after {
 				content: ('');
 			}
+		}
+	}
+	@include respond-to (normal-mobile){
+		li {
+			padding: 0 1px;
+		}
+		.container {
+			padding: 0 4px;
 		}
 	}
 }
@@ -81,6 +90,9 @@
 
 .tabgroup {
 	padding: 30px 0;
+}
+.tab-content {
+	width: 100%;
 }
 .tabs {
 //	@include transparent($black,.6);
@@ -137,11 +149,16 @@
 			a { 
 				padding: 10px;
 				height: 72px;
-				line-height: 52px;
+				line-height: 26px;
 			}
-			&:nth-of-type(4) {
+			#about & { 
 				a {
-					line-height: 26px;
+					line-height: 52px;
+				}
+				&:nth-of-type(4) {
+					a {
+						line-height: 26px;
+					}
 				}
 			}
 			span {
@@ -241,8 +258,27 @@
 				display: block;
 				padding: 2px 10px;
 				text-align: right;
-				&:hover, &.selected {
-
+//				&:hover, &.selected {
+//				}
+			}
+		}
+	}
+	@include respond-to (normal-mobile){
+		.collapse-panel {
+			.collapse-heading {
+				padding: 0 4px;
+				height: 32px;
+				line-height: 32px;
+				font-size: $m-font;
+			}
+			.collapse-body {
+				.tab-group {
+					padding: 0;
+					.tab {
+						height: 32px;
+						line-height: 28px;
+						padding: 0 6px;
+					}
 				}
 			}
 		}
@@ -358,21 +394,24 @@
 	@include respond-to (md-screen){
 		max-height: none;
 		padding-bottom: 30px;
+		
 		.carousel-indicators {
 			left: 50%;
 			width: 60%;
 			li {
 				@include inline-block;
+				float: none;
 			}
 		}
 		.carousel-inner {
 			max-height: none;
+			
 			.col-md-8.img-wrapper, .col-md-8.video-wrapper {
 				height: auto;
 			}
 			.col-md-4.carousel-caption {
 				span.cate-tab {
-					top: -20px;
+					top: 0;
 				}
 				p {
 					max-height: none;
@@ -380,6 +419,11 @@
 				}
 				button {
 					position: static;
+				}
+			}
+			.video-slider {
+				.col-md-4.carousel-caption { 
+					margin-top: -10.6%;
 				}
 			}
 		}
@@ -404,7 +448,7 @@
 			}
 			.col-md-4.carousel-caption {
 				span.cate-tab {
-					top: -18px;
+					top: 0;
 				}
 				p {
 					max-height: none;
@@ -412,6 +456,11 @@
 				}
 				button {
 					position: static;
+				}
+			}
+			.video-slider {
+				.col-md-4.carousel-caption { 
+					margin-top: -11%;
 				}
 			}
 		}

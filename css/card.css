@@ -43,7 +43,6 @@
   background: #fff;
   text-align: justify;
   margin: 10px;
-  float: left;
   vertical-align: top;
   display: -moz-inline-stack;
   display: inline-block;
@@ -85,111 +84,6 @@
   position: absolute;
   clip: rect(0px, 370px, 240px, 70px);
   padding: 0;
-}
-.card.youtube .pic {
-  width: 300px;
-  height: 240px;
-}
-.card.youtube .pic img {
-  height: 320px;
-  left: -65px;
-  top: -40px;
-  clip: rect(40px, 365px, 280px, 65px);
-}
-.card.youtube .pic a {
-  display: block;
-  height: 240px;
-  background-color: transparent;
-  background-color: rgba(0, 0, 0, 0.2);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000);
-  zoom: 1;
-  position: relative;
-  z-index: 4;
-}
-.card.youtube .pic a:hover {
-  background-color: transparent;
-  background-color: transparent;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000,endColorstr=#00000000);
-  zoom: 1;
-}
-.card.youtube .pic i {
-  position: absolute;
-  top: 45%;
-  left: 125px;
-  z-index: 3;
-  color: #fff;
-  background: #b90f00;
-  display: block;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
-  text-align: center;
-  font-size: 1.75em;
-}
-.main-content .card {
-  width: 340px;
-  height: 540px;
-  margin: 16px;
-  float: none;
-  display: -moz-inline-stack;
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-}
-.main-content .card .pic {
-  width: 340px;
-  height: 272px;
-}
-.main-content .card .pic img {
-  height: 272px;
-  left: -79px;
-  clip: rect(0, 419px, 272px, 79px);
-}
-.main-content .card.youtube .pic {
-  width: 340px;
-  height: 272px;
-}
-.main-content .card.youtube .pic img {
-  height: 365px;
-  left: -72px;
-  top: -47px;
-  clip: rect(47px, 412px, 319px, 72px);
-}
-.main-content .card.youtube .pic a {
-  display: block;
-  height: 240px;
-  background-color: transparent;
-  background-color: rgba(0, 0, 0, 0.2);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000);
-  zoom: 1;
-  position: relative;
-  z-index: 4;
-}
-.main-content .card.youtube .pic a:hover {
-  background-color: transparent;
-  background-color: transparent;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000,endColorstr=#00000000);
-  zoom: 1;
-}
-.main-content .card.youtube .pic i {
-  position: absolute;
-  top: 45%;
-  left: 125px;
-  z-index: 3;
-  color: #fff;
-  background: #b90f00;
-  display: block;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
-  text-align: center;
-  font-size: 1.75em;
 }
 .card.short {
   height: 480px;
@@ -242,49 +136,197 @@
   max-height: 92px;
   line-height: 1.5em;
 }
-.card.ticket {
+.card.youtube .pic {
+  width: 300px;
+  height: 240px;
+}
+.card.youtube .pic img {
+  height: 320px;
+  left: -65px;
+  top: -40px;
+  clip: rect(40px, 365px, 280px, 65px);
+}
+.card.youtube .pic a {
+  display: block;
+  height: 240px;
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.2);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000);
+  zoom: 1;
+  position: relative;
+  z-index: 4;
+}
+.card.youtube .pic a:hover {
+  background-color: transparent;
+  background-color: transparent;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000,endColorstr=#00000000);
+  zoom: 1;
+}
+.card.youtube .pic i {
+  position: absolute;
+  top: 45%;
+  left: 125px;
+  z-index: 3;
+  color: #fff;
+  background: #b90f00;
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 1.75em;
+}
+@media only screen and (min-width: 1200px) {
+  .main-content .card {
+    width: 340px;
+    height: 540px;
+    margin: 20px 16px;
+  }
+  .main-content .card .pic {
+    width: 340px;
+    height: 272px;
+  }
+  .main-content .card .pic img {
+    height: 272px;
+    left: -79px;
+    clip: rect(0, 419px, 272px, 79px);
+  }
+  .card.youtube .pic {
+    width: 340px;
+    height: 272px;
+  }
+  .card.youtube .pic img {
+    height: 365px;
+    left: -72px;
+    top: -47px;
+    clip: rect(47px, 412px, 319px, 72px);
+  }
+  .card.youtube .pic a {
+    height: 272px;
+  }
+  .card.youtube .pic i {
+    top: 41%;
+    left: 145px;
+  }
+}
+.card.ticket, .card.collection {
   width: 100%;
-  margin: 16px 0 !important;
   height: auto;
   text-align: left;
+  clear: both;
 }
-.card.ticket .pic, .card.ticket .content {
+.card.ticket .pic, .card.ticket .content, .card.collection .pic, .card.collection .content {
   display: -moz-inline-stack;
   display: inline-block;
   *display: inline;
   zoom: 1;
   vertical-align: top;
 }
-.card.ticket .pic {
-  width: 420px;
-  height: 230px;
+.card.ticket .pic, .card.collection .pic {
   float: left;
 }
-.card.ticket .pic img {
-  height: 230px;
+.card.ticket .pic img, .card.collection .pic img {
   left: 0;
   clip: inherit;
 }
-.card.ticket .content {
+.card.ticket .content, .card.collection .content {
   display: block;
 }
-.card.ticket .content h4 {
+.card.ticket .content h4, .card.collection .content h4 {
   margin: 5px 0;
 }
-.card.ticket .content h4 span {
+.card.ticket .content h4 span, .card.collection .content h4 span {
   padding-right: 10px;
 }
-.card.ticket .content p {
+.card.ticket .content p, .card.collection .content p {
   padding-bottom: 6px;
   max-height: none;
 }
-.card.ticket .btn-group {
+.card.ticket .btn-group, .card.collection .btn-group {
   float: right;
   margin: -13px 26px;
 }
+.card.ticket {
+  margin: 16px 0 !important;
+}
+.card.ticket .pic {
+  width: 420px;
+  height: 230px;
+}
+.card.ticket .pic img {
+  height: 230px;
+}
+.card.collection {
+  width: 100%;
+  height: 80px;
+  margin: 10px 1px;
+  display: block;
+}
+.card.collection span.cate-tab {
+  width: auto;
+  height: auto;
+  padding: 4px 10px;
+  font-size: 0.9em;
+  left: 146px;
+  top: 0;
+}
+.card.collection span.collect {
+  top: 20px;
+  right: 6px;
+}
+.card.collection .pic, .card.collection h3, .card.collection .btn-group {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: top;
+}
+.card.collection h3 {
+  font-size: 1em;
+  width: 50%;
+  max-height: 40px;
+  margin: 30px 10px 0 30px;
+  overflow: hidden;
+  color: #000;
+}
+.card.collection .pic {
+  width: 146px;
+  height: 80px;
+}
+.card.collection .pic img {
+  height: 80px;
+}
+.card.collection .btn-group {
+  position: absolute;
+  top: 20px;
+  right: 48px;
+  margin: 0;
+}
+.card.collection .btn-group button {
+  position: static;
+  margin: 0 0 0 1px;
+  padding: 10px 5px;
+  border: 0;
+  background: #b90f00;
+  color: #fff;
+  font-size: 0.8em;
+}
+.card.collection .btn-group button:hover, .card.collection .btn-group button:active, .card.collection .btn-group button:focus {
+  background: #000;
+  border: none;
+}
+.card.collection .btn-group .dropdown-menu {
+  width: 100%;
+}
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .card.thearter {
+  .main-content .card {
     margin: 6px;
+  }
+  .card.thearter {
+    margin: 6px 5px;
   }
   .card.ticket .pic {
     width: 300px;
@@ -362,31 +404,137 @@
   .card.ticket .btn-group {
     margin: -5px 26px 20px;
   }
+  .card.collection span.cate-tab {
+    left: 0;
+  }
+  .card.collection span.collect {
+    top: 5px;
+    right: 6px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .card.collection h3 {
+    font-size: 1em;
+    width: 54%;
+    max-height: 40px;
+    margin: 36px 10px 0 10px;
+    overflow: hidden;
+    color: #000;
+  }
+  .card.collection .pic {
+    width: 146px;
+    height: 80px;
+  }
+  .card.collection .pic img {
+    height: 80px;
+  }
+  .card.collection .btn-group {
+    top: 5px;
+    right: 40px;
+  }
+  .card.collection .btn-group button {
+    position: static;
+    margin: 0 0 0 1px;
+    padding: 6px 5px;
+    border: 0;
+    background: #b90f00;
+    color: #fff;
+    font-size: 0.8em;
+  }
+  .card.collection .btn-group button:hover, .card.collection .btn-group button:active, .card.collection .btn-group button:focus {
+    background: #000;
+    border: none;
+  }
+  .card.collection .btn-group .dropdown-menu {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 480px) {
-  .main-content .card {
-    width: 286px;
-    height: 500px;
-    margin: 10px auto;
+  .card {
+    width: 96%;
+    height: 420px;
+    margin-bottom: 100px;
   }
-  .card.youtube .pic {
-    width: 300px;
-    height: 240px;
-  }
-  .card.youtube .pic img {
-    height: 320px;
-    left: -70px;
-    top: -40px;
-    clip: rect(40px, 356px, 280px, 70px);
-  }
-  .card.ticket {
+  .card .pic {
     width: 100%;
     height: auto;
+  }
+  .card .pic img {
+    width: 100%;
+    height: auto;
+    position: static;
+    clip: inherit;
+  }
+  #news .card {
+    width: 320px;
+    height: 440px;
+    margin: 10px auto 20px;
+  }
+  .card.youtube .pic {
+    width: 320px;
+    height: 175px;
+  }
+  .card.youtube .pic a {
+    height: 175px;
+  }
+  .card.youtube .pic img {
+    position: absolute;
+    height: 240px;
+    left: 0;
+    top: -30px;
+    clip: rect(30px, 320px, 205px, 0);
+  }
+  .card.collection h3 {
+    width: 46%;
+  }
+  .card.short {
+    height: 400px;
   }
   .card.ticket .btn-group {
     float: none;
     margin: -5px auto 20px;
   }
+}
+@media only screen and (max-width: 320px) {
+  .card {
+    width: 97%;
+  }
+  .card.collection span.collect {
+    top: 40px;
+    right: 6px;
+  }
+  .card.collection .btn-group {
+    right: 6px;
+  }
+  .card.collection h3 {
+    width: 120px;
+  }
+  #news .card {
+    width: 286px;
+    height: 410px;
+  }
+}
+.card.collection.youtube .pic {
+  width: 146px;
+  height: 80px;
+}
+.card.collection.youtube .pic img {
+  height: 120px;
+  left: -7px;
+  top: -16px;
+  clip: rect(16px, 153px, 96px, 7px);
+}
+.card.collection.youtube .pic a {
+  height: 80px;
+}
+.card.collection.youtube .pic i {
+  top: 25%;
+  left: 52px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.25em;
 }
 
 .card-content {
@@ -420,6 +568,7 @@
 .thearter-list {
   margin: 20px auto;
   padding: 20px 0;
+  text-align: center;
   *zoom: 1;
 }
 .thearter-list:after, .thearter-list:before {

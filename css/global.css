@@ -307,49 +307,32 @@ button.btn-normal:hover, button.btn-normal:focus {
 }
 
 .isotope {
-  width: 800px;
+  width: 100%;
   margin: 0 auto;
 }
-#tickets .isotope {
-  width: 100% !important;
-}
-@media only screen and (max-width: 991px) {
-  .isotope {
-    width: 640px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .isotope {
-    width: 320px;
-  }
-}
-
-.main-content .isotope {
+.tab-content .isotope {
   width: 1140px;
-  text-align: center;
 }
-@media only screen and (min-width: 1200px) {
-  .main-content .isotope {
-    width: 1200px;
-  }
+#member .isotope {
+  margin-bottom: 50px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .main-content .isotope {
-    width: 750px;
+  .tab-content .isotope {
+    width: 940px;
   }
 }
-@media only screen and (max-width: 991px) {
-  .main-content .isotope {
-    width: 750px;
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .tab-content .isotope {
+    width: 720px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .tab-content .isotope {
+    width: 720px;
   }
 }
 @media only screen and (max-width: 767px) {
-  .main-content .isotope {
-    width: 350px;
-  }
-}
-@media only screen and (max-width: 320px) {
-  .main-content .isotope {
+  .tab-content .isotope {
     width: 320px;
   }
 }
@@ -846,12 +829,7 @@ a[data-toggle=modal] {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-}
-#navigation nav .navbar-collapse ul.navbar-nav .dropdown-menu.drop-about {
-  width: 156px;
-}
-#navigation nav .navbar-collapse ul.navbar-nav .dropdown-menu.drop-products {
-  width: 124px;
+  width: 100%;
 }
 #navigation nav .navbar-collapse ul.navbar-nav .dropdown-menu li {
   display: block;

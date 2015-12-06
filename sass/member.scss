@@ -160,6 +160,8 @@
 }
 .tab-content, .tab-pane {
 	@include clearfix;
+//	height: 100%;
+	padding-bottom: 40px;
 }
 .profile-sider {
 //	border-right: 1px solid $light-gray;
@@ -177,6 +179,8 @@
 		border-left: 1px solid $light-gray;
 		section {
 			width: 100%;
+			min-height: 500px;
+			@include clearfix;
 			.form-group {
 				input[type="text"], input[type="tel"], input[type="email"], input[type="password"], select {
 					@include inline-block;

@@ -176,37 +176,61 @@ button.btn-normal {
 	}
 }
 .isotope {
-	width: 800px;
+	width: 100%;
 	margin: 0 auto;
-	#tickets & {
-		width: 100%!important;	
+	.tab-content & {
+		width: 1140px;
 	}
-	@include respond-to (tablet-landscape){
-		width: 640px;
-		
+	#tickets &  {
 	}
-	@include respond-to (only-mobile){
-		width: 320px;
-	}
-}
-.main-content .isotope {
-	width: 1140px;
-	text-align: center;
-	@include respond-to (xlg-screen){
-		width: 1200px;
+	#member & {
+		margin-bottom: 50px;
 	}
 	@include respond-to (lg-screen){
-		width: 750px;
+		.tab-content & {
+			width: 940px;
+		}
 	}
-	@include respond-to (tablet-landscape){
-		width: 750px;
+	@include respond-to (md-screen){
+		.tab-content & {
+			width: 720px;
+		}
+	}
+	@include respond-to (md-screen){
+		.tab-content & {
+			width: 720px;
+		}
 	}
 	@include respond-to (only-mobile){
-		width: 350px;
+		.tab-content & {
+			width: 320px;
+		}
 	}
-	@include respond-to (xxs-mobile){
-		width: 320px;
-	}
+//	@include respond-to (tablet-landscape){
+//		width: 640px;
+//	}
+//	@include respond-to (only-mobile){
+//		width: 320px;
+//	}
+}
+.main-content .isotope {
+//	text-align: center;
+//	@include respond-to (xlg-screen){
+//		width: 1200px;
+//	}
+//	@include respond-to (lg-screen){
+//		width: 970px;
+//	}
+//	@include respond-to (md-screen){
+//		width: 640px;
+//	}
+//	@include respond-to (only-device){
+//		width: 640px;
+//	}
+//	@include respond-to (normal-mobile){
+//	}
+//	@include respond-to (xxs-mobile){
+//	}
 }
 .isotope:after {
 	content: '';
@@ -641,12 +665,7 @@ a[data-toggle=modal] {
 					min-width: auto;
 					@include box-shadow($black 0 0 10px);
 					@include border-radius(0);
-					&.drop-about {
-						width: 156px;
-					}
-					&.drop-products {
-						width: 124px;
-					}
+					width: 100%;
 					li {
 						display: block;
 						margin: 0;

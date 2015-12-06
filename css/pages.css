@@ -21,6 +21,7 @@
   height: 3.125em;
   border-bottom: 1px solid #b90f00;
   border-top: 1px solid #b90f00;
+  overflow: hidden;
 }
 .breadcrumbs li {
   display: -moz-inline-stack;
@@ -47,6 +48,14 @@
 }
 .breadcrumbs li:nth-last-of-type(1):after {
   content: "";
+}
+@media only screen and (max-width: 480px) {
+  .breadcrumbs li {
+    padding: 0 1px;
+  }
+  .breadcrumbs .container {
+    padding: 0 4px;
+  }
 }
 
 .main-content {
@@ -90,6 +99,10 @@
 
 .tabgroup {
   padding: 30px 0;
+}
+
+.tab-content {
+  width: 100%;
 }
 
 .tabs {
@@ -159,9 +172,12 @@
   .tabs > li a {
     padding: 10px;
     height: 72px;
+    line-height: 26px;
+  }
+  #about .tabs > li a {
     line-height: 52px;
   }
-  .tabs > li:nth-of-type(4) a {
+  #about .tabs > li:nth-of-type(4) a {
     line-height: 26px;
   }
   .tabs > li span {
@@ -281,6 +297,22 @@
   padding: 2px 10px;
   text-align: right;
 }
+@media only screen and (max-width: 480px) {
+  .filter .collapse-panel .collapse-heading {
+    padding: 0 4px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 1em;
+  }
+  .filter .collapse-panel .collapse-body .tab-group {
+    padding: 0;
+  }
+  .filter .collapse-panel .collapse-body .tab-group .tab {
+    height: 32px;
+    line-height: 28px;
+    padding: 0 6px;
+  }
+}
 
 .top-banner.slider {
   -moz-box-sizing: content-box;
@@ -394,6 +426,7 @@
     display: inline-block;
     *display: inline;
     zoom: 1;
+    float: none;
   }
   #carousel-top .carousel-inner {
     max-height: none;
@@ -402,7 +435,7 @@
     height: auto;
   }
   #carousel-top .carousel-inner .col-md-4.carousel-caption span.cate-tab {
-    top: -20px;
+    top: 0;
   }
   #carousel-top .carousel-inner .col-md-4.carousel-caption p {
     max-height: none;
@@ -410,6 +443,9 @@
   }
   #carousel-top .carousel-inner .col-md-4.carousel-caption button {
     position: static;
+  }
+  #carousel-top .carousel-inner .video-slider .col-md-4.carousel-caption {
+    margin-top: -10.6%;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -435,7 +471,7 @@
     height: auto;
   }
   #carousel-top .carousel-inner .col-md-4.carousel-caption span.cate-tab {
-    top: -18px;
+    top: 0;
   }
   #carousel-top .carousel-inner .col-md-4.carousel-caption p {
     max-height: none;
@@ -443,6 +479,9 @@
   }
   #carousel-top .carousel-inner .col-md-4.carousel-caption button {
     position: static;
+  }
+  #carousel-top .carousel-inner .video-slider .col-md-4.carousel-caption {
+    margin-top: -11%;
   }
 }
 @media only screen and (max-width: 480px) {

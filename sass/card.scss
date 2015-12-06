@@ -40,7 +40,7 @@
 	background: $white;
 	text-align: justify;
 	margin: 10px;
-	float: left;
+//	float: left;
 	vertical-align: top;
 	@include inline-block;
 	@include clearfix;
@@ -70,96 +70,6 @@
 			position: absolute;
 			clip: rect(0px,370px,240px,70px);
 			padding: 0;
-		}
-	}
-	&.youtube {
-		.pic {
-			width: 300px;
-			height: 240px;
-			img {
-				height: 320px;
-				left: -65px;
-				top: -40px;
-				clip: rect(40px,365px,280px,65px);
-			}
-			a {
-				display: block;
-				height: 240px;
-				@include transparent($black,.2);
-				position: relative;
-				z-index: 4;
-				&:hover {
-					@include transparent($black,0);
-				}
-			}
-			i {
-				position: absolute;
-				top: 45%;
-				left: 125px;
-				z-index: 3;
-				color: $white;
-				background: $red;
-				display: block;
-				width: 50px;
-				height: 50px;
-				line-height: 50px;
-				@include border-radius(100%);
-				text-align: center;
-				font-size: $xxxl-font;
-			}
-		}
-	}
-	.main-content & {
-		width: 340px;
-		height: 540px;
-		margin: 16px;
-		float: none;
-		@include inline-block;
-		.pic {
-			width: 340px;
-			height: 272px;
-			img {
-				height: 272px;
-				left: -79px;
-				clip: rect(0,419px,272px,79px);
-			}
-		}
-		&.youtube {
-			.pic {
-				width: 340px;
-				height: 272px;
-				img {
-					height: 365px;
-					left: -72px;
-					top: -47px;
-					clip: rect(47px,412px,319px,72px);
-				}
-				a {
-					display: block;
-					height: 240px;
-					@include transparent($black,.2);
-					position: relative;
-					z-index: 4;
-					&:hover {
-						@include transparent($black,0);
-					}
-				}
-				i {
-					position: absolute;
-					top: 45%;
-					left: 125px;
-					z-index: 3;
-					color: $white;
-					background: $red;
-					display: block;
-					width: 50px;
-					height: 50px;
-					line-height: 50px;
-					@include border-radius(100%);
-					text-align: center;
-					font-size: $xxxl-font;
-				}
-			}
 		}
 	}
 	&.short {
@@ -214,21 +124,90 @@
 			line-height: $xxl-font;
 		}
 	}
-	&.ticket {
+	&.youtube {
+			.pic {
+				width: 300px;
+				height: 240px;
+				img {
+					height: 320px;
+					left: -65px;
+					top: -40px;
+					clip: rect(40px,365px,280px,65px);
+				}
+				a {
+					display: block;
+					height: 240px;
+					@include transparent($black,.2);
+					position: relative;
+					z-index: 4;
+					&:hover {
+						@include transparent($black,0);
+					}
+				}
+				i {
+					position: absolute;
+					top: 45%;
+					left: 125px;
+					z-index: 3;
+					color: $white;
+					background: $red;
+					display: block;
+					width: 50px;
+					height: 50px;
+					line-height: 50px;
+					@include border-radius(100%);
+					text-align: center;
+					font-size: $xxxl-font;
+				}
+			}
+		}
+	@include respond-to (xlg-screen){
+		.main-content & {
+			width: 340px;
+			height: 540px;
+			margin: 20px 16px;
+			.pic {
+				width: 340px;
+				height: 272px;
+				img {
+					height: 272px;
+					left: -79px;
+					clip: rect(0,419px,272px,79px);
+				}
+			}
+		}
+		&.youtube {
+			.pic {
+				width: 340px;
+				height: 272px;
+				img {
+					height: 365px;
+					left: -72px;
+					top: -47px;
+					clip: rect(47px,412px,319px,72px);
+				}
+				a {
+					height: 272px;
+				}
+				i {
+					top: 41%;
+					left: 145px;
+				}
+			}
+		}
+	}
+	&.ticket, &.collection {
 		width: 100%;
-		margin: 16px 0!important;
 		height: auto;
 		text-align: left;
+		clear: both;
 		.pic, .content {
 			@include inline-block;
 			vertical-align: top;
 		}
 		.pic {
-			width: 420px;
-			height: 230px;
 			float: left;
 			img {
-				height: 230px;
 				left: 0;
 				clip: inherit;
 			}
@@ -251,10 +230,84 @@
 			margin: -13px 26px;
 		}
 	}
-	
+	&.ticket {
+		margin: 16px 0!important;
+		.pic {
+			width: 420px;
+			height: 230px;
+			
+			img {
+				height: 230px;
+			}
+		}
+	}
+	&.collection {
+		width: 100%;
+		height: 80px;
+		margin: 10px 1px;
+		display: block;
+		span {
+			&.cate-tab {
+				width: auto;
+				height: auto;
+				padding: 4px 10px;
+				font-size: $s-font;
+				left: 146px;
+				top: 0;
+			}
+			&.collect {
+				top: 20px;
+				right: 6px;
+			}
+		}
+		.pic, h3, .btn-group {
+			@include inline-block;
+			vertical-align: top;
+		}
+		h3 {
+			font-size: $m-font;
+			width: 50%;
+			max-height: 40px;
+			margin: 30px 10px 0 30px;
+			overflow: hidden;
+			color: $black;
+		}
+		.pic {
+			width: 146px;
+			height: 80px;
+			img {
+				height: 80px;
+			}
+		}
+		.btn-group {
+			position: absolute;
+			top: 20px;
+			right: 48px;
+			margin: 0;
+			button {
+				position: static;
+				margin: 0 0 0 1px;
+				padding: 10px 5px;
+				border: 0;
+				background: $red;
+				color: $white;
+				font-size: $xs-font;
+				&:hover, &:active, &:focus {
+					background: $black;
+					border: none;
+				}
+			}
+			.dropdown-menu {
+				width: 100%;
+			}
+		}
+	}
 	@include respond-to (lg-screen){
-		&.thearter {
+		.main-content & {
 			margin: 6px;
+		}
+		&.thearter {
+			margin: 6px 5px;
 		}
 		&.ticket {
 			.pic {
@@ -328,7 +381,6 @@
 				width: 100%;
 				height: auto;
 				float: none;
-				
 				img {
 					height: auto;
 					position: static;
@@ -347,35 +399,150 @@
 				margin: -5px 26px 20px;
 			}
 		}
-	}
-	@include respond-to (normal-mobile){
-		.main-content & {
-			width: 286px;
-			height: 500px;
-			margin: 10px auto;
-		}
-		&.youtube {
+		&.collection {
+			span {
+				&.cate-tab {
+					left: 0;
+				}
+				&.collect {
+					top: 5px;
+					right: 6px;
+					width: 30px;
+					height: 30px;
+					line-height: 30px;
+				}
+			}
+			h3 {
+				font-size: $m-font;
+				width: 54%;
+				max-height: 40px;
+				margin: 36px 10px 0 10px;
+				overflow: hidden;
+				color: $black;
+			}
 			.pic {
-				width: 300px;
-				height: 240px;
+				width: 146px;
+				height: 80px;
 				img {
-					height: 320px;
-					left: -70px;
-					top: -40px;
-					clip: rect(40px,356px,280px,70px);
+					height: 80px;
+				}
+			}
+			.btn-group {
+				top: 5px;
+				right: 40px;
+				button {
+					position: static;
+					margin: 0 0 0 1px;
+					padding: 6px 5px;
+					border: 0;
+					background: $red;
+					color: $white;
+					font-size: $xs-font;
+					&:hover, &:active, &:focus {
+						background: $black;
+						border: none;
+					}
+				}
+			.dropdown-menu {
+					width: 100%;
 				}
 			}
 		}
-		&.ticket {
+	}
+	@include respond-to (normal-mobile){
+		width: 96%;
+		height: 420px;
+		margin-bottom: 100px;
+		.pic {
 			width: 100%;
 			height: auto;
+			img {
+//				left: 0;
+				width: 100%;
+				height: auto;
+				position: static;
+				clip: inherit;
+			}
+		}
+		#news & {
+			width: 320px;
+			height: 440px;
+			margin: 10px auto 20px;
+		}
+		&.youtube {
+			.pic {
+				width: 320px;
+				height: 175px;
+				a {
+					height: 175px;
+				}
+				img {
+					position: absolute;
+					height: 240px;
+					left: 0;
+					top: -30px;
+					clip: rect(30px,320px,205px,0);
+				}
+			}
+		}
+		&.collection {
+			h3 {
+				width: 46%;
+			}
+		}
+		&.short {
+			height: 400px;
+		}
+		&.ticket {
+//			height: auto;
 			.btn-group {
 				float: none;
 				margin: -5px auto 20px;
 			}
-//			.btn-group {
-//				margin: -5px 26px 20px;
-//			}
+		}
+	}
+	@include respond-to (xxs-mobile){
+		width: 97%;
+		&.collection {
+			span {
+				&.collect {
+					top: 40px;
+					right: 6px;
+				}
+			}
+			.btn-group {
+				right: 6px;
+			}
+			h3 {
+				width: 120px;
+			}
+		}
+		#news & {
+			width: 286px;
+			height: 410px;
+		}
+	}
+	&.collection.youtube {
+		.pic {
+			width: 146px;
+			height: 80px;
+			img {
+				height: 120px;
+				left: -7px;
+				top: -16px;
+				clip: rect(16px,153px,96px,7px);
+			}
+			a {
+				height: 80px;
+			}
+			i {
+				top: 25%;
+				left: 52px;
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				font-size: $xl-font;
+			}
 		}
 	}
 }
@@ -414,6 +581,7 @@
 .thearter-list {
 	margin: 20px auto;
 	padding: 20px 0;
+	text-align: center;
 	@include clearfix;
 	p {
 		margin: 10px auto;
