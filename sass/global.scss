@@ -181,8 +181,8 @@ button.btn-normal {
 	.tab-content & {
 		width: 1140px;
 	}
-	#tickets &  {
-	}
+//	#tickets &  {
+//	}
 	#member & {
 		margin-bottom: 50px;
 	}
@@ -206,12 +206,11 @@ button.btn-normal {
 			width: 320px;
 		}
 	}
-//	@include respond-to (tablet-landscape){
-//		width: 640px;
-//	}
-//	@include respond-to (only-mobile){
-//		width: 320px;
-//	}
+}
+#member .tab-content .isotope {
+		
+	width: 100%!important;
+
 }
 .main-content .isotope {
 //	text-align: center;

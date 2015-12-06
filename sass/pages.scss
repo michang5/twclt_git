@@ -93,6 +93,7 @@
 }
 .tab-content {
 	width: 100%;
+	padding: 20px 0;
 }
 .tabs {
 //	@include transparent($black,.6);
@@ -110,7 +111,7 @@
 		margin-right: 1px;
 		padding: 0;
 		#about & {
-			width: 19.6%;
+			width: 19.8%;
 		}
 		#news & {
 			width: 24.6%;
@@ -144,6 +145,13 @@
 	.row {
 		padding: 0;
 	}
+	@include respond-to (only-mobile){
+		> li {
+			#about & {
+				width: 19.5%;
+			}
+		}
+	}
 	@include respond-to (normal-mobile){
 		> li {
 			a { 
@@ -151,7 +159,7 @@
 				height: 72px;
 				line-height: 26px;
 			}
-			#about & { 
+			#about & {
 				a {
 					line-height: 52px;
 				}

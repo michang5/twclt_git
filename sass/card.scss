@@ -125,42 +125,42 @@
 		}
 	}
 	&.youtube {
-			.pic {
-				width: 300px;
+		.pic {
+			width: 300px;
+			height: 240px;
+			img {
+				height: 320px;
+				left: -65px;
+				top: -40px;
+				clip: rect(40px, 365px, 280px, 65px);
+			}
+			a {
+				display: block;
 				height: 240px;
-				img {
-					height: 320px;
-					left: -65px;
-					top: -40px;
-					clip: rect(40px,365px,280px,65px);
-				}
-				a {
-					display: block;
-					height: 240px;
-					@include transparent($black,.2);
-					position: relative;
-					z-index: 4;
-					&:hover {
-						@include transparent($black,0);
-					}
-				}
-				i {
-					position: absolute;
-					top: 45%;
-					left: 125px;
-					z-index: 3;
-					color: $white;
-					background: $red;
-					display: block;
-					width: 50px;
-					height: 50px;
-					line-height: 50px;
-					@include border-radius(100%);
-					text-align: center;
-					font-size: $xxxl-font;
+				@include transparent($black, .2);
+				position: relative;
+				z-index: 4;
+				&:hover {
+					@include transparent($black, 0);
 				}
 			}
+			i {
+				position: absolute;
+				top: 45%;
+				left: 125px;
+				z-index: 3;
+				color: $white;
+				background: $red;
+				display: block;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				@include border-radius(100%);
+				text-align: center;
+				font-size: $xxxl-font;
+			}
 		}
+	}
 	@include respond-to (xlg-screen){
 		.main-content & {
 			width: 340px;
@@ -323,6 +323,9 @@
 				}
 			}
 		}
+		&.youtube {
+			margin: 6px 5px;
+		}
 	}
 	@include respond-to (tablet-landscape){
 		.main-content & {
@@ -451,7 +454,7 @@
 	}
 	@include respond-to (normal-mobile){
 		width: 96%;
-		height: 420px;
+		height: 450px;
 		margin-bottom: 100px;
 		.pic {
 			width: 100%;
@@ -470,6 +473,7 @@
 			margin: 10px auto 20px;
 		}
 		&.youtube {
+			width: 320px;
 			.pic {
 				width: 320px;
 				height: 175px;
@@ -490,19 +494,32 @@
 				width: 46%;
 			}
 		}
+		&.collection.youtube {
+			width: 100%;
+		}
 		&.short {
-			height: 400px;
+			height: 440px;
 		}
 		&.ticket {
-//			height: auto;
 			.btn-group {
 				float: none;
 				margin: -5px auto 20px;
 			}
 		}
 	}
+	@media only screen and (max-width: 420px){
+		height: 450px;
+		&.short {
+			height: 390px;
+		}
+	}
 	@include respond-to (xxs-mobile){
 		width: 97%;
+		height: 400px;
+		margin: 16px 0;
+		.main-content & {
+			margin: 16px 0;
+		}
 		&.collection {
 			span {
 				&.collect {
@@ -520,6 +537,23 @@
 		#news & {
 			width: 286px;
 			height: 410px;
+		}
+		&.youtube {
+			width: 286px;
+			.pic {
+				width: 286px;
+				height: 163px;
+				a {
+					height: 163px;
+				}
+				img {
+					position: absolute;
+					height: 240px;
+					left: 0;
+					top: -26px;
+					clip: rect(26px,286px,188px,0);
+				}
+			}
 		}
 	}
 	&.collection.youtube {

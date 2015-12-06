@@ -272,7 +272,22 @@
 }
 .fixed.tabs {
   top: 200px;
-  width: 90%;
+  width: 86%;
+}
+@media only screen and (min-width: 1200px) {
+  .fixed.tabs {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .fixed.tabs {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .fixed.tabs {
+    width: 96%;
+  }
 }
 @media only screen and (max-width: 480px) {
   .fixed .collapse-heading {

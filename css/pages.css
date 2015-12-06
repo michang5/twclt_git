@@ -103,6 +103,7 @@
 
 .tab-content {
   width: 100%;
+  padding: 20px 0;
 }
 
 .tabs {
@@ -121,7 +122,7 @@
   border: none !important;
 }
 #about .tabs > li {
-  width: 19.6%;
+  width: 19.8%;
 }
 #news .tabs > li {
   width: 24.6%;
@@ -167,6 +168,11 @@
 }
 .tabs .row {
   padding: 0;
+}
+@media only screen and (max-width: 767px) {
+  #about .tabs > li {
+    width: 19.5%;
+  }
 }
 @media only screen and (max-width: 480px) {
   .tabs > li a {

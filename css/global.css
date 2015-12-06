@@ -337,6 +337,10 @@ button.btn-normal:hover, button.btn-normal:focus {
   }
 }
 
+#member .tab-content .isotope {
+  width: 100% !important;
+}
+
 .isotope:after {
   content: '';
   display: block;

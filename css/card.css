@@ -340,6 +340,9 @@
     clip: rect(0px, 370px, 240px, 70px);
     padding: 0;
   }
+  .card.youtube {
+    margin: 6px 5px;
+  }
 }
 @media only screen and (max-width: 991px) {
   .main-content .card {
@@ -453,7 +456,7 @@
 @media only screen and (max-width: 480px) {
   .card {
     width: 96%;
-    height: 420px;
+    height: 450px;
     margin-bottom: 100px;
   }
   .card .pic {
@@ -470,6 +473,9 @@
     width: 320px;
     height: 440px;
     margin: 10px auto 20px;
+  }
+  .card.youtube {
+    width: 320px;
   }
   .card.youtube .pic {
     width: 320px;
@@ -488,17 +494,33 @@
   .card.collection h3 {
     width: 46%;
   }
+  .card.collection.youtube {
+    width: 100%;
+  }
   .card.short {
-    height: 400px;
+    height: 440px;
   }
   .card.ticket .btn-group {
     float: none;
     margin: -5px auto 20px;
   }
 }
+@media only screen and (max-width: 420px) {
+  .card {
+    height: 450px;
+  }
+  .card.short {
+    height: 390px;
+  }
+}
 @media only screen and (max-width: 320px) {
   .card {
     width: 97%;
+    height: 400px;
+    margin: 16px 0;
+  }
+  .main-content .card {
+    margin: 16px 0;
   }
   .card.collection span.collect {
     top: 40px;
@@ -513,6 +535,23 @@
   #news .card {
     width: 286px;
     height: 410px;
+  }
+  .card.youtube {
+    width: 286px;
+  }
+  .card.youtube .pic {
+    width: 286px;
+    height: 163px;
+  }
+  .card.youtube .pic a {
+    height: 163px;
+  }
+  .card.youtube .pic img {
+    position: absolute;
+    height: 240px;
+    left: 0;
+    top: -26px;
+    clip: rect(26px, 286px, 188px, 0);
   }
 }
 .card.collection.youtube .pic {

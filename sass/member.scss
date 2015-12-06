@@ -144,9 +144,11 @@
 		}
 	}
 	@include respond-to (only-mobile){
+		margin: 6px auto;
 		> li {
 			> a {
-				height: 68px;
+				height: 50px;
+				padding: 6px;
 				font-size: $s-font;
 			}
 			i {
@@ -237,7 +239,7 @@
 		.member-block {
 			border-left: 0;
 			.profile-photo {
-				margin: 10px 0 40px 20px;
+				margin: 10px auto 40px;
 			}
 		}
 	}
