@@ -1,0 +1,73 @@
+#search .breadcrumbs {
+  margin-top: 170px;
+}
+#search .search-block {
+  background: #fff;
+  padding: 0 10px;
+  height: 50px;
+  width: 100%;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  overflow-y: hidden;
+}
+#search .search-block ul {
+  width: 200%;
+  cursor: text;
+  overflow: auto;
+  height: 50px;
+}
+#search .search-block li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: top;
+  margin: 8px 0;
+  padding: 0;
+}
+#search .search-block li .btn-group {
+  margin: 0;
+}
+#search .search-block li.input-block {
+  min-width: 100px;
+}
+#search .search-block input[type="text"] {
+  margin: 0;
+  overflow: hidden;
+  border: none;
+}
+#search .search-block input[type="text"]:focus, #search .search-block input[type="text"]:hover, #search .search-block input[type="text"]:active {
+  border: none;
+}
+
+.sort-select {
+  width: 160px;
+  margin: 20px 0;
+  float: right;
+  position: relative;
+}
+.sort-select .btn-normal {
+  margin: 0;
+  padding: 10px;
+  color: #000;
+}
+
+.result-list {
+  width: 100%;
+  padding: 20px 0;
+  margin: 20px auto;
+  clear: both;
+  *zoom: 1;
+}
+.result-list:after, .result-list:before {
+  content: "";
+  display: table;
+}
+.result-list:after {
+  clear: both;
+}
+.result-list h2 {
+  border-bottom: 1px solid #545454;
+  margin: 10px auto;
+}

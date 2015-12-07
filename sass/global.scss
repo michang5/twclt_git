@@ -143,6 +143,22 @@ button.btn-normal {
 		padding-bottom: 10px;
 	}
 }
+.btn-group {
+	.btn-filter {
+		color: $white;
+		background: $red;
+		padding: 6px 8px;
+		&:hover {
+			color: $white;
+			background: $dark-red;
+		}
+		&:nth-last-of-type(1){
+			padding: 6px 2px;
+			border-left: 1px solid $light-red;
+		}
+	}
+}
+.btn-group > .btn + .dropdown-toggle
 //tabs
 .tab-group {
 	padding: 10px 0;
@@ -586,11 +602,6 @@ a[data-toggle=modal] {
 					&.search {
 						width: 270px;
 						left: -110px;
-						input[type="text"], div[type="button"], .input-group-btn, i {
-							&:focus, &:hover, &:active {
-								box-shadow: none;
-							}
-						}
 					}
 					&.language {
 						padding: 5px 0;
@@ -1091,3 +1102,8 @@ footer {
 	}
 }
 
+input[type="text"], div[type="button"], .input-group-btn, i {
+	&:focus, &:hover, &:active {
+		box-shadow: none;
+	}
+}

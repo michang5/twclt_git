@@ -20,7 +20,7 @@
 	<link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">
 	<link href="css/pages.css" rel="stylesheet">
-	<link href="css/contact.css" rel="stylesheet">
+	<link href="css/search.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 
 	<!--[if lt IE 9]>
@@ -28,7 +28,7 @@
 		<script type="text/javascript" src="js/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body id="about">
+<body id="search">
 	
 	<!-- Navigation -->
 	<div id="navigation">
@@ -171,86 +171,55 @@
 	
 	<!-- wrapper -->
 	<div id="wrapper">
-		<div class="top-banner">
-			<img src="images/banner3.jpg" alt="團史" title="團史" width="1280" height="420" class="img-responsive">
-		</div>
 		<div class="breadcrumbs">
 			<div class="container">
 				<ul>
 					<li><a href="index.html">當代傳奇劇場</a></li>
-					<li><a href="contact.html">聯絡我們</a></li>
+					<li><a href="search.html">站內搜尋</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="main-content container">
-			<h1>聯絡我們</h1>
-			<h2>若您有任何當代傳奇劇場的相關問題，請透過電話、e-mai或聯絡表單
-與我們聯絡，我們將盡速與您聯繫，謝謝。</h2>
-			<div class="row">
-				<div class="col-md-6">
-					<ul class="info">
-						<li>電話：+886 2 2392-3868</li>
-						<li>傳真：+886 2 2392-3867</li>
-						<li>信箱：admin@clt.tw</li>
-						<li>地址：台北市10075寧波西街72號 </li>
-						<li>
-							<span>行銷公關：+886 2 2392-3868 #12</span>
-							<span>信箱：<a href="mailto:marketing@clt.tw">marketing@clt.tw</a></span>
-						</li>
-						<li>
-							<span>製作：+886 2 2392-3868 #14 </span>
-							<span>信箱：<a href="mailto:production@twclt.com">production@twclt.com</a></span>
-						</li>
-						<li>
-							<span>票務出版：+886 2 2392-3868 #18</span>
-							<span>信箱：<a href="mailto:admin@clt.tw">admin@clt.tw</a></span>
-						</li>
-						<li>
-							<span>會計：+886 2 2392-3868 #13</span>
-							<span>信箱：<a href="mailto:accounting@twclt.com">accounting@twclt.com</a></span>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-6">
-					<div class="form-group">
-						<span>姓名</span>
-						<input type="text" class="form-control" id="contact-name" placeholder="">
-					</div>
-					<div class="form-group">
-						<span>電話</span>
-						<input type="tel" class="form-control" id="contact-tel" placeholder="">
-					</div>
-					<div class="form-group">
-						<span>Email</span>
-						<input type="email" class="form-control" id="contact-mail" placeholder="">
-					</div>
-					<div class="form-group">
-						<span>詢問內容</span>
-						<select class="form-control">
-							<option>請選擇主題</option>
-							<option>票務問題</option>
-							<option>會員權益</option>
-							<option>活動諮詢</option>
-							<option>其他</option>
-						</select>
-					</div>
-					<div class="form-group">
-						<span>內容描述</span>
-						<textarea class="form-control" id="contact-message" rows="4"></textarea>
-					</div>
-					<div class="form-group">
-						<span>驗證碼</span>
-						<input type="text" class="form-control" id="captcha" placeholder="">
-						<span class="captcha">captcha</span>
-					</div>
-					<div class="form-group">
-						<span></span>
-						<button type="button" class="btn btn-primary btn-lg">送出</button>
-					</div>
-					
-				</div>
+			<div class="search-block">
+				<ul>
+					<li>
+						<div class="btn-group">
+						  <a href="#" class="btn btn-filter">Filter1</a>
+						  <a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
+
+						</div>
+					</li>
+					<li>
+						<div class="btn-group">
+						  <a href="#" class="btn btn-filter">Filter1</a>
+						  <a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
+
+						</div>
+					</li>
+					<li>
+						<div class="btn-group">
+						  <a href="#" class="btn btn-filter">Filter1</a>
+						  <a href="#" class="btn btn-filter" data-toggle="dropdown"><i class="fa fa-times"></i></a>
+
+						</div>
+					</li>
+					<li class="input-block">
+						<input type="text" class="form-control" id="search" placeholder="">
+					</li>
+				</ul>
 			</div>
-			
+			<div class="sort-select">
+				<button class="btn btn-normal" data-toggle="dropdown" id="search-sort" aria-expanded="false">搜尋排序<i class="fa fa-caret-down"></i></button>
+				
+				<ul class="dropdown-menu search-sort" aria-labelledby="search-sort">
+					<li><a href="#" target="_blank">新<i class="fa fa-arrow-right"></i>舊</a></li>
+					<li><a href="#" target="_blank">舊<i class="fa fa-arrow-right"></i>新</a></li>
+				</ul>	
+			</div>
+			<div class="result-list">
+				<h2>藝術家</h2>
+				<img src="images/banner.jpg" alt="" class="img-responsive">
+			</div>
 			
 		</div>
 	</div>

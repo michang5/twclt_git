@@ -263,12 +263,28 @@ button.btn-normal:hover, button.btn-normal:focus {
   padding-bottom: 10px;
 }
 
+.btn-group .btn-filter {
+  color: #fff;
+  background: #b90f00;
+  padding: 6px 8px;
+}
+.btn-group .btn-filter:hover {
+  color: #fff;
+  background: #940C00;
+}
+.btn-group .btn-filter:nth-last-of-type(1) {
+  padding: 6px 2px;
+  border-left: 1px solid #e8999d;
+}
+
+.btn-group > .btn + .dropdown-toggle
 .tab-group {
   padding: 10px 0;
   border-bottom: 1px solid #d2d2d2;
   text-align: left;
 }
 @media only screen and (max-width: 767px) {
+  .btn-group > .btn + .dropdown-toggle
   .tab-group {
     text-align: center;
   }
@@ -749,9 +765,6 @@ a[data-toggle=modal] {
 #navigation header .top-nav > ul > li .dropdown-menu.search {
   width: 270px;
   left: -110px;
-}
-#navigation header .top-nav > ul > li .dropdown-menu.search input[type="text"]:focus, #navigation header .top-nav > ul > li .dropdown-menu.search input[type="text"]:hover, #navigation header .top-nav > ul > li .dropdown-menu.search input[type="text"]:active, #navigation header .top-nav > ul > li .dropdown-menu.search div[type="button"]:focus, #navigation header .top-nav > ul > li .dropdown-menu.search div[type="button"]:hover, #navigation header .top-nav > ul > li .dropdown-menu.search div[type="button"]:active, #navigation header .top-nav > ul > li .dropdown-menu.search .input-group-btn:focus, #navigation header .top-nav > ul > li .dropdown-menu.search .input-group-btn:hover, #navigation header .top-nav > ul > li .dropdown-menu.search .input-group-btn:active, #navigation header .top-nav > ul > li .dropdown-menu.search i:focus, #navigation header .top-nav > ul > li .dropdown-menu.search i:hover, #navigation header .top-nav > ul > li .dropdown-menu.search i:active {
-  box-shadow: none;
 }
 #navigation header .top-nav > ul > li .dropdown-menu.language {
   padding: 5px 0;
@@ -1283,4 +1296,8 @@ footer .footer-menu > ul > ul li:hover {
     display: block;
     padding: 30px;
   }
+}
+
+input[type="text"]:focus, input[type="text"]:hover, input[type="text"]:active, div[type="button"]:focus, div[type="button"]:hover, div[type="button"]:active, .input-group-btn:focus, .input-group-btn:hover, .input-group-btn:active, i:focus, i:hover, i:active {
+  box-shadow: none;
 }
