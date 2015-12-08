@@ -7,13 +7,11 @@
 	.breadcrumbs {
 		margin-top: 170px;
 	}
+	
 	.input-group {
-		background: $white;
-		padding-left: 8px;
 		height: 50px;
 		width: 100%;
-		position: relative;
-		@include border-radius(8px);
+		overflow-x: scroll;
 		a {
 			color: $black;
 		}
@@ -44,32 +42,51 @@
 				}
 			}
 		}
-		.input-group-addon {
-			padding: 0;
-			background: none;
-			border: none;
-		}
 		input[type="text"] {
 			margin: 8px 0;
 			overflow: hidden;
 			border: none;
 			width: 100%;
+			min-width: 220px;
 			&:focus, &:hover, &:active {
 				border: none;
 			}
 		}
 	}
 }
-.sort-select {
-	width: 160px;
-	margin: 20px 0;
-	float: right;
+.search-wrapper {
+	background: $white;
 	position: relative;
-	.btn-normal {
-		margin: 0;
-		padding: 10px;
-		color: $black;
+	padding: 0 5px;
+	.input-group-wrapper {
+		overflow: auto;
+		padding-right: 120px;
+		width: 85%;
 	}
+	.result-block {
+		text-align: right;
+		position: absolute;
+		background: $white;
+		right: 3px;
+		top: 0;
+		height: 50px;
+		line-height: 50px;
+		min-width: 80px;
+		z-index: 9999;
+	//	background: $white;
+		color: $black;
+		font-size: $s-font;
+		padding: 0;
+		span {
+			padding: 0;
+			@include inline-block;
+		}
+		i {
+		}
+	}
+}
+.search-wrapper {
+		
 }
 .list-group {
 	width: 100%;
@@ -90,3 +107,5 @@
 		}
 	}
 }
+
+
