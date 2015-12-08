@@ -28,6 +28,59 @@
 		<script type="text/javascript" src="js/html5shiv.min.js"></script>
 		<script type="text/javascript" src="js/respond.min.js"></script>
 	<![endif]-->
+	
+	<style>
+	
+		.Module.TypeaheadField.buttonOnRight.guided {
+			margin-right: 46px;
+		}
+		.SearchForm .TypeaheadField.guided {
+			display: block;
+			float: none;
+			width: 100%;
+		}
+		.SearchForm .TypeaheadField {
+			
+		}
+		.TypeaheadField {
+			position: relative;
+		}
+		.SearchForm {
+			text-align: left;
+		}
+		.TypeaheadField.guided .tokenizedInputWrapper {
+			position:relative;
+		}
+		.TokenizedInput.guided {
+			overflow: hidden;
+		}
+		.TokenizedInput .scrollWrapper {
+			overflow: hidden;
+		}
+		.TokenizedInput.guided .tokensWrapper {
+			overflow: visible;
+			position: relative;
+			transition-property: left;
+			transition-duration: .25s;
+		}
+		.TokenizedInput .tokensWrapper {
+			float: left;
+			cursor: text;
+			white-space: nowrap;
+		}
+		.TokenizedInput.guided .tokensWrapper .tokenizedItem {
+			vertical-align: middle;
+			height: 32px;
+			
+		}
+		.TokenizedInput .tokenizedItem {
+			display:inline-block;
+			overflow: hidden;
+		}
+		input {
+			color: #000;
+		}
+	</style>
 </head>
 <body id="search">
 	
@@ -181,181 +234,296 @@
 			</div>
 		</div>
 		<div class="main-content container">
-			<div class="input-group">
-				<span class="input-group-btn">
-					<a href="#" class="btn btn-filter">Filter1</a>
-					<a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
-				</span>
-				<span class="input-group-btn">
-					<a href="#" class="btn btn-filter">Filter1</a>
-					<a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
-				</span>
-				<span class="input-group-btn">
-					<a href="#" class="btn btn-filter">Filter1</a>
-					<a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
-				</span>
-				<span class="input-group-btn">
-					<a href="#" class="btn btn-filter">Filter1</a>
-					<a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
-				</span>
-				<input type="text" class="form-control" placeholder="搜尋">
-				<span class="input-group-addon" id="basic-addon3">
-				   共搜尋123456筆
-				</span>
-				<span class="input-group-btn">
-					<a href="#" class="btn btn-filter clear"><i class="fa fa-times"></i></a>
-				</span>
-			</div>
-
-<!--
-			<div class="search-block">
-				<div class="search-group">
-					<div class="scroll-wrapper">
-						<ul class="input-wrapper">
-							<li class="search-filter">
-								<div class="btn-group">
-								  <a href="#" class="btn btn-filter">Filter1</a>
-								  <a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
-
-								</div>
-							</li>
-							<li class="search-filter">
-								<div class="btn-group">
-								  <a href="#" class="btn btn-filter">Filter1</a>
-								  <a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
-
-								</div>
-							</li>
-							<li class="search-filter">
-								<div class="btn-group">
-								  <a href="#" class="btn btn-filter">Filter1</a>
-								  <a href="#" class="btn btn-filter" data-toggle="dropdown"><i class="fa fa-times"></i></a>
-
-								</div>
-							</li>
-							<li class="search-filter">
-								<div class="btn-group">
-								  <a href="#" class="btn btn-filter">Filter1</a>
-								  <a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
-
-								</div>
-							</li>
-							
-						</ul>
-						<div class="inputing">
-							<input type="text" class="form-control" id="search" placeholder="">
-							
-						</div>
-					</div>
-					<div class="results">
-						<span>共124999筆結果</span>
-						<span><a href=""><i class="fa fa-times"></i></a></span>
-					</div>
-				</div>
-			</div>
 			
--->
-<!--
-			<div class="search-block">
-				<div class="search-group">
-					<div class="scroll-wrapper btn-group" style="display: table; width: 100%;">
-						<ul class="input-wrapper">
-							<li>
-								<div class="btn-group">
-								  <a href="#" class="btn btn-filter">Filter1</a>
-								  <a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
+			<div class="Module SearchForm buttonOnRight guided tokenized" data-component-type="43">
 
-								</div>
-							</li>
-							<li>
-								<div class="btn-group">
-								  <a href="#" class="btn btn-filter">Filter1</a>
-								  <a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
 
-								</div>
-							</li>
-							<li>
-								<div class="btn-group">
-								  <a href="#" class="btn btn-filter">Filter1</a>
-								  <a href="#" class="btn btn-filter" data-toggle="dropdown"><i class="fa fa-times"></i></a>
+    
 
-								</div>
-							</li>
-							<li>
-								<div class="btn-group">
-								  <a href="#" class="btn btn-filter">Filter1</a>
-								  <a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
+    
 
-								</div>
-							</li>
-						</ul>
-						<div class="inputing">
-							<input type="text" class="form-control" id="search" placeholder="">
-							
-						</div>
-					</div>
-					<div class="results">
-						<span>共124999筆結果</span>
-						<span><a href=""><i class="fa fa-times"></i></a></span>
-					</div>
-				</div>
-			</div>
-			
-			
--->
-			
-			
-			<div class="sort-select">
-				<button class="btn btn-normal" data-toggle="dropdown" id="search-sort" aria-expanded="false">搜尋排序<i class="fa fa-caret-down"></i></button>
-				
-				<ul class="dropdown-menu search-sort" aria-labelledby="search-sort">
-					<li><a href="#" target="_blank">新<i class="fa fa-arrow-right"></i>舊</a></li>
-					<li><a href="#" target="_blank">舊<i class="fa fa-arrow-right"></i>新</a></li>
-				</ul>	
-			</div>
-			<div class="list-group">
-				<h2>藝術家</h2>
-				<div class="list">
-					<div class="col-sm-4">
-						<img src="images/banner4.jpg" alt="" class="img-responsive">
-					</div>
-					<div class="col-sm-8">
-						<h3>吳興國 藝術總監．導演．主演</h3>
-						<p>生於高雄市旗津區，原名吳國秋，台灣演員、劇作家、導演；當代傳奇劇場藝術總監；乃少數橫跨電影、電視、傳統戲曲、現代劇場以及舞蹈之表演藝術家。吳目前於國立台灣藝術大學表演藝術研究所專任教授；曾獲美國傅爾‧布萊特獎學金、亞洲文化協會獎學金。</p>
-						<button class="btn btn-normal" data-toggle="modal" data-target="#card-content">閱讀更多</button>
-					</div>
-				</div>
-				<div class="list">
-					<div class="col-sm-4">
-						<img src="images/banner4.jpg" alt="" class="img-responsive">
-					</div>
-					<div class="col-sm-8">
-						<h3>林秀偉 製作人．編劇．編舞</h3>
-						<p>太古踏舞團藝術總監，當代傳奇劇場行政總監。法國費加洛日報評為：「是在碧娜．鮑許，羅伯．威
-	爾森之外，看到一些很有魅力的新東西。」德國國際舞蹈雜誌撰稿的巴黎舞評家約翰馬克亞道夫說：「和日本舞踏十分不同，在舞蹈的圖像
-	中，我感受到無以言喻的精神力量。」</p>
-						<button class="btn btn-normal" data-toggle="modal" data-target="#card-content">閱讀更多</button>
-					</div>
-				</div>
-				<div class="list">
-					<div class="col-sm-12">
-						<div class="card search-results" data-category="transition">
-							<span class="cate-tab">戲劇指導</span>
-							<div class="pic"><img src="images/artist.jpg" alt="金士傑" title="金士傑"></div>
-							<div class="content">
-								<h3>金士傑</h3>
-								<p>臺灣劇場界的核心創作份子，「蘭陵劇坊」創始團員，多年來一直從事於舞臺劇演員及編導工作，曾任教於國立藝術學院(現更名為國立台北藝術大學)。曾於一..</p>
-							</div>
-							<button class="btn btn-normal" data-toggle="modal" data-target="#artist-content">閱讀更多</button>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-			<div class="result-list">
-				<h2>藝術家</h2>
-				
-			</div>
+
+        
+
+
+<form action="https://www.pinterest.com/search/" method="GET" name="search">
+    <div class="Module TypeaheadField buttonOnRight guided">
+
+    
+
+
+
+                            <div class="tokenizedInputWrapper">
+        <div class="Module TokenizedInput guided typeaheadWithTitles">
+    
+
+    
+
+<div class="scrollWrapper" style="overflow-x: hidden;">
+    <ul class="tokensWrapper" style="width: 514px;">
+        <li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(37, 173, 197);">
+    <span data-element-type="227">design</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li>
+<li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(157, 138, 235);">
+    <span data-element-type="227">ideas</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li>
+<li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(157, 138, 235);">
+    <span data-element-type="227">ideas</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li>
+<li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(157, 138, 235);">
+    <span data-element-type="227">ideas</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li>
+<li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(157, 138, 235);">
+    <span data-element-type="227">ideas</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li>
+<li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(157, 138, 235);">
+    <span data-element-type="227">ideas</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li>
+<li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(157, 138, 235);">
+    <span data-element-type="227">ideas</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li>
+<li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(157, 138, 235);">
+    <span data-element-type="227">ideas</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li>
+<li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(157, 138, 235);">
+    <span data-element-type="227">ideas</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li>
+<li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(157, 138, 235);">
+    <span data-element-type="227">ideas</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li>
+<li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(157, 138, 235);">
+    <span data-element-type="227">ideas</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li>
+<li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(157, 138, 235);">
+    <span data-element-type="227">ideas</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li>
+<li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(157, 138, 235);">
+    <span data-element-type="227">ideas</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li>
+<li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(157, 138, 235);">
+    <span data-element-type="227">ideas</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li>
+<li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(157, 138, 235);">
+    <span data-element-type="227">ideas</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li>
+<li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(157, 138, 235);">
+    <span data-element-type="227">ideas</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li>
+<li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(157, 138, 235);">
+    <span data-element-type="227">ideas</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li>
+<li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(158, 46, 154);">
+    <span data-element-type="227">design</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li><li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(55, 127, 190);">
+    <span data-element-type="227">ui</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li><li class="tokenizedItem tokenWrapper"><div class="Module SearchInputToken">
+
+
+
+
+
+<div class="tokenContainer" style="background-color: rgb(124, 192, 165);">
+    <span data-element-type="227">ux</span>
+    <span data-element-type="225" class="remove"><em></em></span>
+</div>
+</div></li><li class="tokenizedItem inputToken" style="width: 100px;">
+            <input autocomplete="off" class="Input Module field" data-element-type="227" name="q" placeholder="">
+    
+    
+    
+    
+        </li>
+    </ul>
+</div>
+
+    <a class="removeAll" style="display: block;"><em></em></a>
+</div>
+    </div>
+
+
+
+
+
+    
+        
+                    
+                    
+        
+        
+        
+        
+                    
+        
+        
+                    
+        
+                    
+                    
+    <div class="Module Typeahead buttonOnRight guided typeaheadWithTitles">
+    
+
+    
+
+    
+
+    <ul class="results" data-component-type="35"></ul>
+</div>
+</div>
+</form>
+</div>
+		
 		</div>
 	</div>
 	

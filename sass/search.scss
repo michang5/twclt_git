@@ -7,35 +7,53 @@
 	.breadcrumbs {
 		margin-top: 170px;
 	}
-	.search-block {
+	.input-group {
 		background: $white;
-		padding: 0 10px;
+		padding-left: 8px;
 		height: 50px;
 		width: 100%;
+		position: relative;
 		@include border-radius(8px);
-		overflow-y: hidden;
-		ul {
-			width: 200%;
-			cursor: text;
-			overflow: auto;
-			height: 50px;
+		a {
+			color: $black;
 		}
-		li {
-			@include inline-block;
-			vertical-align: top;
-			margin: 8px 0;
+		.input-group-btn {
+			margin: 0 10px;
+			a {
+				color: $white;
+				background: $red;
+				padding: 6px 4px;
+				&:first-of-type {
+					@include border-radius(6px 0 0 6px);
+					margin-left: 3px;
+				}
+				&:nth-last-of-type(1) {
+					@include border-radius(0 6px 6px 0);
+					border-left: 1px solid $light-red;
+				}
+				i {
+					padding: 0;
+					margin: 0;
+				}
+				&.clear {
+					display: block;
+					background: none;
+					color: $red;
+					border: none;
+					margin-right: 4px;
+				}
+			}
+		}
+		.input-group-addon {
 			padding: 0;
-			.btn-group {
-				margin: 0;
-			}
-			&.input-block {
-				min-width: 100px;
-			}
+			background: none;
+			border: none;
 		}
 		input[type="text"] {
-			margin: 0;
+			margin: 8px 0;
 			overflow: hidden;
 			border: none;
+			width: 100%;
 			&:focus, &:hover, &:active {
 				border: none;
 			}
@@ -53,14 +71,22 @@
 		color: $black;
 	}
 }
-.result-list {
+.list-group {
 	width: 100%;
-	padding: 20px 0;
-	margin: 20px auto;
+	padding: 10px 0;
+	margin: 0 auto;
 	clear: both;
 	@include clearfix;
 	h2 {
 		border-bottom: 1px solid $gray;
 		margin: 10px auto;
+	}
+	.list {
+		padding: 10px 0;
+		clear: both;
+		@include clearfix;
+		.btn {
+			margin: 0;
+		}
 	}
 }

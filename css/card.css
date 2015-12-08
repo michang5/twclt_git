@@ -43,6 +43,7 @@
   background: #fff;
   text-align: justify;
   margin: 10px;
+  clear: both;
   vertical-align: top;
   display: -moz-inline-stack;
   display: inline-block;
@@ -212,40 +213,40 @@
     left: 145px;
   }
 }
-.card.ticket, .card.collection {
+.card.ticket, .card.collection, .card.search-results {
   width: 100%;
   height: auto;
   text-align: left;
   clear: both;
 }
-.card.ticket .pic, .card.ticket .content, .card.collection .pic, .card.collection .content {
+.card.ticket .pic, .card.ticket .content, .card.collection .pic, .card.collection .content, .card.search-results .pic, .card.search-results .content {
   display: -moz-inline-stack;
   display: inline-block;
   *display: inline;
   zoom: 1;
   vertical-align: top;
 }
-.card.ticket .pic, .card.collection .pic {
+.card.ticket .pic, .card.collection .pic, .card.search-results .pic {
   float: left;
 }
-.card.ticket .pic img, .card.collection .pic img {
+.card.ticket .pic img, .card.collection .pic img, .card.search-results .pic img {
   left: 0;
   clip: inherit;
 }
-.card.ticket .content, .card.collection .content {
+.card.ticket .content, .card.collection .content, .card.search-results .content {
   display: block;
 }
-.card.ticket .content h4, .card.collection .content h4 {
+.card.ticket .content h4, .card.collection .content h4, .card.search-results .content h4 {
   margin: 5px 0;
 }
-.card.ticket .content h4 span, .card.collection .content h4 span {
+.card.ticket .content h4 span, .card.collection .content h4 span, .card.search-results .content h4 span {
   padding-right: 10px;
 }
-.card.ticket .content p, .card.collection .content p {
+.card.ticket .content p, .card.collection .content p, .card.search-results .content p {
   padding-bottom: 6px;
   max-height: none;
 }
-.card.ticket .btn-group, .card.collection .btn-group {
+.card.ticket .btn-group, .card.collection .btn-group, .card.search-results .btn-group {
   float: right;
   margin: -13px 26px;
 }
@@ -320,6 +321,29 @@
 }
 .card.collection .btn-group .dropdown-menu {
   width: 100%;
+}
+.card.search-results {
+  height: 120px;
+}
+.card.search-results .content {
+  padding: 10px 20px;
+}
+.card.search-results .pic {
+  width: 219px;
+  height: 120px;
+}
+.card.search-results .pic img {
+  height: 120px;
+}
+.card.search-results .btn-group {
+  margin: 0;
+  position: absolute;
+  bottom: 12px;
+  right: 26px;
+}
+.card.search-results button {
+  bottom: 12px;
+  right: 16px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .main-content .card {

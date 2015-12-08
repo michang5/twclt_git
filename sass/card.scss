@@ -40,7 +40,7 @@
 	background: $white;
 	text-align: justify;
 	margin: 10px;
-//	float: left;
+	clear: both;
 	vertical-align: top;
 	@include inline-block;
 	@include clearfix;
@@ -196,7 +196,7 @@
 			}
 		}
 	}
-	&.ticket, &.collection {
+	&.ticket, &.collection, &.search-results {
 		width: 100%;
 		height: auto;
 		text-align: left;
@@ -300,6 +300,29 @@
 			.dropdown-menu {
 				width: 100%;
 			}
+		}
+	}
+	&.search-results {
+		height: 120px;
+		.content {
+			padding: 10px 20px;
+		}
+		.pic {
+			width: 219px;
+			height: 120px;
+			img {
+				height: 120px;
+			}
+		}
+		.btn-group {
+			margin: 0;
+			position: absolute;
+			bottom: 12px;
+			right: 26px;
+		}
+		button {
+			bottom: 12px;
+			right: 16px;
 		}
 	}
 	@include respond-to (lg-screen){
