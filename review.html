@@ -185,13 +185,42 @@
 			</div>
 		</div>
 		<div class="main-content container">
-			<div class="filter-wrapper">
-				<div class="sort-select filter">
-					<div class="btn btn-normal" data-toggle="dropdown" id="search-sort" aria-expanded="false">時間排序<i class="fa fa-caret-down"></i></div>
-					<ul id="filters" class="dropdown-menu"  aria-labelledby="search-sort">
-						<li class="tab is-checked" data-filter="*">新 &#62 舊</li>
-						<li class="tab" data-filter=".tab-theater">舊 &#62 新</li>				
-					</ul>
+			<div class="collapse-menu filter">
+				<div class="collapse-panel">
+					<header class="collapse-heading">
+						時間<i class="fa fa-angle-down"></i>
+					</header>
+					<div class="collapse-body open">
+						<div class="filters tab-group filters-tab-group">
+<!--							<div class="tab is-checked" data-filter="*">全部</div>-->
+							<div class="tab" data-filter=".filter1-1">新 &#62 舊</div>
+							<div class="tab" data-filter=".filter1-2">舊 &#62 新</div>
+						</div>
+					</div>
+				</div>
+				<div class="collapse-panel">
+					<header class="collapse-heading">
+						媒體<i class="fa fa-angle-down"></i>
+					</header>
+					<div class="collapse-body">
+						<div class="filters tab-group filters-tab-group">
+							<div class="tab is-checked" data-filter="*">全部</div>
+							<div class="tab" data-filter=".filter2-1">filter2-1</div>
+							<div class="tab" data-filter=".filter2-2">filter2-2</div>
+						</div>
+					</div>
+				</div>
+				<div class="collapse-panel">
+					<header class="collapse-heading">
+						語系<i class="fa fa-angle-down"></i>
+					</header>
+					<div class="collapse-body">
+						<div class="filters tab-group filters-tab-group">
+							<div class="tab is-checked" data-filter="*">全部</div>
+							<div class="tab" data-filter=".filter2-1">filter2-1</div>
+							<div class="tab" data-filter=".filter2-2">filter2-2</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="isotope">
