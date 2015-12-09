@@ -74,7 +74,7 @@
 		height: 50px;
 		line-height: 50px;
 		min-width: 80px;
-		z-index: 9999;
+		z-index: 999;
 	//	background: $white;
 		color: $black;
 		font-size: $s-font;
@@ -87,8 +87,16 @@
 		}
 	}
 }
-.search-wrapper {
-		
+.search-wrapper {	
+}
+
+.categary {
+	@include clearfix;
+	h2 {
+		border-bottom: 1px solid $gray;
+		margin: 30px auto;
+		padding: 10px;
+	}
 }
 .list-group {
 	width: 100%;
@@ -96,10 +104,6 @@
 	margin: 0 auto;
 	clear: both;
 	@include clearfix;
-	h2 {
-		border-bottom: 1px solid $gray;
-		margin: 10px auto;
-	}
 	.list {
 		padding: 10px 0;
 		clear: both;

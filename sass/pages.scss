@@ -291,6 +291,141 @@
 		}
 	}
 }
+//tabs
+.tab-group {
+	padding: 10px 0;
+	border-bottom: 1px solid $light-gray;
+	text-align: left;
+	@include respond-to (only-mobile){
+		text-align: center;
+	}
+}
+//isotope
+.tab {
+	@include border-radius(40px);
+	@include inline-block;
+	@include transition(color, .5s, ease-in);
+	background: $lighter-gray;
+	overflow: hidden;
+	margin: 3px;
+	color: $black;
+	padding: 4px 10px;
+	width: 90px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	&:hover, &:focus {
+		background: $red; 
+		color: $white;
+	}
+	&.is-checked {
+		background: $red; 
+		color: $white;
+	}
+}
+.filter-wrapper {
+	@include clearfix;
+	width: 100%;
+	.btn-cate {
+		float: right;
+		text-align: center;
+		height: 40px;
+		padding: 0 10px;
+		margin: 10px 0 0;
+		line-height: 40px;
+		font-size: $l-font;
+		@include border-radius(40px);
+		display: block;
+		color: $white;
+		background: $red;
+		cursor: pointer;
+		font-size: $m-font;
+		&:hover {
+			color: $white;
+			background: $red;
+		}
+	}
+	@include respond-to (only-desktop){
+		.btn-cate {
+			display: none;
+		}
+		.dropdown-menu {
+			display: block;
+			border: none;
+			background: none;
+			position: static;
+			@include box-shadow(none);	
+		}
+	}
+	@include respond-to (only-device){
+		.btn-cate {
+			display: block;
+		}
+		.dropdown-menu {
+			width: 120px;
+			padding: 0;
+			left: auto;
+			right: 0;
+			@include transparent($white,.9);
+			.tab {
+//				background: none;
+				width: 100%;
+				margin: 0;
+				display: block;
+				line-height: 30px;
+				border-radius: 0;
+				&:hover, &:focus {
+					background: $red; 
+					color: $white;
+				}
+				&.is-checked {
+					background: $red; 
+					color: $white;
+				}
+			}
+		}
+	}
+}
+.isotope {
+	width: 100%;
+	margin: 0 auto;
+	.tab-content & {
+		width: 1140px;
+	}
+	#member & {
+		margin-bottom: 50px;
+	}
+	@include respond-to (lg-screen){
+		.tab-content & {
+			width: 940px;
+		}
+	}
+	@include respond-to (md-screen){
+		.tab-content & {
+			width: 720px;
+		}
+	}
+	@include respond-to (md-screen){
+		.tab-content & {
+			width: 720px;
+		}
+	}
+	@include respond-to (only-mobile){
+		.tab-content & {
+			width: 320px;
+		}
+	}
+}
+#member .tab-content .isotope {	
+	width: 100%!important;
+}
+.main-content .isotope {
+}
+.isotope:after {
+	content: '';
+	display: block;
+	clear: both;
+}
 //slider
 .top-banner.slider {
 //	max-height: 450px;

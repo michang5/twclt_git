@@ -1,3 +1,38 @@
+.btn-custom, .btn-fb, .btn-yh {
+  margin: 4px;
+  color: #fff;
+}
+.btn-custom:hover, .btn-fb:hover, .btn-yh:hover {
+  color: #fff;
+}
+
+.btn-fb {
+  background: #3b5998;
+}
+.btn-fb:hover {
+  background-color: transparent;
+  background-color: rgba(59, 89, 152, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC3B5998,endColorstr=#CC3B5998);
+  zoom: 1;
+}
+.btn-fb.btn-lg {
+  padding: 13px 16px;
+}
+
+.btn-yh {
+  background: #410093;
+}
+.btn-yh:hover {
+  background-color: transparent;
+  background-color: rgba(65, 0, 147, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC410093,endColorstr=#CC410093);
+  zoom: 1;
+}
+.btn-yh.btn-lg {
+  padding-top: 13px;
+  padding-bottom: 10px;
+}
+
 .member {
   text-align: center;
 }

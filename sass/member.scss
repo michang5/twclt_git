@@ -4,6 +4,34 @@
 @import 'base/media';
 
 //login + reset pwd
+.btn-custom {
+	margin: 4px;
+	color: $white;
+	&:hover {
+		color: $white;
+	}
+}
+.btn-fb {
+	@extend .btn-custom;
+	background: $facebook;
+	&:hover {
+		@include transparent($facebook,.8);
+	}
+	&.btn-lg {
+		padding: 13px 16px;
+	}
+}
+.btn-yh {
+	@extend .btn-custom;
+	background: $yahoo;
+	&:hover {
+		@include transparent($yahoo,.8);
+	}
+	&.btn-lg {
+		padding-top: 13px;
+		padding-bottom: 10px;
+	}
+}
 .member {
 	h2 {
 		color: $red;

@@ -205,26 +205,6 @@
 							<a href="#" class="btn btn-filter">Filter1</a>
 							<a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
 						</span>
-						<span class="input-group-btn">
-							<a href="#" class="btn btn-filter">Filter1</a>
-							<a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
-						</span>
-						<span class="input-group-btn">
-							<a href="#" class="btn btn-filter">Filter1</a>
-							<a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
-						</span>
-						<span class="input-group-btn">
-							<a href="#" class="btn btn-filter">Filter1</a>
-							<a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
-						</span>
-						<span class="input-group-btn">
-							<a href="#" class="btn btn-filter">Filter1</a>
-							<a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
-						</span>
-						<span class="input-group-btn">
-							<a href="#" class="btn btn-filter">Filter1</a>
-							<a href="#" class="btn btn-filter"><i class="fa fa-times"></i></a>
-						</span>
 						<input type="text" class="form-control" placeholder="搜尋">
 					</div>
 				</div>
@@ -232,66 +212,104 @@
 					<span>共搜尋156筆</span>
 					<span><a href="#" class="clear"><i class="fa fa-times"></i></a></span>
 				</div>
-			</div>		
-			<div class="filter-wrapper">
-				<ul>
-					<li><a href=""></a></li>
-				</ul>
 			</div>
 			
-			<div class="list-group">
-				<h2>藝術家</h2>
-				<div class="list">
-					<div class="col-sm-4">
-						<img src="images/banner4.jpg" alt="" class="img-responsive">
+			<div class="filter-wrapper dropdown">
+				<a class="btn-cate dropdown-toggle" data-toggle="dropdown" id="cate" aria-expanded="false">搜尋類別<i class="fa fa-caret-down"></i></a>
+				<div class="dropdown-menu cate">
+					<div id="filters" class="tab-group">
+						<li class="tab is-checked" data-filter="*">全部</li>
+						<li class="tab" data-filter=".tab-theater">劇目創作</li>
+						<li class="tab" data-filter=".tab-collect">影音精選</li>
+						<li class="tab" data-filter=".tab-meduia">媒體報導</li>
+						<li class="tab" data-filter=".tab-perform-news">演出新訊</li>
+						<li class="tab" data-filter=".tab-behind-the-scenes">幕後花絮</li>
+						<li class="tab" data-filter=".tab-event-news">活動新訊</li>
+						<li class="tab" data-filter=".tab-perform-info">演出資訊</li>
+						<li class="tab" data-filter=".tab-artist">藝術家</li>
+						<li class="tab" data-filter=".tab-actor">主要演員</li>
+						<li class="tab" data-filter=".tab-photos">劇照</li>
+						<li class="tab" data-filter=".tab-products">周邊商品</li>
+					</ul>
+				</div>
+			</div>
+			</div>
+						
+			<div class="categary">
+				<h2>合作藝術家</h2>
+				<div class="list-group isotope">
+					<div class="element-item list tab-theater">
+						<div class="col-sm-4">
+							<img src="images/banner4.jpg" alt="" class="img-responsive">
+						</div>
+						<div class="col-sm-8">
+							<h3>吳興國 藝術總監．導演．主演</h3>
+							<p>生於高雄市旗津區，原名吳國秋，台灣演員、劇作家、導演；當代傳奇劇場藝術總監；乃少數橫跨電影、電視、傳統戲曲、現代劇場以及舞蹈之表演藝術家。吳目前於國立台灣藝術大學表演藝術研究所專任教授；曾獲美國傅爾‧布萊特獎學金、亞洲文化協會獎學金。</p>
+							<button class="btn btn-normal" data-toggle="modal" data-target="#card-content">閱讀更多</button>
+						</div>
 					</div>
-					<div class="col-sm-8">
-						<h3>吳興國 藝術總監．導演．主演</h3>
-						<p>生於高雄市旗津區，原名吳國秋，台灣演員、劇作家、導演；當代傳奇劇場藝術總監；乃少數橫跨電影、電視、傳統戲曲、現代劇場以及舞蹈之表演藝術家。吳目前於國立台灣藝術大學表演藝術研究所專任教授；曾獲美國傅爾‧布萊特獎學金、亞洲文化協會獎學金。</p>
-						<button class="btn btn-normal" data-toggle="modal" data-target="#card-content">閱讀更多</button>
+					<div class="element-item list tab-perform-news">
+						<div class="col-sm-4">
+							<img src="images/banner4.jpg" alt="" class="img-responsive">
+						</div>
+						<div class="col-sm-8">
+							<h3>林秀偉 製作人．編劇．編舞</h3>
+							<p>太古踏舞團藝術總監，當代傳奇劇場行政總監。法國費加洛日報評為：「是在碧娜．鮑許，羅伯．威
+		爾森之外，看到一些很有魅力的新東西。」德國國際舞蹈雜誌撰稿的巴黎舞評家約翰馬克亞道夫說：「和日本舞踏十分不同，在舞蹈的圖像
+		中，我感受到無以言喻的精神力量。」</p>
+							<button class="btn btn-normal" data-toggle="modal" data-target="#card-content">閱讀更多</button>
+						</div>
+					</div>
+					<div class="element-item list tab-actor">
+						<div class="col-sm-12">
+							<div class="card search-results" data-category="transition">
+								<span class="cate-tab">戲劇指導</span>
+								<div class="pic"><img src="images/artist.jpg" alt="金士傑" title="金士傑"></div>
+								<div class="content">
+									<h3>金士傑</h3>
+									<p>臺灣劇場界的核心創作份子，「蘭陵劇坊」創始團員，多年來一直從事於舞臺劇演員及編導工作，曾任教於國立藝術學院(現更名為國立台北藝術大學)。曾於一..</p>
+								</div>
+								<button class="btn btn-normal" data-toggle="modal" data-target="#artist-content">閱讀更多</button>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="list">
-					<div class="col-sm-4">
-						<img src="images/banner4.jpg" alt="" class="img-responsive">
-					</div>
-					<div class="col-sm-8">
-						<h3>林秀偉 製作人．編劇．編舞</h3>
-						<p>太古踏舞團藝術總監，當代傳奇劇場行政總監。法國費加洛日報評為：「是在碧娜．鮑許，羅伯．威
-	爾森之外，看到一些很有魅力的新東西。」德國國際舞蹈雜誌撰稿的巴黎舞評家約翰馬克亞道夫說：「和日本舞踏十分不同，在舞蹈的圖像
-	中，我感受到無以言喻的精神力量。」</p>
-						<button class="btn btn-normal" data-toggle="modal" data-target="#card-content">閱讀更多</button>
-					</div>
-				</div>
-				<div class="list">
+				<a href="#" class="btn btn-text">更多合作藝術家搜尋結果<i class="fa fa-arrow-right"></i></a>
+			</div>
+			
+			<div class="categary">
+				<h2>經典劇作</h2>
+				<div class="element-item list tab-actor">
 					<div class="col-sm-12">
 						<div class="card search-results" data-category="transition">
-							<span class="cate-tab">戲劇指導</span>
-							<div class="pic"><img src="images/artist.jpg" alt="金士傑" title="金士傑"></div>
+							<span class="cate-tab">劇目創作</span>
+							<div class="pic"><img src="images/series3.jpg" alt="當代傳奇劇場—樓蘭女" title="當代傳奇劇場—樓蘭女"></div>
 							<div class="content">
-								<h3>金士傑</h3>
+								<h3>當代傳奇劇場—樓蘭女</h3>
 								<p>臺灣劇場界的核心創作份子，「蘭陵劇坊」創始團員，多年來一直從事於舞臺劇演員及編導工作，曾任教於國立藝術學院(現更名為國立台北藝術大學)。曾於一..</p>
 							</div>
-							<button class="btn btn-normal" data-toggle="modal" data-target="#artist-content">閱讀更多</button>
-						</div>
-						
-						<div class="card collection" style="margin:6px!important" data-category="transition">
-							<span class="cate-tab">劇目創作</span>
-							<span class="collect"><a href="#" class="collected"><i class="fa fa-heart"></i></a></span>
-							<div class="pic"><img src="images/series4.jpg" alt="樓蘭女" title="樓蘭女"></div>
-							<h3>當代傳奇劇場—樓蘭女</h3>
 							<div class="btn-group">
-								<button class="btn btn-normal" onclick="location.href='card-content.html'">閱讀更多</button>
+								<button class="btn btn-normal" onclick="location.href=''">了解戲劇</button>
+								<button class="btn btn-normal" data-toggle="dropdown" id="tickets-sell" aria-expanded="false">售票</button>
+								<ul class="dropdown-menu tickets-sell" aria-labelledby="tickets-sell">
+									<li><a href="#" target="_blank">兩廳院售票系統</a></li>
+									<li><a href="#" target="_blank">博客來</a></li>
+									<li><a href="#" target="_blank">KKTIX</a></li>
+								</ul>
+								<button class="btn btn-normal" onclick="location.href=''">周邊商品</button>
 							</div>
-										
 						</div>
-						
 					</div>
 				</div>
+				<a href="#" class="btn btn-text">更多合作藝術家搜尋結果<i class="fa fa-arrow-right"></i></a>
+			
+			</div>
+			<div class="list-group isotope">
+				
 				
 			</div>
 			<div class="result-list">
-				<h2>藝術家</h2>
+				
 			</div>
 		</div>
 	</div>
@@ -408,6 +426,8 @@
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="js/isotope.pkgd.js"></script>
+	<script type="text/javascript" src="js/isotope.js"></script>
 	<script type="text/javascript" src="js/pages.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	

@@ -73,7 +73,7 @@
   height: 50px;
   line-height: 50px;
   min-width: 80px;
-  z-index: 9999;
+  z-index: 999;
   color: #000;
   font-size: 0.9em;
   padding: 0;
@@ -84,6 +84,22 @@
   display: inline-block;
   *display: inline;
   zoom: 1;
+}
+
+.categary {
+  *zoom: 1;
+}
+.categary:after, .categary:before {
+  content: "";
+  display: table;
+}
+.categary:after {
+  clear: both;
+}
+.categary h2 {
+  border-bottom: 1px solid #545454;
+  margin: 30px auto;
+  padding: 10px;
 }
 
 .list-group {
@@ -99,10 +115,6 @@
 }
 .list-group:after {
   clear: both;
-}
-.list-group h2 {
-  border-bottom: 1px solid #545454;
-  margin: 10px auto;
 }
 .list-group .list {
   padding: 10px 0;

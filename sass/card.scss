@@ -246,9 +246,7 @@
 		height: 80px;
 		margin: 10px 1px!important;
 		display: block;
-		box-shadow: none;
-		border: 1px solid $light-gray;
-		overflow: hidden;
+		@include box-shadow ($gray 0 0 1px);
 		span {
 			&.cate-tab {
 				width: auto;
