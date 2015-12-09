@@ -233,14 +233,12 @@
 					<span><a href="#" class="clear"><i class="fa fa-times"></i></a></span>
 				</div>
 			</div>		
-			<div class="sort-select">
-				<button class="btn btn-normal" data-toggle="dropdown" id="search-sort" aria-expanded="false">搜尋排序<i class="fa fa-caret-down"></i></button>
-				
-				<ul class="dropdown-menu search-sort" aria-labelledby="search-sort">
-					<li><a href="#" target="_blank">新<i class="fa fa-arrow-right"></i>舊</a></li>
-					<li><a href="#" target="_blank">舊<i class="fa fa-arrow-right"></i>新</a></li>
-				</ul>	
+			<div class="filter-wrapper">
+				<ul>
+					<li><a href=""></a></li>
+				</ul>
 			</div>
+			
 			<div class="list-group">
 				<h2>藝術家</h2>
 				<div class="list">
@@ -276,13 +274,24 @@
 							</div>
 							<button class="btn btn-normal" data-toggle="modal" data-target="#artist-content">閱讀更多</button>
 						</div>
+						
+						<div class="card collection" style="margin:6px!important" data-category="transition">
+							<span class="cate-tab">劇目創作</span>
+							<span class="collect"><a href="#" class="collected"><i class="fa fa-heart"></i></a></span>
+							<div class="pic"><img src="images/series4.jpg" alt="樓蘭女" title="樓蘭女"></div>
+							<h3>當代傳奇劇場—樓蘭女</h3>
+							<div class="btn-group">
+								<button class="btn btn-normal" onclick="location.href='card-content.html'">閱讀更多</button>
+							</div>
+										
+						</div>
+						
 					</div>
 				</div>
 				
 			</div>
 			<div class="result-list">
 				<h2>藝術家</h2>
-				
 			</div>
 		</div>
 	</div>
@@ -382,7 +391,19 @@
 			</div>
 		</div>
 	</div>
-
+	
+	<!-- artist-content -->
+	<div class="modal fade" id="artist-content" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<button type="button" class="close hairline" data-dismiss="modal"></button>
+				<div class="modal-body">
+					<iframe width="853" height="480" src="artist-content.html" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	<!--jQuery--> 
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js" ></script>

@@ -172,12 +172,12 @@
 	<!-- wrapper -->
 	<div id="wrapper">
 		<div class="top-banner slider">
-			<div id="carousel-top" class="carousel slide" data-ride="carousel">
+			<div id="carousel-top" class="carousel slide" data-interval="false">
 				<div class="carousel-inner short" role="listbox">
 					<div class="item active video-slider">
-						<div class="video-wrapper col-md-8">
-							<div class="video-container">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/xnFQq7qyrvE" frameborder="0" allowfullscreen></iframe>
+						<div id="video1" class="video-wrapper col-md-8">
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xnFQq7qyrvE" frameborder="0" allowfullscreen><div class="video_mask"></div></iframe>
 							</div>
 						</div>
 						<div class="carousel-caption col-md-4">
@@ -190,10 +190,9 @@
 						</div>
 					</div>				
 					<div class="item video-slider">
-						<div class="video-wrapper col-md-8">
-							<div class="video-container">
-								
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/ST2wnGtQ48s" frameborder="0" allowfullscreen><div class="video_mask"></div></iframe>
+						<div id="video2" class="video-wrapper col-md-8">
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xnFQq7qyrvE" frameborder="0" allowfullscreen><div class="video_mask"></div></iframe>
 							</div>
 						</div>
 						<div class="carousel-caption col-md-4">
@@ -204,9 +203,9 @@
 						</div>
 					</div>
 					<div class="item video-slider">
-						<div class="video-wrapper col-md-8">
-							<div class="video-container">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/tekHOZlMRmA" frameborder="0" allowfullscreen></iframe>
+						<div id="video3" class="video-wrapper col-md-8">
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tekHOZlMRmA" frameborder="0" allowfullscreen><div class="video_mask"></div></iframe>
 							</div>
 						</div>
 						<div class="carousel-caption col-md-4">
@@ -217,9 +216,9 @@
 						</div>
 					</div>
 					<div class="item video-slider">
-						<div class="video-wrapper col-md-8">
-							<div class="video-container">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/xnFQq7qyrvE" frameborder="0" allowfullscreen></iframe>
+						<div id="video4" class="video-wrapper col-md-8">
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xnFQq7qyrvE" frameborder="0" allowfullscreen><div class="video_mask"></div></iframe>
 							</div>
 						</div>
 						<div class="carousel-caption col-md-4">
@@ -236,6 +235,7 @@
 					<li data-target="#carousel-top" data-slide-to="0" class="active"></li>
 					<li data-target="#carousel-top" data-slide-to="1"></li>
 					<li data-target="#carousel-top" data-slide-to="2"></li>
+					<li data-target="#carousel-top" data-slide-to="3"></li>
 				</ol>
 			</div>
 		</div>
@@ -456,10 +456,10 @@
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="js/touchswipe.min.js"></script>
-	<script type="text/javascript" src="js/pages.js"></script>
 	<script type="text/javascript" src="js/isotope.pkgd.js"></script>
 	<script type="text/javascript" src="js/isotope.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
+	<script type="text/javascript" src="js/pages.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>

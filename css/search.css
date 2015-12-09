@@ -1,6 +1,9 @@
 #search .breadcrumbs {
   margin-top: 170px;
 }
+#search ::-webkit-scrollbar {
+  display: none;
+}
 #search .input-group {
   height: 50px;
   width: 100%;

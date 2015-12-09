@@ -12,14 +12,18 @@ body {
 .content {
   position: relative;
 }
+.content .pic, .content .video-wrapper {
+  position: relative;
+}
 .content .collect, .content .social-share {
   position: absolute;
-  top: -45px;
+  top: -46px;
   width: 40px;
   height: 40px;
   line-height: 40px;
   display: block;
   text-align: center;
+  z-index: 999;
 }
 .content .collect > a, .content .social-share > a {
   color: #fff;
@@ -52,12 +56,10 @@ body {
   text-shadow: none;
 }
 .content .social-share {
-  right: 58px;
-  z-index: 999;
+  right: 60px;
 }
 .content .collect {
   right: 10px;
-  z-index: 999;
 }
 
 @media only screen and (max-width: 991px) {

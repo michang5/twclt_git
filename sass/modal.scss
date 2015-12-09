@@ -14,14 +14,18 @@ body {
 }
 .content {
 	position: relative;
+	.pic, .video-wrapper {
+		position: relative;
+	}
 	.collect, .social-share {
 		position: absolute;
-		top: -45px;
+		top: -46px;
 		width: 40px;
 		height: 40px;
 		line-height: 40px;
 		display: block;
 		text-align: center;
+		z-index: 999;
 		> a {
 			color: $white;
 			display: block;
@@ -41,12 +45,22 @@ body {
 		}
 	}
 	.social-share {
-		right: 58px;
-		z-index: 999;
+		right: 60px;
+//		top: 0;
 	}
 	.collect {
 		right: 10px;
-		z-index: 999;
+//		top: 0;
+	}
+	@include respond-to (only-device){
+		.social-share {
+			
+//			top: 40px;
+		}
+		.collect {
+//			right: 60px;
+//			top: 0x;
+		}
 	}
 }
 .row.artist {

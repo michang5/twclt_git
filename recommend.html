@@ -173,12 +173,12 @@
 	<!-- wrapper -->
 	<div id="wrapper">
 		<div class="top-banner slider">
-			<div id="carousel-top" class="carousel slide" data-ride="carousel">
+			<div id="carousel-top" class="carousel slide" data-interval="false">
 				<div class="carousel-inner" role="listbox">
 					<div class="item video-slider active">
-						<div class="video-wrapper col-md-8">
-							<div class="video-container">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/ZWDSklP9yJc" frameborder="0" allowfullscreen></iframe>
+						<div id="video1" class="video-wrapper col-md-8">
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZWDSklP9yJc" frameborder="0" allowfullscreen><div class="video_mask"></div></iframe>
 							</div>
 						</div>
 						<div class="carousel-caption col-md-4">
@@ -737,26 +737,15 @@
 		</div>
 	</div>
 	
-	<!-- video -->
-	<div class="modal fade video-stack" id="video" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<button type="button" class="close hairline" data-dismiss="modal"></button>
-				<div class="modal-body">
-					<iframe width="853" height="480" src="https://www.youtube.com/embed/9f-hBV_KSuc" frameborder="0" allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!--jQuery--> 
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="js/touchswipe.min.js"></script>
-	<script type="text/javascript" src="js/pages.js"></script>
 	<script type="text/javascript" src="js/isotope.pkgd.js"></script>
 	<script type="text/javascript" src="js/isotope.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
+	<script type="text/javascript" src="js/pages.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	
 </body>

@@ -517,32 +517,29 @@ a[data-toggle=modal] {
 }
 
 //video
-.video {
-	position: relative;
-	margin-bottom: 40px;
-	
-	video {
-		@include box-shadow($black 0 0 10px);
-		background: $black;
-		width: 80%;
-		display: block;
-		margin: 0 auto;
-		height: auto!important;
-		.modal-body & {
-			width: 100%;
-		}
-	}
-	@include respond-to (only-device){
-		video { 
-			width: 90%;
-			margin-bottom: 20px;
-		}
-	}
-}
-.video-container {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 30px; height: 0; overflow: hidden;
+//.video {
+//	position: relative;
+//	margin-bottom: 40px;
+//	
+//	video {
+//		@include box-shadow($black 0 0 10px);
+//		background: $black;
+//		width: 80%;
+//		display: block;
+//		margin: 0 auto;
+//		height: auto!important;
+//		.modal-body & {
+//			width: 100%;
+//		}
+//	}
+//	@include respond-to (only-device){
+//		video { 
+//			width: 90%;
+//			margin-bottom: 20px;
+//		}
+//	}
+//}
+.video-wrapper {
 	
 	iframe, object, embed {
 //		border: 1px solid #fff;
@@ -552,7 +549,7 @@ a[data-toggle=modal] {
 		width: 100%;
 		height: 100%;
 		.top-banner & {
-			height: 82%;
+			height: 88%;
 		}
 	}
 }

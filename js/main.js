@@ -1,28 +1,4 @@
-
 $(function(){
-//	$('.dropdown-menu input, .dropdown-menu label').click(function(e) {
-//        e.stopPropagation();
-//    });
-	$(document).ready(function() {
-		//Enable swiping...
-		$(".carousel-inner").swipe( {
-			//Generic swipe handler for all directions
-				swipeLeft:function(event, direction, distance, duration, fingerCount) {
-					$(this).parent().carousel('next'); 
-				},
-				swipeRight: function() {
-					$(this).parent().carousel('prev'); 
-				},
-			//Default is 75px, set to 0 for demo so any distance triggers swipe
-				threshold:0
-			});
-		});
-	
-	$('.carousel').carousel({
-		pause: true,
-		interval: false
-	});
-	//jQuery for page scrolling feature - requires jQuery Easing plugin
 	$(function() {
 		$('.fix-icon a').bind('click', function(event) {
 			var $anchor = $(this);
@@ -45,7 +21,26 @@ $(function(){
 	});
 	
 	$(".carousel-indicators li").click(function () {
-		$(".carousel iframe").attr("src", $(".carousel iframe").attr("src"));
+		$("#video1 iframe").attr("src", $("#video1 iframe").attr("src"));
 	});
+	
+	$(".carousel-indicators li").click(function () {
+		$("#video2 iframe").attr("src", $("#video2 iframe").attr("src"));
+	});
+	
+	$(".carousel-indicators li").click(function () {
+		$("#video3 iframe").attr("src", $("#video3 iframe").attr("src"));
+	});
+});
+$(function () {
+	$(document).ready(function () {
 
+		$(".carousel").swiperight(function () {
+			$(this).carousel('prev');
+		});
+		$(".carousel").swipeleft(function () {
+			$(this).carousel('next');
+		});
+
+	});
 });
