@@ -716,7 +716,7 @@
   height: 140px;
   left: 0;
   top: -16px;
-  clip: rect(16px, 153px, 96px, 0);
+  clip: rect(16px, 146px, 96px, 0);
 }
 .card.collection.youtube .pic a {
   height: 80px;
@@ -741,7 +741,7 @@
     height: 120px;
     left: 0;
     top: -16px;
-    clip: rect(16px, 153px, 96px, 0);
+    clip: rect(16px, 146px, 96px, 0);
   }
   .card.search-results.youtube .pic a {
     height: 80px;
