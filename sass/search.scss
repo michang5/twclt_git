@@ -93,23 +93,81 @@
 .categary {
 	@include clearfix;
 	h2 {
-		border-bottom: 1px solid $gray;
-		margin: 30px auto;
-		padding: 10px;
+		border-top: 1px solid $gray;
+		margin: 20px auto 0;
+		padding: 16px 0 0;
+	}
+	@include respond-to (only-device){
+		h2 {
+			margin: 15px auto;
+		}
+	}
+	@include respond-to (normal-mobile){
+		h2 {
+			margin: 5px auto;
+		}
 	}
 }
 .list-group {
 	width: 100%;
-	padding: 10px 0;
-	margin: 0 auto;
+	margin: 0 auto 6px;
 	clear: both;
 	@include clearfix;
+	.col-xs-4 {
+		padding: 0;
+		img {
+			padding: 0;
+		}
+	}
 	.list {
 		padding: 10px 0;
 		clear: both;
 		@include clearfix;
 		.btn {
-			margin: 0;
+			margin: 0 0 0 1px;
+			padding: 7px 5px;
+			border: 0;
+			background: $red;
+			color: $white;
+			font-size: $xs-font;
+			&:hover, &:active, &:focus {
+				background: $black;
+				border: none;
+			}
+		}
+	}
+	p {
+		padding-bottom: 10px;
+	}
+	@include respond-to (md-screen){
+		p {
+			display: none;
+		}
+		.col-xs-8 { 
+			padding: 0 8px;
+		}
+	}
+	@include respond-to (only-device){
+		p {
+			display: none;
+		}
+		.list {
+			.btn {
+				padding: 6px 5px;
+			}
+		}
+		.col-xs-8 { 
+			padding: 0;
+		}
+	}
+	@include respond-to (only-mobile){
+		h3 {
+			font-size: $xl-font;
+		}
+	}
+	@include respond-to (normal-mobile){
+		.col-xs-4, .col-xs-8 { 
+			width: 100%;
 		}
 	}
 }

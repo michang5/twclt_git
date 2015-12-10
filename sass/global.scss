@@ -118,10 +118,16 @@ button.btn-normal {
 .btn-text {
 	color: $white;
 	float: right;
-	padding: 10px 20px;
+	padding: 10px 6px;
 	&:hover, &:focus, &.active {
 		color: $yellow;
 		background: $dark-gray;
+	}
+	i {
+		margin: 0 2px;
+	}
+	#products & {
+		float: left;
 	}
 }
 .btn-group {

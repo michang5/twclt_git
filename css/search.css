@@ -97,15 +97,24 @@
   clear: both;
 }
 .categary h2 {
-  border-bottom: 1px solid #545454;
-  margin: 30px auto;
-  padding: 10px;
+  border-top: 1px solid #545454;
+  margin: 20px auto 0;
+  padding: 16px 0 0;
+}
+@media only screen and (max-width: 768px) {
+  .categary h2 {
+    margin: 15px auto;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .categary h2 {
+    margin: 5px auto;
+  }
 }
 
 .list-group {
   width: 100%;
-  padding: 10px 0;
-  margin: 0 auto;
+  margin: 0 auto 6px;
   clear: both;
   *zoom: 1;
 }
@@ -115,6 +124,12 @@
 }
 .list-group:after {
   clear: both;
+}
+.list-group .col-xs-4 {
+  padding: 0;
+}
+.list-group .col-xs-4 img {
+  padding: 0;
 }
 .list-group .list {
   padding: 10px 0;
@@ -129,5 +144,46 @@
   clear: both;
 }
 .list-group .list .btn {
-  margin: 0;
+  margin: 0 0 0 1px;
+  padding: 7px 5px;
+  border: 0;
+  background: #b90f00;
+  color: #fff;
+  font-size: 0.8em;
+}
+.list-group .list .btn:hover, .list-group .list .btn:active, .list-group .list .btn:focus {
+  background: #000;
+  border: none;
+}
+.list-group p {
+  padding-bottom: 10px;
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .list-group p {
+    display: none;
+  }
+  .list-group .col-xs-8 {
+    padding: 0 8px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .list-group p {
+    display: none;
+  }
+  .list-group .list .btn {
+    padding: 6px 5px;
+  }
+  .list-group .col-xs-8 {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .list-group h3 {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .list-group .col-xs-4, .list-group .col-xs-8 {
+    width: 100%;
+  }
 }

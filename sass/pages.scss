@@ -294,9 +294,10 @@
 //tabs
 .tab-group {
 	padding: 10px 0;
-	border-bottom: 1px solid $light-gray;
+//	border-bottom: 1px solid $light-gray;
 	text-align: left;
 	@include respond-to (only-mobile){
+		padding: 0;
 		text-align: center;
 	}
 }
@@ -368,12 +369,13 @@
 			right: 0;
 			@include transparent($white,.9);
 			.tab {
-//				background: none;
+				background: $white;
 				width: 100%;
 				margin: 0;
 				display: block;
 				line-height: 30px;
 				border-radius: 0;
+				
 				&:hover, &:focus {
 					background: $red; 
 					color: $white;

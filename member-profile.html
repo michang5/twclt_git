@@ -138,23 +138,27 @@
 						<div role="tabpanel" class="tab-pane" id="collect">
 							<section>
 								<h3>我的收藏</h3>
-								
-								
-								<div id="filters" class="tab-group filters-tab-group">
-									<div class="tab is-checked" data-filter="*">全部</div>
-									<div class="tab" data-filter=".tab-theater">劇目創作</div>
-									<div class="tab" data-filter=".tab-collect">影音精選</div>
-									<div class="tab" data-filter=".tab-meduia">媒體報導</div>
-									<div class="tab" data-filter=".tab-perform-news">演出新訊</div>
-									<div class="tab" data-filter=".tab-behind-the-scenes">幕後花絮</div>
-									<div class="tab" data-filter=".tab-event-news">活動新訊</div>
-									<div class="tab" data-filter=".tab-perform-info">演出資訊</div>
-									<div class="tab" data-filter=".tab-artist">藝術家</div>
-									<div class="tab" data-filter=".tab-actor">主要演員</div>
-									<div class="tab" data-filter=".tab-photos">劇照</div>
-									<div class="tab" data-filter=".tab-products">周邊商品</div>
+								<div class="filter-wrapper dropdown">
+									<a class="btn-cate dropdown-toggle" data-toggle="dropdown" id="cate" aria-expanded="false">搜尋類別<i class="fa fa-caret-down"></i></a>
+									<div class="dropdown-menu cate">
+										<div id="filters" class="tab-group">
+											<ul>
+												<li class="tab is-checked" data-filter="*">全部</li>
+												<li class="tab" data-filter=".tab-theater">劇目創作</li>
+												<li class="tab" data-filter=".tab-collect">影音精選</li>
+												<li class="tab" data-filter=".tab-meduia">媒體報導</li>
+												<li class="tab" data-filter=".tab-perform-news">演出新訊</li>
+												<li class="tab" data-filter=".tab-behind-the-scenes">幕後花絮</li>
+												<li class="tab" data-filter=".tab-event-news">活動新訊</li>
+												<li class="tab" data-filter=".tab-perform-info">演出資訊</li>
+												<li class="tab" data-filter=".tab-artist">藝術家</li>
+												<li class="tab" data-filter=".tab-actor">主要演員</li>
+												<li class="tab" data-filter=".tab-photos">劇照</li>
+												<li class="tab" data-filter=".tab-products">周邊商品</li>
+											</ul>
+										</div>
+									</div>
 								</div>
-							
 								<div class="isotope">
 									<div class="element-item card collection youtube tab-theater" data-category="transition">
 										<span class="cate-tab">劇目創作</span>

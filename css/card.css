@@ -134,6 +134,9 @@
   max-height: 92px;
   line-height: 1.5em;
 }
+.card.youtube {
+  overflow: hidden;
+}
 .card.youtube .pic {
   width: 300px;
   height: 240px;
@@ -275,8 +278,9 @@
   top: 0;
 }
 .card.collection span.collect {
-  top: 20px;
-  right: 6px;
+  top: auto;
+  bottom: 4px;
+  right: 4px;
 }
 .card.collection .pic, .card.collection h3, .card.collection .btn-group {
   display: -moz-inline-stack;
@@ -289,7 +293,7 @@
   font-size: 1em;
   width: 50%;
   max-height: 40px;
-  margin: 30px 10px 0 30px;
+  margin: 30px 10px 0 10px;
   overflow: hidden;
   color: #000;
 }
@@ -302,7 +306,7 @@
 }
 .card.collection .btn-group {
   position: absolute;
-  top: 20px;
+  bottom: 5px;
   right: 48px;
   margin: 0;
 }
@@ -323,10 +327,23 @@
   width: 100%;
 }
 .card.search-results {
+  width: 100%;
   height: 120px;
+  margin: 8px auto;
+  display: block;
 }
 .card.search-results .content {
   padding: 10px 20px;
+}
+.card.search-results .content h4, .card.search-results .content p {
+  width: 72%;
+}
+.card.search-results .content h4 {
+  margin: 0;
+}
+.card.search-results .content p {
+  line-height: 1.5em;
+  height: 46px;
 }
 .card.search-results .pic {
   width: 219px;
@@ -339,11 +356,40 @@
   margin: 0;
   position: absolute;
   bottom: 12px;
-  right: 26px;
-}
-.card.search-results button {
-  bottom: 12px;
   right: 16px;
+}
+.card.search-results .btn-group button {
+  position: static;
+  margin: 0 0 0 1px;
+  padding: 10px 5px;
+  border: 0;
+  background: #b90f00;
+  color: #fff;
+  font-size: 0.8em;
+}
+.card.search-results .btn-group button:hover, .card.search-results .btn-group button:active, .card.search-results .btn-group button:focus {
+  background: #000;
+  border: none;
+}
+.card.search-results.youtube .pic {
+  height: 120px;
+}
+.card.search-results.youtube .pic img {
+  height: 164px;
+  left: 0;
+  top: -20px;
+  clip: rect(0, 219px, 142px, 0);
+}
+.card.search-results.youtube .pic a {
+  height: 120px;
+}
+.card.search-results.youtube .pic i {
+  top: 30%;
+  left: 90px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.25em;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .main-content .card {
@@ -366,6 +412,9 @@
   }
   .card.youtube {
     margin: 6px 5px;
+  }
+  .card.search-results {
+    margin: 8px auto;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -403,10 +452,85 @@
     clip: rect(0px, 350px, 240px, 90px);
     padding: 0;
   }
+  .card.search-results {
+    height: 100px;
+    margin: 6px auto;
+  }
+  .card.search-results span.cate-tab {
+    padding: 4px;
+    height: auto;
+    width: auto;
+  }
+  .card.search-results .pic {
+    width: 183px;
+    height: 100px;
+  }
+  .card.search-results .pic img {
+    height: 100px;
+  }
+  .card.search-results .content {
+    padding: 10px;
+  }
+  .card.search-results .content h3 {
+    color: #000;
+    font-size: 1.125em;
+  }
+  .card.search-results .content p {
+    display: none;
+  }
+  .card.search-results.youtube .pic {
+    height: 100px;
+  }
+  .card.search-results.youtube .pic img {
+    height: 138px;
+    left: 0;
+    top: -19px;
+    clip: rect(19px, 183px, 119px, 0);
+  }
+  .card.search-results.youtube .pic a {
+    height: 100px;
+  }
+  .card.search-results.youtube .pic i {
+    top: 30%;
+    left: 62px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.25em;
+  }
 }
 @media only screen and (max-width: 768px) {
   .card.ticket .content p {
     line-height: 1.25em;
+  }
+  .card.search-results {
+    height: 100px;
+    margin: 5px auto;
+  }
+  .card.search-results span.cate-tab {
+    padding: 4px;
+    width: auto;
+    height: auto;
+  }
+  .card.search-results .pic {
+    width: 183px;
+    height: 100px;
+  }
+  .card.search-results .pic img {
+    height: 100px;
+  }
+  .card.search-results .content {
+    padding: 10px;
+  }
+  .card.search-results .content h3 {
+    color: #000;
+  }
+  .card.search-results .content h4, .card.search-results .content p {
+    display: none;
+  }
+  .card.search-results .btn-group {
+    bottom: 5px;
+    right: 5px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -431,36 +555,36 @@
   .card.ticket .btn-group {
     margin: -5px 26px 20px;
   }
-  .card.collection span.cate-tab {
-    left: 0;
+  .card.collection, .card.search-results {
+    height: 80px;
   }
-  .card.collection span.collect {
-    top: 5px;
-    right: 6px;
+  .card.collection span.cate-tab, .card.search-results span.cate-tab {
+    left: 0;
+    font-size: 0.75em;
+  }
+  .card.collection span.collect, .card.search-results span.collect {
     width: 30px;
     height: 30px;
     line-height: 30px;
   }
-  .card.collection h3 {
-    font-size: 1em;
-    width: 54%;
-    max-height: 40px;
-    margin: 36px 10px 0 10px;
-    overflow: hidden;
-    color: #000;
+  .card.collection .content, .card.search-results .content {
+    padding: 0;
   }
-  .card.collection .pic {
+  .card.collection h3, .card.search-results h3 {
+    font-size: 1em;
+    line-height: 1em;
+    max-height: 32px;
+    overflow: hidden;
+    margin: 6px;
+  }
+  .card.collection .pic, .card.search-results .pic {
     width: 146px;
     height: 80px;
   }
-  .card.collection .pic img {
+  .card.collection .pic img, .card.search-results .pic img {
     height: 80px;
   }
-  .card.collection .btn-group {
-    top: 5px;
-    right: 40px;
-  }
-  .card.collection .btn-group button {
+  .card.collection .btn-group button, .card.search-results .btn-group button {
     position: static;
     margin: 0 0 0 1px;
     padding: 6px 5px;
@@ -469,12 +593,18 @@
     color: #fff;
     font-size: 0.8em;
   }
-  .card.collection .btn-group button:hover, .card.collection .btn-group button:active, .card.collection .btn-group button:focus {
+  .card.collection .btn-group button:hover, .card.collection .btn-group button:active, .card.collection .btn-group button:focus, .card.search-results .btn-group button:hover, .card.search-results .btn-group button:active, .card.search-results .btn-group button:focus {
     background: #000;
     border: none;
   }
-  .card.collection .btn-group .dropdown-menu {
+  .card.collection .btn-group .dropdown-menu, .card.search-results .btn-group .dropdown-menu {
     width: 100%;
+  }
+  .card.collection h3 {
+    margin: 10px;
+  }
+  .card.collection .btn-group {
+    right: 36px;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -547,7 +677,7 @@
     margin: 16px 0;
   }
   .card.collection span.collect {
-    top: 40px;
+    bottom: 40px;
     right: 6px;
   }
   .card.collection .btn-group {
@@ -583,10 +713,10 @@
   height: 80px;
 }
 .card.collection.youtube .pic img {
-  height: 120px;
-  left: -7px;
+  height: 140px;
+  left: 0;
   top: -16px;
-  clip: rect(16px, 153px, 96px, 7px);
+  clip: rect(16px, 153px, 96px, 0);
 }
 .card.collection.youtube .pic a {
   height: 80px;
@@ -598,6 +728,32 @@
   height: 40px;
   line-height: 40px;
   font-size: 1.25em;
+}
+@media only screen and (max-width: 480px) {
+  .card.search-results.youtube {
+    width: 100%;
+  }
+  .card.search-results.youtube .pic {
+    width: 146px;
+    height: 80px;
+  }
+  .card.search-results.youtube .pic img {
+    height: 120px;
+    left: 0;
+    top: -16px;
+    clip: rect(16px, 153px, 96px, 0);
+  }
+  .card.search-results.youtube .pic a {
+    height: 80px;
+  }
+  .card.search-results.youtube .pic i {
+    top: 25%;
+    left: 52px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.25em;
+  }
 }
 
 .card-content {
