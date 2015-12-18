@@ -1,0 +1,140 @@
+@import 'compass';
+@import 'base/fonts';
+@import 'base/style';
+@import 'base/media';
+
+.key-visual {
+	padding-top: 114px;
+	max-width: 1280px;
+	margin: 0 auto;
+	position: relative;
+	img {
+		margin: 0 auto;
+	}
+	.content {
+		position: absolute;
+		width: 440px;
+		max-height: 440px;
+		overflow: hidden;
+		right: 1%;
+		top: 50%;
+		@include clearfix;
+		h2 {
+			font-size: $xxxxxl-font;
+			color: $white;
+		}
+		h3 {
+			font-size: $xxxl-font;
+			color: $white;
+			font-weight: normal;
+		}
+		button {
+			margin-top: 10px;
+		}
+	}
+	@include respond-to (md-screen){
+		padding-top: 50px;
+		padding-bottom: 20px;
+		.content {
+			width: 80%;
+			position: static;
+			margin: 0 auto;
+		}
+	}
+	@include respond-to (only-device){
+		padding-top: 50px;
+		padding-bottom: 20px;
+		.content {
+			width: 90%;
+			position: static;
+			margin: 0 auto;
+			text-align: center;
+			h2 {
+				font-size: $xxxl-font;
+			}
+			h3 {
+				font-size: $xl-font;
+				color: $white;
+				font-weight: normal;
+			}
+		}
+	}
+}
+.ad-block {
+	img {
+		margin: 20px auto 0;
+	}
+}
+.series {
+	position: relative;
+	@include clearfix;
+	img {
+		margin: 0 auto;
+	}
+	.content {
+		position: absolute;
+		text-align: center;
+		padding: 4px 0;
+		width: 100%;
+		color: $white;
+		text-shadow: 0 0 5px $black;
+		bottom: 0;
+  		@include background-image(linear-gradient(to right, rgba($black, 0) ,rgba($black, 1), rgba($black, 0)));
+		h3 {
+			font-size: $xxxxl-font;
+		}
+		h4 {
+			font-weight: normal;
+			font-size: $xxl-font;
+		}
+	}
+	@include respond-to (only-device){
+		.content {
+			min-height: auto;
+			h3 {
+				font-size: $xl-font;
+				line-height: $xxl-font;
+			}
+			h4 {
+				font-size: $m-font;
+				line-height: $xxl-font;
+			}
+		}
+	}
+}
+#crazyad-img {
+	.modal-body {
+		display: table;
+		width: 100%;
+	}
+	.ad-content {
+		display: table-cell;
+		position: relative;
+		vertical-align: middle;
+		width: 100%;
+		.content {
+			
+			position: absolute;
+			width: 80%;
+			top: 65%;
+			left: 10%;
+			padding: 20px;
+			color: $white;
+			@include transparent ($black,.6)
+				
+		}
+	}
+	img {
+		width: 100%;
+	}
+	@include respond-to (only-device){
+		.ad-content {
+			.content {
+				position: static;
+				width: 90%;
+				margin: 0 auto;
+				padding: 20px;
+			}
+		}
+	}
+}
