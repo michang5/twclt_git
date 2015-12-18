@@ -525,9 +525,7 @@ a[data-toggle=modal] {
 
 /* ------------ layout ------------ */
 #wrapper {
-  min-height: 100%;
   margin-top: -60px;
-  padding-bottom: 50px;
 }
 @media only screen and (max-width: 768px) {
   #wrapper {
@@ -549,7 +547,7 @@ a[data-toggle=modal] {
   transform: translate3d(0, 0, 0);
   transition: .5s transform ease-in-out;
 }
-#nav .open {
+#nav .open-icon {
   position: absolute;
   top: 48%;
   right: 0;
@@ -757,6 +755,7 @@ a[data-toggle=modal] {
   top: 45px;
   left: 22px;
   padding: 0px;
+  z-index: 198;
 }
 #sidenav > ul > li {
   margin: 5px auto;
@@ -1137,6 +1136,7 @@ footer .social-link li a {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+  background: #720900;
   display: block;
   text-align: center;
 }

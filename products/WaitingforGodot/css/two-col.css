@@ -1,0 +1,87 @@
+#wrapper.container {
+  background: #b90f00;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: -60px;
+  position: relative;
+}
+#wrapper.container .col-md-6 {
+  display: table-cell;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+#wrapper.container .col-md-6.col-left img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  vertical-align: top;
+}
+#wrapper.container .col-md-6.col-left iframe {
+  width: 100%;
+  height: 100%;
+}
+#wrapper.container .col-md-6.col-right {
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+  zoom: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+@media only screen and (max-width: 767px) {
+  #wrapper.container .col-md-6.col-right {
+    position: static;
+  }
+}
+#wrapper.container .content-scroll {
+  height: 100%;
+  padding: 10% 8%;
+  color: #fff;
+}
+#wrapper.container .content-scroll .main {
+  height: 100%;
+  padding: 2%;
+  overflow-y: scroll;
+}
+#wrapper.container .content-scroll ::-webkit-scrollbar {
+  width: 6px;
+}
+#wrapper.container .content-scroll ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+}
+#wrapper.container .content-scroll ::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+}
+#wrapper.container .content-scroll h2, #wrapper.container .content-scroll h3 {
+  margin: 10px auto;
+}
+
+.tv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tv .screen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  margin: auto;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.tv .screen.active {
+  opacity: 1;
+}

@@ -371,16 +371,16 @@ a[data-toggle=modal] {
 /* ------------ layout ------------ */
 //wrapper
 #wrapper {
-	min-height: 100%;
+//	min-height: 100%;
 	margin-top: -60px;
-	padding-bottom: 50px;
+//	padding-bottom: 50px;
 	@include respond-to (only-device){
 		min-height: 0;
 	}
 }
 //slide side nav
 #nav {
-	.open {
+	.open-icon {
 		position: absolute;
 		top: 48%;
 		right: 0;
@@ -569,6 +569,7 @@ a[data-toggle=modal] {
 	top: 45px;
 	left: 22px;
 	padding: 0px;
+	z-index: 198;
 	> ul > li {
 		margin: 5px auto;
 		text-align: center;
@@ -892,12 +893,14 @@ footer {
 			@include inline-block;
 			font-size: $l-font;
 			margin: 0 6px;
+			
 			a {
 				color: $white;
 				width: 30px;
 				height: 30px;
 				line-height: 30px;
 				@include border-radius(50%);
+				background: $darker-red;
 				display: block;
 				text-align: center;
 				&:hover {
