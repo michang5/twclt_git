@@ -1,0 +1,222 @@
+body {
+  background: #fff;
+}
+
+#wrapper {
+  margin-top: 0;
+  background: none;
+  height: 100%;
+  padding-bottom: 80px;
+}
+#wrapper .col-sm-6.col-right {
+  background: none;
+}
+#wrapper .content-scroll {
+  color: #000;
+  padding: 40px 10% 100px;
+}
+@media only screen and (max-width: 768px) {
+  #wrapper {
+    height: auto;
+    max-height: none;
+    height: auto;
+    padding-bottom: 0;
+  }
+  #wrapper .col-sm-6 {
+    width: 100%;
+    height: auto;
+  }
+  #wrapper .col-sm-6.col-right {
+    position: static;
+  }
+  #wrapper .content-scroll {
+    padding-bottom: 20px;
+  }
+}
+
+.content {
+  position: relative;
+  *zoom: 1;
+}
+.content:after, .content:before {
+  content: "";
+  display: table;
+}
+.content:after {
+  clear: both;
+}
+.content .collect, .content .social-share {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  text-align: center;
+  z-index: 999;
+}
+.content .collect > a, .content .social-share > a {
+  color: #000;
+  display: block;
+  text-shadow: none;
+  background: none;
+}
+.content .collect > a:hover, .content .social-share > a:hover {
+  color: #b90f00;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+.content .collect > a.collected, .content .social-share > a.collected {
+  color: #b90f00;
+  text-shadow: none;
+}
+.content .social-share {
+  right: 120px;
+}
+.content .collect {
+  right: 70px;
+}
+
+@media only screen and (min-width: 769px) {
+  #navigation .dropdown-menu::after, .dropdown-menu.social-media::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -0.5em;
+    top: 0;
+    left: 49.8%;
+    box-sizing: border-box;
+    border: 3px solid #fff;
+    border-color: #fff #fff transparent transparent;
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+    box-shadow: 1px -1px 1px 0 rgba(0, 0, 0, 0.4);
+  }
+}
+.dropdown-menu.social-media {
+  padding: 12px 10px 6px;
+  width: 260px;
+  left: -108px;
+  top: 50px;
+}
+.dropdown-menu.social-media li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  width: 110px;
+  margin: 2px;
+  text-align: left;
+}
+.dropdown-menu.social-media li a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  padding: 2px;
+  width: 100px;
+  color: #000;
+}
+.dropdown-menu.social-media li a i {
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  border-radius: 16px;
+  color: #fff;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  padding: 0;
+  font-size: 1.125em;
+  text-align: center;
+}
+.dropdown-menu.social-media::before {
+  left: 80px;
+}
+.content .dropdown-menu.social-media {
+  left: -168px;
+}
+.content .dropdown-menu.social-media::after {
+  left: 188px;
+}
+
+.carousel-inner {
+  overflow: visible;
+}
+
+.carousel-indicators {
+  height: auto;
+  bottom: 0;
+  text-align: center;
+}
+.carousel-indicators li {
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s;
+  background: #000;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.carousel-indicators li img {
+  opacity: .3;
+}
+.carousel-indicators li.active {
+  width: 80px;
+  height: 80px;
+  opacity: 1;
+  overflow: hidden;
+}
+.carousel-indicators li.active img {
+  opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+  .carousel-indicators {
+    top: 48%;
+  }
+}
+@media (max-width: 680px) {
+  .carousel-indicators {
+    top: 40%;
+  }
+}
+@media (max-width: 580px) {
+  .carousel-indicators {
+    top: 32%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .carousel-indicators {
+    top: 28%;
+    width: 80%;
+    left: 40%;
+  }
+  .carousel-indicators li {
+    width: 60px;
+    height: 60px;
+  }
+  .carousel-indicators li.active {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .carousel-indicators {
+    top: 19%;
+    width: 80%;
+    left: 40%;
+  }
+  .carousel-indicators li {
+    width: 60px;
+    height: 60px;
+  }
+  .carousel-indicators li.active {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -71,7 +71,6 @@ body {
   word-wrap: break-word;
   word-break: normal;
   line-height: 1.75;
-  background: #000;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -121,6 +120,10 @@ hr {
 }
 .clearfix:after {
   clear: both;
+}
+
+img, video {
+  vertical-align: top;
 }
 
 .red {
@@ -310,6 +313,15 @@ a[data-toggle=modal] {
 
 .carousel {
   margin: 0 auto;
+  *zoom: 1;
+  height: 100%;
+}
+.carousel:after, .carousel:before {
+  content: "";
+  display: table;
+}
+.carousel:after {
+  clear: both;
 }
 .carousel .carousel-inner {
   padding: 0;
@@ -354,7 +366,7 @@ a[data-toggle=modal] {
   height: 50px;
   text-align: center;
   font-size: 1em;
-  line-height: 50px;
+  line-height: 52px;
   z-index: 1000;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -430,18 +442,17 @@ a[data-toggle=modal] {
 
 .arrow {
   display: block;
-  width: 40px;
+  width: 50px;
   height: 100px;
   cursor: pointer;
   position: absolute;
   top: 37.5%;
-  background-color: transparent;
-  background-color: rgba(185, 15, 0, 0.7);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3B90F00,endColorstr=#B3B90F00);
-  zoom: 1;
 }
 .arrow:hover, .arrow:focus {
-  background: #b90f00;
+  background-color: transparent;
+  background-color: rgba(84, 84, 84, 0.1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#1A545454,endColorstr=#1A545454);
+  zoom: 1;
 }
 .arrow::before {
   -moz-transform: rotate(45deg);
@@ -449,9 +460,9 @@ a[data-toggle=modal] {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   position: relative;
-  width: 20px;
-  height: 20px;
-  top: 38px;
+  width: 40px;
+  height: 40px;
+  top: 32px;
   content: "";
   display: inline-block;
   margin-right: 0.5em;
@@ -460,17 +471,39 @@ a[data-toggle=modal] {
   right: 0;
 }
 .arrow.arrow-right::before {
-  border-right: 2px solid #fff;
-  border-top: 2px solid #fff;
-  left: 6px;
+  border-right: 1px solid #000;
+  border-top: 1px solid #000;
+  left: -10px;
 }
 .arrow.arrow-left {
   left: 0;
 }
 .arrow.arrow-left::before {
-  border-left: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
   left: 17px;
+}
+@media only screen and (max-width: 768px) {
+  .arrow {
+    top: 20%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .arrow {
+    width: 30px;
+    height: 60px;
+  }
+  .arrow::before {
+    width: 20px;
+    height: 20px;
+    top: 18px;
+  }
+  .arrow.arrow-right::before {
+    left: 0;
+  }
+  .arrow.arrow-left::before {
+    left: 8px;
+  }
 }
 
 .btn-search {
@@ -525,7 +558,15 @@ a[data-toggle=modal] {
 
 /* ------------ layout ------------ */
 #wrapper {
-  margin-top: -60px;
+  margin-top: -120px;
+  *zoom: 1;
+}
+#wrapper:after, #wrapper:before {
+  content: "";
+  display: table;
+}
+#wrapper:after {
+  clear: both;
 }
 @media only screen and (max-width: 768px) {
   #wrapper {
@@ -552,6 +593,7 @@ a[data-toggle=modal] {
   top: 48%;
   right: 0;
   color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   font-size: 1.25em;
 }
 #nav.toggle {
@@ -602,6 +644,12 @@ a[data-toggle=modal] {
 }
 #nav .dropdown-menu li a {
   padding: 10px 26px;
+}
+#nav .dropdown-menu > .active > a {
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.2);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000);
+  zoom: 1;
 }
 #nav .visible-xs-block > ul {
   cursor: default;
@@ -679,7 +727,11 @@ a[data-toggle=modal] {
 }
 @media only screen and (max-width: 767px) {
   #nav {
+    padding-right: 0;
     width: 100%;
+  }
+  #nav .open-icon {
+    display: none;
   }
   #nav.toggle {
     transform: translate3d(-100%, 0, 0);
@@ -695,11 +747,12 @@ a[data-toggle=modal] {
   cursor: pointer;
   color: #fff;
   top: 10px;
-  right: -45px;
+  right: -47px;
   width: 40px;
   height: 40px;
   line-height: 40px;
   text-align: center;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -711,12 +764,26 @@ a[data-toggle=modal] {
 .btn-toggle:hover, .btn-close:hover, .btn-ticket:hover {
   background: #b90f00;
 }
+@media only screen and (max-width: 767px) {
+  .btn-toggle, .btn-close, .btn-ticket {
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3000000,endColorstr=#B3000000);
+    zoom: 1;
+  }
+}
 
 .btn-close {
   right: 10px;
+  text-shadow: none;
 }
 .btn-close:hover {
   background: #000;
+}
+@media only screen and (max-width: 767px) {
+  .btn-close {
+    background: none;
+  }
 }
 
 .btn-ticket {
@@ -752,8 +819,8 @@ a[data-toggle=modal] {
 
 #sidenav {
   position: fixed;
-  top: 45px;
-  left: 22px;
+  top: 52px;
+  left: 23px;
   padding: 0px;
   z-index: 198;
 }
@@ -774,6 +841,7 @@ a[data-toggle=modal] {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 }
 #sidenav > ul > li > a:hover {
   background: #b90f00;
@@ -803,6 +871,10 @@ a[data-toggle=modal] {
     display: inline-block;
     *display: inline;
     zoom: 1;
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000,endColorstr=#80000000);
+    zoom: 1;
   }
   #sidenav > ul > li:nth-of-type(1), #sidenav > ul > li:nth-of-type(3), #sidenav > ul > li:nth-of-type(4) {
     display: none;
@@ -830,10 +902,11 @@ a[data-toggle=modal] {
 }
 #header h1 {
   position: absolute;
-  left: 60px;
+  left: 66px;
   top: 6px;
   color: #fff;
   font-size: 1.75em;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 }
 #header h2 {
   width: 220px;
@@ -855,7 +928,7 @@ a[data-toggle=modal] {
     width: 170px;
   }
 }
-@media only screen and (min-width: 321px) and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   #header h2 {
     width: 150px;
   }
@@ -1030,9 +1103,6 @@ footer {
   margin-top: 0;
   padding: 2% 0;
 }
-#index footer {
-  margin-top: 2px;
-}
 footer a {
   color: #fff;
 }
@@ -1154,7 +1224,10 @@ footer .official span {
   line-height: 2em;
 }
 footer .official img {
-  width: 80%;
+  height: 30px;
+}
+#single footer {
+  margin-top: -200px;
 }
 @media only screen and (max-width: 991px) {
   footer .container {
@@ -1165,10 +1238,18 @@ footer .official img {
     display: block;
     padding: 30px;
   }
+  #single footer {
+    margin-top: 0;
+  }
 }
 @media only screen and (max-width: 768px) {
   footer .footer-info h5 {
     float: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #single footer {
+    margin-top: 0;
   }
 }
 

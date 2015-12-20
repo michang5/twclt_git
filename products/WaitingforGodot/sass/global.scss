@@ -16,7 +16,7 @@ body {
 	word-wrap: break-word;
 	word-break: normal;
 	line-height: 1.75;
-	background: $black;
+//	background: $black;
 }
 //h-style
 h1, h2, h3, h4, h5, h6 {
@@ -42,6 +42,9 @@ hr {
 }
 .clearfix {
 	@include clearfix;
+}
+img, video {
+	vertical-align: top;
 }
 //color
 .red {
@@ -190,7 +193,9 @@ a[data-toggle=modal] {
 .carousel {
 //	width: 80%;
 	margin: 0 auto;
-	.carousel-inner{
+	@include clearfix;
+	height: 100%;
+	.carousel-inner {
 		padding: 0;
 		margin: 0;
 	}
@@ -232,7 +237,7 @@ a[data-toggle=modal] {
 	height: 50px;
 	text-align: center;
 	font-size: $m-font;
-	line-height: 50px;
+	line-height: 52px;
 	z-index: 1000;
 	@include border-radius(50px);
 	@include transparent($red,.9);
@@ -292,22 +297,20 @@ a[data-toggle=modal] {
 }
 .arrow {
 	display: block;
-	width: 40px;
+	width: 50px;
 	height: 100px;
 	cursor: pointer;
 	position: absolute;
 	top: 37.5%;
-	@include transparent ($red,.7);
 	&:hover,&:focus {
-		background: $red;
+		@include transparent($gray,.1);
 	}
 	&::before {
 		@include transform(rotate(45deg));
 		position: relative;
-		width: 20px;
-		height: 20px;
-		top: 38px;
-		
+		width: 40px;
+		height: 40px;
+		top: 32px;
 		content: "";
 		display: inline-block;
 		margin-right: 0.5em;
@@ -315,17 +318,39 @@ a[data-toggle=modal] {
 	&.arrow-right {
 		right: 0;
 		&::before {
-			border-right: 2px solid $white;
-			border-top: 2px solid $white;
-			left: 6px;
+			border-right: 1px solid $black;
+			border-top: 1px solid $black;
+			left: -10px;
 		}
 	}
 	&.arrow-left {
 		left: 0;
 		&::before {
-			border-left: 2px solid $white;
-			border-bottom: 2px solid $white;
+			border-left: 1px solid $black;
+			border-bottom: 1px solid $black;
 			left: 17px;
+		}
+	}
+	@include respond-to (only-device){
+		top: 20%;
+	}
+	@include respond-to (xs-mobile){
+		width: 30px;
+		height: 60px;
+		&::before {
+			width: 20px;
+			height: 20px;
+			top: 18px;
+		}
+		&.arrow-right {
+			&::before {
+				left: 0;
+			}
+		}
+		&.arrow-left {
+			&::before {
+				left: 8px;
+			}
 		}
 	}
 }
@@ -372,7 +397,8 @@ a[data-toggle=modal] {
 //wrapper
 #wrapper {
 //	min-height: 100%;
-	margin-top: -60px;
+	margin-top: -120px;
+	@include clearfix;
 //	padding-bottom: 50px;
 	@include respond-to (only-device){
 		min-height: 0;
@@ -385,6 +411,7 @@ a[data-toggle=modal] {
 		top: 48%;
 		right: 0;
 		color: $white;
+		text-shadow: 0 0 5px rgba($black, .7);
 		font-size: $xl-font;
 	}
 	width: 200px;
@@ -429,6 +456,11 @@ a[data-toggle=modal] {
 			@include transparent($black,.15);
 			a {
 				padding: 10px 26px;
+			}
+		}
+		> .active {
+			> a {
+				@include transparent($black,.2);
 			}
 		}
 	}
@@ -503,6 +535,10 @@ a[data-toggle=modal] {
 		}				
 	}
 	@include respond-to (only-mobile){
+		padding-right: 0;
+		.open-icon {
+			display: none;
+		}
 		width: 100%;
 		&.toggle {
 			transform: translate3d(-100%,0,0);
@@ -518,21 +554,29 @@ a[data-toggle=modal] {
 	cursor: pointer;
 	color: $white;
 	top: 10px;
-	right: -45px;
+	right: -47px;
 	width: 40px;
 	height: 40px;
 	line-height: 40px;
 	text-align: center;
+	text-shadow: 0 0 5px rgba($black, .7);
 	@include border-radius(50%);
 	@include transition(color, .5s, ease-in);
 	&:hover {
 		background: $red;
 	}
+	@include respond-to (only-mobile){
+		@include transparent($black,.7);
+	}
 }
 .btn-close {
 	right: 10px;
+	text-shadow: none;
 	&:hover {
 		background: $black;
+	}
+	@include respond-to (only-mobile){
+		background: none;
 	}
 }
 .btn-ticket {
@@ -566,8 +610,8 @@ a[data-toggle=modal] {
 #sidenav {
 	position: fixed;
 //	width: 40px;
-	top: 45px;
-	left: 22px;
+	top: 52px;
+	left: 23px;
 	padding: 0px;
 	z-index: 198;
 	> ul > li {
@@ -582,6 +626,7 @@ a[data-toggle=modal] {
 			width: 40px;
 			height: 40px;
 			@include border-radius(50%);
+			text-shadow: 0 0 3px rgba($black, .7);
 			&:hover {
 				background: $red;
 			}
@@ -607,6 +652,7 @@ a[data-toggle=modal] {
 		> ul > li {
 			margin: 0;
 			@include inline-block;
+			@include transparent($black,.5);
 			&:nth-of-type(1), &:nth-of-type(3), &:nth-of-type(4){
 				display: none;
 			}
@@ -631,10 +677,11 @@ a[data-toggle=modal] {
 	text-align: center;
 	h1 {
 		position: absolute;
-		left: 60px;
+		left: 66px;
 		top: 6px;
 		color: $white;
 		font-size: $xxxl-font;
+		text-shadow: 0 0 3px rgba($black, .7);
 	}
 	h2 {
 		width: 220px;
@@ -806,9 +853,6 @@ footer {
 	background: $dark-red;
 	margin-top: 0;
 	padding: 2% 0;
-	#index & {
-		margin-top: 2px;
-	}
 	a {
 		color: $white;
 		&:hover {
@@ -919,8 +963,11 @@ footer {
 			line-height: $xxxxl-font;
 		}
 		img {
-			width: 80%;
+			height: 30px;
 		}
+	}
+	#single & {
+		margin-top: -200px;
 	}
 	@include respond-to (tablet-landscape){
 		.container {
@@ -931,12 +978,20 @@ footer {
 			display: block;
 			padding: 30px;
 		}
+		#single & {
+			margin-top: 0;
+		}
 	}
 	@include respond-to (only-device){
 		.footer-info {
 			h5 {
 				float: none;
 			}
+		}
+	}
+	@include respond-to (only-mobile){
+		#single & {
+			margin-top: 0;
 		}
 	}
 }

@@ -1,0 +1,89 @@
+body {
+  background: #fff;
+}
+
+#header h1 {
+  color: #000;
+  text-shadow: none;
+}
+
+.btn-toggle, .btn-ticket, #sidenav ul li a {
+  color: #000;
+  text-shadow: none;
+  background: none !important;
+}
+
+#sidenav ul li:nth-of-type(1) a {
+  color: #fff;
+}
+@media only screen and (max-width: 767px) {
+  #sidenav ul li {
+    background: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .btn-close {
+    background-color: transparent;
+    background-color: rgba(148, 12, 0, 0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#80940C00,endColorstr=#80940C00);
+    zoom: 1;
+  }
+}
+#wrapper {
+  background: #fff;
+  min-height: 100%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin-top: 0;
+}
+#wrapper .container {
+  padding-bottom: 200px;
+}
+#wrapper .col-md-4 {
+  text-align: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+#wrapper .col-md-4 .cast {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+#wrapper .col-md-4 h3 {
+  text-align: left;
+}
+#wrapper .col-md-4 h3 span {
+  font-size: 0.75em;
+  padding: 0 5px;
+}
+@media only screen and (max-width: 767px) {
+  #wrapper {
+    min-height: initial;
+  }
+  #wrapper .col-md-4 h3 {
+    font-size: 1.125em;
+  }
+  #wrapper .col-md-4 h3 span {
+    font-size: 0.75em;
+    padding: 0 5px;
+  }
+  #wrapper .col-xs-6 {
+    width: 50%;
+  }
+  #wrapper .container {
+    padding-bottom: 100px;
+  }
+}
+
+.nav-tabs {
+  margin-bottom: 20px;
+  font-size: 1.25em;
+}
+.nav-tabs > li a {
+  color: #545454;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active a:focus {
+  color: #b90f00;
+}

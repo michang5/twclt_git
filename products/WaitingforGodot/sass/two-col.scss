@@ -3,9 +3,11 @@
 @import 'base/style';
 @import 'base/media';
 
-#wrapper.container {
+#wrapper {
 	background: $red;
 	width: 100%;
+	max-height: 100%;
+	overflow: hidden;
 	padding: 0;
 	margin: 0;
 	margin-top: -60px;
@@ -13,36 +15,40 @@
 //	display: table;
 	position: relative;
 //	min-height:500px;
-	.col-md-6 {
-		display: table-cell;
+	.col-sm-6 {
+//		display: table-cell;
 		padding: 0;
 		margin: 0;
 		height: 100%;
 //		float: none;
 //		border: 1px solid #fff;
 	}
-	.col-md-6.col-left {
-		img {
+	.col-sm-6.col-left {
+		overflow: hidden;
+		img, video {
 			width: 100%;
 			height: 100%;
 			padding: 0;
-			vertical-align: top;
 		}
 		iframe {
 			width: 100%;
 			height: 100%;
 		}
 	}
-	.col-md-6.col-right {
-		@include transparent($black,.6);
+	.col-sm-6.col-right {
 		position: absolute;
 		top: 0;
     	right: 0;
 		overflow: hidden;
 	}
-	@include respond-to (only-mobile){
-		.col-md-6.col-right {
-			position: static;
+	&.introduction {
+		.col-sm-6.col-right {
+			@include transparent($black,.6);
+		}
+	}
+	&.actor-production {
+		.col-sm-6.col-right {
+			@include transparent($purple,.6);
 		}
 	}
 	.content-scroll {
@@ -58,37 +64,174 @@
 			width: 6px;
 		} 
 		::-webkit-scrollbar-track {
-			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8); 
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
 		} 
 		::-webkit-scrollbar-thumb {
-			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8); 
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
 		}
-		h2, h3 {
+		h2 {
 			margin: 10px auto;
+			span {
+				padding: 0 6px;
+				font-size: 16px;
+			}
+		}
+		h3 {
+			line-height: $xl-font;
+			margin: 10px auto 20px;
+		}
+	}
+	@include respond-to (md-screen){
+	}
+	@include respond-to (only-mobile){
+		max-height: none;
+		height: auto;
+		.col-sm-6 {
+			height: auto;
+		}
+		.col-sm-6.col-right {
+			position: static;
+		}
+		.content-scroll { 
+			h2 {
+				font-size: $xxxl-font;
+			}
+			h3 {
+				font-size: $xl-font;
+			}
+			h2, h3 {
+				margin: 0;
+			}
 		}
 	}
 }
-
-.tv {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.tv .screen {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  margin: auto;
-  opacity: 0;
-  transition: opacity .5s;
-}
-.tv .screen.active {
-  opacity: 1;
+#timeline {
+	position: relative;
+	padding: 0 0 60px;
+	@include transition(all ,.5s, ease-in-out);
+	&:before {
+		content:"";
+		width: 1px;
+		height: 100%;
+		background: $black;
+		left: 0;
+		top: 0;
+		position: absolute;
+	}
+	&:after {
+		content: "";
+		clear: both;
+		display: table;
+		width: 100%;
+	}
+	.timeline-item {
+		position: relative;
+		@include clearfix;
+		&.year-circle {
+			height: 20px;
+			margin-bottom: 20px;
+			margin-top: 0;
+		}
+		&:nth-of-type(1), &:nth-of-type(2), &.year-circle + .timeline-item {
+			margin-top: 0;
+		}
+		.timeline-icon {
+			background: $black;
+			width: 40px;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			&.year {
+				width: 70px;
+				height: 30px;
+				line-height: 30px;
+				margin-left: 0;
+				font-size: $xxl-font;
+			}
+		}
+		.timeline-content {
+			float: right;
+			width: 90%;
+			background: $white;
+			padding: 20px;
+			@include border-radius(6px);
+			@include transition(all ,.3s, ease-in-out);
+			h2 {
+				padding: 10px;
+				background: $red;
+				line-height: $xl-font;
+				margin: -20px -20px 0 -20px;
+				@include border-radius(6px 6px 0 0);
+			}
+			p {
+				color: $black;
+				padding-bottom: 6px;
+			}
+			img {
+				width: 100%;
+				padding: 16px 6px;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				left: 45%;
+				top: 20px;
+				width: 0; 
+				height: 0; 
+				border-top: 7px solid transparent;
+				border-bottom: 7px solid transparent; 
+				border-right: 7px solid $red; 
+			}
+			
+		}
+	}
+	@include respond-to (only-device){
+		width: 80%;
+		margin: 0 0 0 12px;
+		&:before {
+			left: 0;
+		}
+		.timeline-item {
+			margin-top: 0;
+			margin-bottom: 20px;
+			.timeline-content {
+				width: 90%;
+				float: right;
+				padding: 6px;
+				h2 {
+					padding: 12px 6px;
+					font-size: $m-font;
+					margin: -6px -6px 0 -6px;
+				}
+				&:before, &.right:before {
+					left: 10%;
+					margin-left: -6px;
+					border-left: 0;
+					border-right: 7px solid $red;
+				}
+			}
+			.timeline-icon {
+				left: -2px;
+				width: 32px;
+				height: 32px;
+				line-height: 32px;
+				font-size: $s-font;
+					&.year {
+						width: 50px;
+						height: 50px;
+						line-height: 50px;
+						margin-left: -31px;
+						font-size: $l-font;
+				}
+			}
+		}
+	}
+	@include respond-to (xxs-mobile){
+		width: 80%;
+		margin: 0 0 0 6px;
+	}
 }

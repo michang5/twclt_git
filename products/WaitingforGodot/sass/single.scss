@@ -1,0 +1,100 @@
+@import 'compass';
+@import 'base/fonts';
+@import 'base/style';
+@import 'base/media';
+
+body {
+	background: $white;
+}
+#header {
+	h1 {
+		color: $black;
+		text-shadow: none;
+	}
+
+}
+.btn-toggle, .btn-ticket, #sidenav ul li a {
+	color: $black;
+	text-shadow: none;
+	background: none!important;
+}
+#sidenav ul li {
+//	background: none!important;
+	&:nth-of-type(1) {
+		a {
+			color: $white;
+		}
+	}
+	@include respond-to (only-mobile){
+		background: none;
+	}
+}
+@include respond-to (only-mobile){
+	.btn-close {
+		@include transparent($dark-red,.5);
+	}
+}
+
+#wrapper {
+	.container {
+		padding-bottom: 200px;
+	}
+	background: $white;
+	min-height: 100%;
+	padding-top: 20px;
+	padding-bottom: 40px;
+	margin-top: 0;
+	.col-md-4 {
+		text-align: center;
+		padding-top: 6px;
+		padding-bottom: 6px;
+		.cast {
+			@include inline-block;
+		}
+		h3 {
+			text-align: left;
+			span {
+				font-size: $xxs-font;
+				padding: 0 5px;
+			}
+		}
+	}
+	@include respond-to (only-mobile){
+		min-height: initial;
+		.col-md-4 {
+			h3 {
+				font-size: $l-font;
+				span {
+					font-size: $xxs-font;
+					padding: 0 5px;
+				}
+			}
+		}
+		.col-xs-6 {
+			width: 50%;
+		}
+		.container {
+			padding-bottom: 100px;
+		}
+	}
+}
+
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+	
+}
+.nav-tabs {
+	margin-bottom: 20px;
+	font-size: $xl-font;
+	> li {
+		a {
+			color: $gray;
+		}
+		&.active {
+			> a, > a:hover, a:focus {
+				color: $red;
+			}
+		}
+	}
+}

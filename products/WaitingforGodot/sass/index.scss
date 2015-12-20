@@ -5,11 +5,12 @@
 
 .key-visual {
 //	padding-top: 114px;
-	max-width: 1280px;
+//	max-width: 1280px;
 	margin: 0 auto;
 	position: relative;
 	img {
 		margin: 0 auto;
+		width: 100%;
 	}
 	.content {
 		position: absolute;
@@ -34,21 +35,24 @@
 	}
 	@include respond-to (md-screen){
 		padding-top: 50px;
-		padding-bottom: 20px;
 		.content {
-			width: 80%;
+			width: 100%;
 			position: static;
 			margin: 0 auto;
+			padding: 3%;
+			text-align: center;
+			background: $black;
 		}
 	}
 	@include respond-to (only-device){
 		padding-top: 50px;
-		padding-bottom: 20px;
 		.content {
-			width: 90%;
+			width: 100%;
 			position: static;
 			margin: 0 auto;
+			padding: 3%;
 			text-align: center;
+			background: $black;
 			h2 {
 				font-size: $xxxl-font;
 			}
