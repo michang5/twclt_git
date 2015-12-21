@@ -19,6 +19,7 @@
 	<link href="../../css/bootstrap.css" rel="stylesheet">
 	<link href="../../fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">
+	<link href="../../css/card.css" rel="stylesheet">
 	<link href="css/single.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 	<!--[if lt IE 9]>
@@ -41,20 +42,20 @@
 					<li><a href="synopsis.html">劇情簡介</a></li>
 				</ul>
 			</li>
-			<li class="dropdown open">
+			<li class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" id="Actor-Production" aria-expanded="false">演出與製作</a>
 				<ul class="dropdown-menu" aria-labelledby="Actor-Production">
-					<li class="active"><a href="cast.html">主要演員</a></li>
+					<li><a href="cast.html">主要演員</a></li>
 					<li><a href="director.html">編導介紹</a></li>
 					<li><a href="artist.html">合作藝術家</a></li>
 					<li><a href="team.html">製作團隊</a></li>
 				</ul>
 			</li>
-			<li class="dropdown">
+			<li class="dropdown open">
 				<a class="dropdown-toggle" data-toggle="dropdown" id="Media-Reviews" aria-expanded="false">媒體報評</a>
 				<ul class="dropdown-menu" aria-labelledby="Media-Reviews">
 					<li><a href="worldwide-tour.html">國際演出紀記錄</a></li>
-					<li><a href="review.html">各界好評</a></li>
+					<li class="active"><a href="review.html">各界好評</a></li>
 					<li><a href="reports.html">媒體報導</a></li>
 				</ul>
 			</li>
@@ -139,110 +140,108 @@
 	<!-- wrapper -->
 	<div id="wrapper">
 		<div class="container">
-			<ul class="nav nav-tabs" role="tablist">
-				<li role="presentation" class="active"><a href="#actors" aria-controls="actors" role="tab" data-toggle="tab">演員群</a></li>
-				<li role="presentation"><a href="#musician" aria-controls="musician" role="tab" data-toggle="tab">樂師群</a></li>
-				<li role="presentation"><a href="#producer" aria-controls="producer" role="tab" data-toggle="tab">製作群</a></li>
-			</ul>
-			<div class="tab-content">
-				<div role="tabpanel" class="tab-pane active" id="actors">
-					<div class="col-md-4 col-xs-6">
-						<div class="cast">
-							<h3>吳興國<span>飾啼啼</span></h3>
-							<a data-toggle="modal" data-target="#cast"><img src="images/cast1.jpg" alt="吳興國 飾啼啼" class="img-responsive"></a>
+			<div class="main-content reports">
+				<div class="collapse-menu filter">
+					<div class="collapse-panel">
+							<header class="collapse-heading">
+								時間<i class="fa fa-angle-down"></i>
+							</header>
+							<div class="collapse-body open">
+								<div class="filters tab-group filters-tab-group">
+									<div class="tab" data-filter=".filter1-1">新 &#62 舊</div>
+									<div class="tab" data-filter=".filter1-2">舊 &#62 新</div>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="col-md-4 col-xs-6">
-						<div class="cast">
-							<h3>盛鑑<span>飾哭哭</span></h3>
-							<a data-toggle="modal" data-target="#cast"><img src="images/cast2.jpg" alt="盛鑑 飾哭哭" class="img-responsive"></a>
+					<div class="collapse-panel">
+							<header class="collapse-heading">
+								媒體<i class="fa fa-angle-down"></i>
+							</header>
+							<div class="collapse-body">
+								<div class="filters tab-group filters-tab-group">
+									<div class="tab is-checked" data-filter="*">全部</div>
+									<div class="tab" data-filter=".filter2-1">filter2-1</div>
+									<div class="tab" data-filter=".filter2-2">filter2-2</div>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="col-md-4 col-xs-6">
-						<div class="cast">
-							<h3>馬寶山<span>飾暴發戶</span></h3>
-							<a data-toggle="modal" data-target="#cast"><img src="images/cast3.jpg" alt="馬寶山 飾暴發戶" class="img-responsive"></a>
+					<div class="collapse-panel">
+							<header class="collapse-heading">
+								語系<i class="fa fa-angle-down"></i>
+							</header>
+							<div class="collapse-body">
+								<div class="filters tab-group filters-tab-group">
+									<div class="tab is-checked" data-filter="*">全部</div>
+									<div class="tab" data-filter=".filter2-1">filter2-1</div>
+									<div class="tab" data-filter=".filter2-2">filter2-2</div>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="col-md-4 col-xs-6">
-						<div class="cast">
-							<h3>吳興國<span>飾啼啼</span></h3>
-							<a data-toggle="modal" data-target="#cast"><img src="images/cast1.jpg" alt="吳興國 飾啼啼" class="img-responsive"></a>
+				</div> 
+				<div class="isotope">
+					<div class="element-item card filter1-2" data-category="transition">
+						<div class="pic"><img src="images/report.jpg" alt="等待果陀來了" title="等待果陀來了"></div>
+						<div class="content">
+							<h3>等待果陀來了</h3>
+							<h4><span>媒體單位</span><span>2015/09/05</span></h4>
+							<p>打破京劇框架，融合黑色幽默，暌違10年，當代傳奇劇場經典劇作《等待果陀》重新搬演，金士傑擔任戲劇指導，導演吳興國帶著徒弟盛鑑同台演出。「10年前...</p>
 						</div>
+						<button class="btn btn-normal" data-toggle="modal" data-target="#reports">閱讀更多</button>
 					</div>
-					<div class="col-md-4 col-xs-6">
-						<div class="cast">
-							<h3>盛鑑<span>飾哭哭</span></h3>
-							<a data-toggle="modal" data-target="#cast"><img src="images/cast2.jpg" alt="盛鑑 飾哭哭" class="img-responsive"></a>
+					<div class="element-item card youtube filter1-1">
+						<div class="pic">
+								<i class="fa fa-youtube-play"></i>
+								<a data-toggle="modal" data-target="#card-content"></a>
+								<img src="http://img.youtube.com/vi/IJ4MVrhesaA/sddefault.jpg" alt="" title="">		
+							</div>
+						<div class="content">
+							<h3>等待果陀來了</h3>
+							<h4><span>媒體單位</span><span>2015/09/05</span></h4>
+							<p>打破京劇框架，融合黑色幽默，暌違10年，當代傳奇劇場經典劇作《等待果陀》重新搬演，金士傑擔任戲劇指導，導演吳興國帶著徒弟盛鑑同台演出。「10年前...</p>
 						</div>
+						<button class="btn btn-normal" data-toggle="modal" data-target="#reports">閱讀更多</button>
 					</div>
-					<div class="col-md-4 col-xs-6">
-						<div class="cast">
-							<h3>馬寶山<span>飾暴發戶</span></h3>
-							<a data-toggle="modal" data-target="#cast"><img src="images/cast3.jpg" alt="馬寶山 飾暴發戶" class="img-responsive"></a>
+					<div class="element-item card filter1-1" data-category="transition">
+						<div class="pic"><img src="images/report.jpg" alt="等待果陀來了" title="等待果陀來了"></div>
+						<div class="content">
+							<h3>等待果陀來了</h3>
+							<h4><span>媒體單位</span><span>2015/09/05</span></h4>
+							<p>打破京劇框架，融合黑色幽默，暌違10年，當代傳奇劇場經典劇作《等待果陀》重新搬演，金士傑擔任戲劇指導，導演吳興國帶著徒弟盛鑑同台演出。「10年前...</p>
 						</div>
+						<button class="btn btn-normal" data-toggle="modal" data-target="#reports">閱讀更多</button>
 					</div>
-				</div>
-				<div role="tabpanel" class="tab-pane" id="musician">
-					<div class="col-md-4 col-xs-6">
-						<div class="cast">
-							<h3>盛鑑<span>飾哭哭</span></h3>
-							<a data-toggle="modal" data-target="#cast"><img src="images/cast2.jpg" alt="盛鑑 飾哭哭" class="img-responsive"></a>
+					<div class="element-item card filter1-1" data-category="transition">
+						<div class="pic"><img src="images/report.jpg" alt="等待果陀來了" title="等待果陀來了"></div>
+						<div class="content">
+							<h3>等待果陀來了</h3>
+							<h4><span>媒體單位</span><span>2015/09/05</span></h4>
+							<p>打破京劇框架，融合黑色幽默，暌違10年，當代傳奇劇場經典劇作《等待果陀》重新搬演，金士傑擔任戲劇指導，導演吳興國帶著徒弟盛鑑同台演出。「10年前...</p>
 						</div>
+						<button class="btn btn-normal" data-toggle="modal" data-target="#card-content">reports</button>
 					</div>
-					<div class="col-md-4 col-xs-6">
-						<div class="cast">
-							<h3>馬寶山<span>飾暴發戶</span></h3>
-							<a data-toggle="modal" data-target="#cast"><img src="images/cast3.jpg" alt="馬寶山 飾暴發戶" class="img-responsive"></a>
+					<div class="element-item card filter2-1" data-category="transition">
+						<div class="pic"><img src="images/report.jpg" alt="等待果陀來了" title="等待果陀來了"></div>
+						<div class="content">
+							<h3>等待果陀來了</h3>
+							<h4><span>媒體單位</span><span>2015/09/05</span></h4>
+							<p>打破京劇框架，融合黑色幽默，暌違10年，當代傳奇劇場經典劇作《等待果陀》重新搬演，金士傑擔任戲劇指導，導演吳興國帶著徒弟盛鑑同台演出。「10年前...</p>
 						</div>
+						<button class="btn btn-normal" data-toggle="modal" data-target="#card-content">reports</button>
 					</div>
-					<div class="col-md-4 col-xs-6">
-						<div class="cast">
-							<h3>吳興國<span>飾啼啼</span></h3>
-							<a data-toggle="modal" data-target="#cast"><img src="images/cast1.jpg" alt="吳興國 飾啼啼" class="img-responsive"></a>
+					<div class="element-item card filter2-2" data-category="transition">
+						<div class="pic"><img src="images/report.jpg" alt="等待果陀來了" title="等待果陀來了"></div>
+						<div class="content">
+							<h3>等待果陀來了</h3>
+							<h4><span>媒體單位</span><span>2015/09/05</span></h4>
+							<p>打破京劇框架，融合黑色幽默，暌違10年，當代傳奇劇場經典劇作《等待果陀》重新搬演，金士傑擔任戲劇指導，導演吳興國帶著徒弟盛鑑同台演出。「10年前...</p>
 						</div>
+						<button class="btn btn-normal" data-toggle="modal" data-target="#card-content">reports</button>
 					</div>
-					<div class="col-md-4 col-xs-6">
-						<div class="cast">
-							<h3>盛鑑<span>飾哭哭</span></h3>
-							<a data-toggle="modal" data-target="#cast"><img src="images/cast2.jpg" alt="盛鑑 飾哭哭" class="img-responsive"></a>
-						</div>
-					</div>
-					<div class="col-md-4 col-xs-6">
-						<div class="cast">
-							<h3>馬寶山<span>飾暴發戶</span></h3>
-							<a data-toggle="modal" data-target="#cast"><img src="images/cast3.jpg" alt="馬寶山 飾暴發戶" class="img-responsive"></a>
-						</div>
-					</div>
-					<div class="col-md-4 col-xs-6">
-						<div class="cast">
-							<h3>吳興國<span>飾啼啼</span></h3>
-							<a data-toggle="modal" data-target="#cast"><img src="images/cast1.jpg" alt="吳興國 飾啼啼" class="img-responsive"></a>
-						</div>
-					</div>
-				</div>
-				<div role="tabpanel" class="tab-pane" id="producer">
-					<p>
-						原著│山謬‧貝克特<br>
-						藝術總監‧導演‧改編‧作曲│吳興國<br>
-						戲劇指導│金士傑<br>
-						主演│吳興國、盛鑑、馬寶山、林朝緒　<br>
-						製作人│林秀偉　<br>
-						舞台‧燈光設計│林克華<br>
-						服裝設計│黃文英<br>
-						攝影│許斌、郭政彰、歐陽珊<br>
-						題字│張忘<br>
-						繪圖│紀淵字<br>
-						平面設計│張治倫工作室<br>
-						製作演出│當代傳奇劇場<br>
-						指導單位│文化部、台北市文化局<br>
-					</p>
 				</div>
 			</div>
-							
 		</div>
 	</div>
-	
+
 	<!-- footer	-->
 	<footer>
 		<div class="container">
@@ -317,23 +316,28 @@
 	</div>
 	
 	<!-- member -->
-	<div class="modal fade" id="cast" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade" id="reports" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<button type="button" class="close hairline" data-dismiss="modal"></button>
 				<div class="modal-body">
-					<iframe src="cast-content.html" frameborder="0" allowfullscreen></iframe>	
+					<iframe src="reports-content.html" frameborder="0" allowfullscreen></iframe>	
 				</div>
 			</div>
 		</div>
 	</div>
+	
+	
 	
 	<!--jQuery--> 
 	<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="../../js/bootstrap.min.js" ></script>
 	<script type="text/javascript" src="../../js/bootstrap/transition.js" ></script>
 	<script type="text/javascript" src="../../js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="../../js/isotope.pkgd.js"></script>
+	<script type="text/javascript" src="../../js/isotope.js"></script>
 	<script type="text/javascript" src="../../js/main.js"></script>
+	<script type="text/javascript" src="../../js/pages.js"></script>
 	<script type="text/javascript" src="../../js/products.js"></script>
 </body>
 </html>

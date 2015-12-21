@@ -51,6 +51,11 @@
 			@include transparent($purple,.6);
 		}
 	}
+	&.media-reviews {
+		.col-sm-6.col-right {
+			@include transparent($brown,.6);
+		}
+	}
 	.content-scroll {
 		height: 100%;
 		padding: 10% 8%;
@@ -107,13 +112,13 @@
 }
 #timeline {
 	position: relative;
-	padding: 0 0 60px;
+	padding: 0 0 20px;
 	@include transition(all ,.5s, ease-in-out);
 	&:before {
 		content:"";
 		width: 1px;
 		height: 100%;
-		background: $black;
+		background: $white;
 		left: 0;
 		top: 0;
 		position: absolute;
@@ -128,64 +133,61 @@
 		position: relative;
 		@include clearfix;
 		&.year-circle {
-			height: 20px;
+			height: 26px;
 			margin-bottom: 20px;
-			margin-top: 0;
 		}
 		&:nth-of-type(1), &:nth-of-type(2), &.year-circle + .timeline-item {
 			margin-top: 0;
 		}
+		>span {
+			padding-left: 20px;
+		}
 		.timeline-icon {
-			background: $black;
-			width: 40px;
-			height: 20px;
-			line-height: 20px;
-			text-align: center;
+			background: $white;
+			width: 12px;
+			height: 12px;
 			position: absolute;
-			top: 0;
-			left: 0;
+			top: 7px;
+			left: -5px;
 			overflow: hidden;
+			@include border-radius(20px);
 			&.year {
-				width: 70px;
-				height: 30px;
-				line-height: 30px;
-				margin-left: 0;
-				font-size: $xxl-font;
+				width: 22px;
+				height: 22px;
+				top: 2px;
+				margin-left: -5px;
 			}
 		}
 		.timeline-content {
-			float: right;
-			width: 90%;
-			background: $white;
-			padding: 20px;
-			@include border-radius(6px);
+			float: left;
+			width: 80%;
+			padding: 0 10px 10px 20px;
 			@include transition(all ,.3s, ease-in-out);
-			h2 {
-				padding: 10px;
-				background: $red;
-				line-height: $xl-font;
-				margin: -20px -20px 0 -20px;
-				@include border-radius(6px 6px 0 0);
-			}
 			p {
-				color: $black;
 				padding-bottom: 6px;
+				span:after {
+					content: ('\002F');
+					padding-left: 4px;
+				}
+				span:nth-last-of-type(1):after {
+					content: ('');
+				}
 			}
 			img {
 				width: 100%;
 				padding: 16px 6px;
 			}
-			&:before {
-				content: '';
-				position: absolute;
-				left: 45%;
-				top: 20px;
-				width: 0; 
-				height: 0; 
-				border-top: 7px solid transparent;
-				border-bottom: 7px solid transparent; 
-				border-right: 7px solid $red; 
-			}
+//			&:before {
+//				content: '';
+//				position: absolute;
+//				left: 45%;
+//				top: 20px;
+//				width: 0; 
+//				height: 0; 
+//				border-top: 7px solid transparent;
+//				border-bottom: 7px solid transparent; 
+//				border-right: 7px solid $red; 
+//			}
 			
 		}
 	}

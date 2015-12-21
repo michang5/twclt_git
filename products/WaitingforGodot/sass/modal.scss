@@ -204,3 +204,16 @@ body {
 		}
 	}
 }
+.modal-main {
+	h3 {
+		font-size: $m-font;
+		padding: 6px 10px;
+		margin-bottom: 10px;
+		color: $red;
+		@include transparent($light-gray,.3);
+		@include inline-block;
+	}
+	img {
+		padding: 20px 0;
+	}
+}
