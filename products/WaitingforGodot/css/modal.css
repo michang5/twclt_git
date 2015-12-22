@@ -5,7 +5,8 @@ body {
 #wrapper {
   margin-top: 0;
   background: none;
-  height: 100%;
+  height: auto;
+  max-height: none;
   padding-bottom: 80px;
 }
 #wrapper .col-sm-6.col-right {
@@ -31,6 +32,12 @@ body {
   }
   #wrapper .content-scroll {
     padding-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #wrapper {
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
@@ -77,6 +84,29 @@ body {
 .content .collect {
   right: 70px;
 }
+@media only screen and (max-width: 768px) {
+  .content .social-share {
+    right: 0;
+  }
+  .content .collect {
+    right: 40px;
+  }
+}
+
+.news .content {
+  position: static;
+}
+.news .pic {
+  position: relative;
+}
+.news .pic .social-share {
+  right: 40px;
+  top: -50px;
+}
+.news .pic .collect {
+  right: 0;
+  top: -50px;
+}
 
 @media only screen and (min-width: 769px) {
   #navigation .dropdown-menu::after, .dropdown-menu.social-media::after {
@@ -99,7 +129,7 @@ body {
   padding: 12px 10px 6px;
   width: 260px;
   left: -108px;
-  top: 50px;
+  top: 30px;
 }
 .dropdown-menu.social-media li {
   display: -moz-inline-stack;
@@ -235,6 +265,8 @@ body {
   *display: inline;
   zoom: 1;
 }
-.modal-main img {
-  padding: 20px 0;
+@media only screen and (max-width: 480px) {
+  .modal-main h2 {
+    font-size: 1.5em;
+  }
 }

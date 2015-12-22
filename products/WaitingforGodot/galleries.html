@@ -19,14 +19,14 @@
 	<link href="../../css/bootstrap.css" rel="stylesheet">
 	<link href="../../fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">
-	<link href="css/index.css" rel="stylesheet">
+	<link href="css/single.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 	<!--[if lt IE 9]>
 		<script type="text/javascript" src="js/html5shiv.min.js"></script>
 		<script type="text/javascript" src="js/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body id="index">
+<body id="single">
 
 	<!-- Navigation -->
 	<nav id="nav" class="toggle">
@@ -41,10 +41,10 @@
 					<li><a href="synopsis.html">劇情簡介</a></li>
 				</ul>
 			</li>
-			<li class="dropdown">
+			<li class="dropdown open">
 				<a class="dropdown-toggle" data-toggle="dropdown" id="Actor-Production" aria-expanded="false">演出與製作</a>
 				<ul class="dropdown-menu" aria-labelledby="Actor-Production">
-					<li><a href="cast.html">主要演員</a></li>
+					<li class="active"><a href="cast.html">主要演員</a></li>
 					<li><a href="director.html">編導介紹</a></li>
 					<li><a href="artist.html">合作藝術家</a></li>
 					<li><a href="team.html">製作團隊</a></li>
@@ -138,11 +138,42 @@
 	
 	<!-- wrapper -->
 	<div id="wrapper">
-		<div class="key-visual">
-			<img src="images/index.jpg" alt="等待果陀" title="等待果陀" width="1280" height="720" class="img-responsive">
-			<div class="content">
-				<h2>西方文學系列 - 等待果陀</h2>
-				<h3>睽違十年，感動再現</h3>
+		<div class="container">
+			<div class="col-md-4 col-xs-6">
+				<div class="cast">
+					<h3>吳興國<span>飾啼啼</span></h3>
+					<a data-toggle="modal" data-target="#cast"><img src="images/cast1.jpg" alt="吳興國 飾啼啼" class="img-responsive"></a>
+				</div>
+			</div>
+			<div class="col-md-4 col-xs-6">
+				<div class="cast">
+					<h3>吳興國<span>飾啼啼</span></h3>
+					<a data-toggle="modal" data-target="#cast"><img src="images/cast1.jpg" alt="吳興國 飾啼啼" class="img-responsive"></a>
+				</div>
+			</div>
+			<div class="col-md-4 col-xs-6">
+				<div class="cast">
+					<h3>吳興國<span>飾啼啼</span></h3>
+					<a data-toggle="modal" data-target="#cast"><img src="images/cast1.jpg" alt="吳興國 飾啼啼" class="img-responsive"></a>
+				</div>
+			</div>
+			<div class="col-md-4 col-xs-6">
+				<div class="cast">
+					<h3>吳興國<span>飾啼啼</span></h3>
+					<a data-toggle="modal" data-target="#cast"><img src="images/cast1.jpg" alt="吳興國 飾啼啼" class="img-responsive"></a>
+				</div>
+			</div>
+			<div class="col-md-4 col-xs-6">
+				<div class="cast">
+					<h3>吳興國<span>飾啼啼</span></h3>
+					<a data-toggle="modal" data-target="#cast"><img src="images/cast1.jpg" alt="吳興國 飾啼啼" class="img-responsive"></a>
+				</div>
+			</div>
+			<div class="col-md-4 col-xs-6">
+				<div class="cast">
+					<h3>吳興國<span>飾啼啼</span></h3>
+					<a data-toggle="modal" data-target="#cast"><img src="images/cast1.jpg" alt="吳興國 飾啼啼" class="img-responsive"></a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -215,6 +246,18 @@
 				<button type="button" class="close hairline" data-dismiss="modal"></button>
 				<div class="modal-body">
 					<iframe src="../../member-profile.html" frameborder="0" allowfullscreen></iframe>	
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- cast -->
+	<div class="modal fade" id="gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<button type="button" class="close hairline" data-dismiss="modal"></button>
+				<div class="modal-body">
+					<iframe src="cast-content.html" frameborder="0" allowfullscreen></iframe>	
 				</div>
 			</div>
 		</div>

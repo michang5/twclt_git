@@ -1002,3 +1002,56 @@ input[type="text"], div[type="button"], .input-group-btn, i {
 		outline: none;
 	}
 }
+
+.card {
+	@include clearfix;
+	@include inline-block;
+	background: $white;
+	width: 260px;
+	height: 220px;
+	margin: 4px;
+	overflow: hidden;
+	&.youtube{ 
+		a {
+			cursor: pointer;
+			display: block;
+			width: 260px;
+			height: 147px;
+			@include transparent($black,.3);
+			z-index: 9;
+			position: absolute;
+		}
+		.pic {
+			position: relative;
+			height: 147px;
+			img {
+				width: 260px;
+				padding: 0;
+				position: absolute;
+				top: -24px;
+				clip: rect(24px, 260px, 170px, 0);
+			}
+			i {
+				z-index: 9;
+				position: absolute;
+				font-size: $xl-font;
+				color: $white;
+				background: $red;
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				top: 38%;
+				left: 110px;
+				text-align: center;
+				@include border-radius(40px);
+			}
+		}
+	}
+	h3 {
+		text-align: center;
+		color: $black;
+		font-size: $l-font;
+		margin: 10px auto!important;
+		padding: 0 10px;
+	}
+}

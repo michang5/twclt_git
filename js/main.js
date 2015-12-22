@@ -20,6 +20,10 @@ $(function(){
 		$("#video iframe").attr("src", $("#video iframe").attr("src"));
 	});
 	
+	$(".modal#card-content").on('hidden.bs.modal', function () {
+		$("#card-content iframe").attr("src", $("#card-content iframe").attr("src"));
+	});
+	
 	$(".carousel-indicators li").click(function () {
 		$("#video1 iframe").attr("src", $("#video1 iframe").attr("src"));
 	});

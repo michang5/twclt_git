@@ -49,6 +49,12 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99463A28,endColorstr=#99463A28);
   zoom: 1;
 }
+#wrapper.classic .col-sm-6.col-right {
+  background-color: transparent;
+  background-color: rgba(255, 165, 0, 0.3);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4DFFA500,endColorstr=#4DFFA500);
+  zoom: 1;
+}
 #wrapper .content-scroll {
   height: 100%;
   padding: 10% 8%;
@@ -67,6 +73,9 @@
 }
 #wrapper .content-scroll ::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+}
+#wrapper .content-scroll.classics {
+  padding: 60px 20px;
 }
 #wrapper .content-scroll h2 {
   margin: 10px auto;

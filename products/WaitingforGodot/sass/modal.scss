@@ -9,7 +9,8 @@ body {
 #wrapper {
 	margin-top: 0;
 	background: none;
-	height: 100%;
+	height: auto;
+	max-height: none;
 	padding-bottom: 80px;
 	.col-sm-6.col-right {
 		background: none;
@@ -33,6 +34,10 @@ body {
 		.content-scroll {
 			padding-bottom: 20px;
 		}
+	}
+	@include respond-to (xs-mobile){
+		width: 90%;
+		margin: 0 auto;
 	}
 }
 .content {
@@ -70,10 +75,26 @@ body {
 	}
 	@include respond-to (only-device){
 		.social-share {
-
+			right: 0;
 		}
 		.collect {
-
+			right: 40px;
+		}
+	}
+}
+.news {
+	.content {
+		position: static;
+	}
+	.pic {
+		position: relative;
+		.social-share {
+			right: 40px;
+			top: -50px;
+		}
+		.collect {
+			right: 0;
+			top: -50px;
 		}
 	}
 }
@@ -101,7 +122,7 @@ body {
 		padding: 12px 10px 6px;
 		width: 260px;
 		left: -108px;
-		top: 50px;
+		top: 30px;
 		li {
 			@include inline-block;
 			width: 110px;
@@ -213,7 +234,15 @@ body {
 		@include transparent($light-gray,.3);
 		@include inline-block;
 	}
-	img {
-		padding: 20px 0;
+	img, iframe {
+		
+	}
+	@include respond-to (xs-mobile){
+		h2 {
+			font-size: $xxl-font;
+		}
+		img, iframe {
+			
+		}
 	}
 }
