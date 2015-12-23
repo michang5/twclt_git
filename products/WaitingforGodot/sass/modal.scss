@@ -98,6 +98,19 @@ body {
 		}
 	}
 }
+.gallery {
+	.pic {
+		margin-top: 60px;
+		.social-share {
+			right: 60px;
+			top: 10px;
+		}
+		.collect {
+			right: 10px;
+			top: 10px;
+		}
+	}
+}
 .dropdown-menu {
 	@include respond-to (only-desktop){
 		#navigation & , &.social-media {

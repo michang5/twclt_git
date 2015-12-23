@@ -19,14 +19,15 @@
 	<link href="../../css/bootstrap.css" rel="stylesheet">
 	<link href="../../fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">
-	<link href="css/two-col.css" rel="stylesheet">
+	<link href="../../css/card.css" rel="stylesheet">
+	<link href="css/single.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 	<!--[if lt IE 9]>
 		<script type="text/javascript" src="js/html5shiv.min.js"></script>
 		<script type="text/javascript" src="js/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body id="col-two">
+<body id="news">
 
 	<!-- Navigation -->
 	<nav id="nav" class="toggle">
@@ -55,15 +56,15 @@
 				<ul class="dropdown-menu" aria-labelledby="Media-Reviews">
 					<li><a href="worldwide-tour.html">國際演出紀記錄</a></li>
 					<li><a href="review.html">各界好評</a></li>
-					<li><a href="reports.html">媒體報導</a></li>
+					<li class="active"><a href="reports.html">媒體報導</a></li>
 				</ul>
 			</li>
 			<li class="dropdown open">
 				<a class="dropdown-toggle" data-toggle="dropdown" id="Media-Reviews" aria-expanded="false">典藏精選</a>
 				<ul class="dropdown-menu" aria-labelledby="Media-Reviews">
-					<li class="active"><a href="highlights.html">精彩片段</a></li>
+					<li><a href="highlights.html">精彩片段</a></li>
 					<li><a href="galleries.html">經典劇照</a></li>
-					<li><a href="behindScenes.html">幕後花絮</a></li>
+					<li class="active"><a href="behindScenes.html">幕後花絮</a></li>
 				</ul>
 			</li>
 			<li id="language-xs" class="visible-xs-block">
@@ -137,99 +138,75 @@
 	<!-- /.Navigation -->
 	
 	<!-- wrapper -->
-	<div id="wrapper" class="container classic">
-		<div class="row">
-			<div class="col-sm-6 col-left">
-				<img src="images/highlight.jpg" alt="等待果陀精采片段" title="等待果陀精采片段" class="">
-			</div>
-			<div class="col-sm-6 col-right">
-				<div class="content-scroll classics">
-					<div class="main">
-						<div class="card highlight">
-							<div class="pic">
-								<i class="fa fa-youtube-play"></i>
-								<a data-toggle="modal" data-target="#video-content"></a>
-								<img src="http://img.youtube.com/vi/IJ4MVrhesaA/sddefault.jpg" alt="" title="">
-							</div>
-							<div class="content">
-								<h3>等待果陀來了等待果陀來了等待果陀來了</h3>
-							</div>
+	<div id="wrapper">
+		<div class="container">
+			<div class="main-content scenes">
+				<div class="">
+					<div class="card youtube">
+						<div class="pic">
+							<i class="fa fa-youtube-play"></i>
+							<a data-toggle="modal" data-target="#card-content"></a>
+							<img src="http://img.youtube.com/vi/2V9_8YxxM2M/sddefault.jpg" alt="" title="">		
 						</div>
-						<div class="card highlight">
-							<div class="pic">
-								<i class="fa fa-youtube-play"></i>
-								<a data-toggle="modal" data-target="#video-content"></a>
-								<img src="http://img.youtube.com/vi/IJ4MVrhesaA/sddefault.jpg" alt="" title="">
-							</div>
-							<div class="content">
-								<h3>等待果陀來了等待果陀來了等待果陀來了</h3>
-							</div>
+						<div class="content">
+							<h3>【央廣】傳奇學堂 吳興國的京劇使命</h3>
+							<p>【央廣】傳奇學堂 吳興國的京劇使命（ 2010.11.19）...</p>
 						</div>
-						<div class="card highlight">
-							<div class="pic">
-								<i class="fa fa-youtube-play"></i>
-								<a data-toggle="modal" data-target="#video-content"></a>
-								<img src="http://img.youtube.com/vi/IJ4MVrhesaA/sddefault.jpg" alt="" title="">
-							</div>
-							<div class="content">
-								<h3>等待果陀來了等待果陀來了等待果陀來了</h3>
-							</div>
+						<button class="btn btn-normal" data-toggle="modal" data-target="#reports">閱讀更多</button>
+					</div>
+					<div class="card youtube">
+						<div class="pic">
+							<i class="fa fa-youtube-play"></i>
+							<a data-toggle="modal" data-target="#card-content"></a>
+							<img src="http://img.youtube.com/vi/UoozxzQAdLk/sddefault.jpg" alt="" title="">		
 						</div>
-						<div class="card highlight">
-							<div class="pic">
-								<i class="fa fa-youtube-play"></i>
-								<a data-toggle="modal" data-target="#video-content"></a>
-								<img src="http://img.youtube.com/vi/IJ4MVrhesaA/sddefault.jpg" alt="" title="">
-							</div>
-							<div class="content">
-								<h3>等待果陀來了等待果陀來了等待果陀來了</h3>
-							</div>
+						<div class="content">
+							<h3>5/18雙強合體</h3>
+							<p>在當代傳奇的辦公室裡，金士傑老師和吳興國老師馬上做了一場相當精彩的對談!裡面簡直是金句連連，忍不住讓人拍手叫好啊！...</p>
 						</div>
-						<div class="card highlight">
-							<div class="pic">
-								<i class="fa fa-youtube-play"></i>
-								<a data-toggle="modal" data-target="#video-content"></a>
-								<img src="http://img.youtube.com/vi/IJ4MVrhesaA/sddefault.jpg" alt="" title="">
-							</div>
-							<div class="content">
-								<h3>等待果陀來了等待果陀來了等待果陀來了</h3>
-							</div>
+						<button class="btn btn-normal" data-toggle="modal" data-target="#reports">閱讀更多</button>
+					</div>
+					<div class="card youtube">
+						<div class="pic">
+							<i class="fa fa-youtube-play"></i>
+							<a data-toggle="modal" data-target="#card-content"></a>
+							<img src="http://img.youtube.com/vi/iiwLegEsEiA/sddefault.jpg" alt="" title="">		
 						</div>
-						<div class="card highlight">
-							<div class="pic">
-								<i class="fa fa-youtube-play"></i>
-								<a data-toggle="modal" data-target="#video-content"></a>
-								<img src="http://img.youtube.com/vi/IJ4MVrhesaA/sddefault.jpg" alt="" title="">
-							</div>
-							<div class="content">
-								<h3>等待果陀來了等待果陀來了等待果陀來了</h3>
-							</div>
+						<div class="content">
+							<h3>當代傳奇劇場 -兄妹串戲 精華片段 (Hip-opera!)</h3>
+							<p>當代傳奇劇場 -兄妹串戲 精華片段 (Hip-opera!)...</p>
 						</div>
-						<div class="card highlight">
-							<div class="pic">
-								<i class="fa fa-youtube-play"></i>
-								<a data-toggle="modal" data-target="#video-content"></a>
-								<img src="http://img.youtube.com/vi/IJ4MVrhesaA/sddefault.jpg" alt="" title="">
-							</div>
-							<div class="content">
-								<h3>等待果陀來了等待果陀來了等待果陀來了</h3>
-							</div>
+						<button class="btn btn-normal" data-toggle="modal" data-target="#reports">閱讀更多</button>
+					</div>
+					<div class="card">
+						<div class="pic"><img src="images/report.jpg" alt="等待果陀來了" title="等待果陀來了"></div>
+						<div class="content">
+							<h3>5/18雙強合體</h3>
+							<p>在當代傳奇的辦公室裡，金士傑老師和吳興國老師馬上做了一場相當精彩的對談!裡面簡直是金句連連，忍不住讓人拍手叫好啊！...</p>
 						</div>
-						<div class="card highlight">
-							<div class="pic">
-								<i class="fa fa-youtube-play"></i>
-								<a data-toggle="modal" data-target="#video-content"></a>
-								<img src="http://img.youtube.com/vi/IJ4MVrhesaA/sddefault.jpg" alt="" title="">
-							</div>
-							<div class="content">
-								<h3>等待果陀來了等待果陀來了等待果陀來了</h3>
-							</div>
+						<button class="btn btn-normal" data-toggle="modal" data-target="#card-content">reports</button>
+					</div>
+					<div class="card filter2-1" data-category="transition">
+						<div class="pic"><img src="images/report.jpg" alt="等待果陀來了" title="等待果陀來了"></div>
+						<div class="content">
+							<h3>5/18雙強合體</h3>
+							<p>在當代傳奇的辦公室裡，金士傑老師和吳興國老師馬上做了一場相當精彩的對談!裡面簡直是金句連連，忍不住讓人拍手叫好啊！...</p>
 						</div>
+						<button class="btn btn-normal" data-toggle="modal" data-target="#card-content">reports</button>
+					</div>
+					<div class="card filter2-2" data-category="transition">
+						<div class="pic"><img src="images/report.jpg" alt="等待果陀來了" title="等待果陀來了"></div>
+						<div class="content">
+							<h3>5/18雙強合體</h3>
+							<p>在當代傳奇的辦公室裡，金士傑老師和吳興國老師馬上做了一場相當精彩的對談!裡面簡直是金句連連，忍不住讓人拍手叫好啊！...</p>
+						</div>
+						<button class="btn btn-normal" data-toggle="modal" data-target="#card-content">reports</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<!-- footer	-->
 	<footer>
 		<div class="container">
@@ -303,13 +280,13 @@
 		</div>
 	</div>
 	
-	<!-- highlight -->
-	<div class="modal fade" id="video-content" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<!-- reports -->
+	<div class="modal fade" id="reports" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<button type="button" class="close hairline" data-dismiss="modal"></button>
 				<div class="modal-body">
-					<iframe src="highlight-content.html" frameborder="0" allowfullscreen></iframe>	
+					<iframe src="reports-content.html" frameborder="0" allowfullscreen></iframe>	
 				</div>
 			</div>
 		</div>
@@ -320,8 +297,10 @@
 	<script type="text/javascript" src="../../js/bootstrap.min.js" ></script>
 	<script type="text/javascript" src="../../js/bootstrap/transition.js" ></script>
 	<script type="text/javascript" src="../../js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="../../js/isotope.pkgd.js"></script>
+	<script type="text/javascript" src="../../js/isotope.js"></script>
 	<script type="text/javascript" src="../../js/main.js"></script>
+	<script type="text/javascript" src="../../js/pages.js"></script>
 	<script type="text/javascript" src="../../js/products.js"></script>
-
 </body>
 </html>

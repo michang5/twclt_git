@@ -283,5 +283,13 @@ body {
 .card {
 	margin: 6px;
 	border: 1px solid $light-gray;
+	.scenes & {
+		height: 470px;
+	}
 }
 
+.gallery {
+	border: 1px solid $light-gray;
+	padding: 10px 10px 8px 10px;
+	margin-bottom: 16px;
+}

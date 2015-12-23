@@ -108,6 +108,18 @@ body {
   top: -50px;
 }
 
+.gallery .pic {
+  margin-top: 60px;
+}
+.gallery .pic .social-share {
+  right: 60px;
+  top: 10px;
+}
+.gallery .pic .collect {
+  right: 10px;
+  top: 10px;
+}
+
 @media only screen and (min-width: 769px) {
   #navigation .dropdown-menu::after, .dropdown-menu.social-media::after {
     content: "";
