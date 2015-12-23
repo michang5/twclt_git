@@ -760,6 +760,7 @@ a[data-toggle=modal] {
   -o-transition: color, 0.5s, ease-in;
   -webkit-transition: color, 0.5s, ease-in;
   transition: color, 0.5s, ease-in;
+  z-index: 198;
 }
 .btn-toggle:hover, .btn-close:hover, .btn-ticket:hover {
   background: #b90f00;
@@ -808,12 +809,7 @@ a[data-toggle=modal] {
 }
 @media only screen and (max-width: 320px) {
   .btn-ticket {
-    top: 15px;
-  }
-  .btn-ticket a {
-    width: 30px;
-    height: 30px;
-    line-height: 26px;
+    left: 52px;
   }
 }
 

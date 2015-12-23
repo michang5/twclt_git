@@ -67,7 +67,7 @@
 		color: $white;
 		.main {
 			height: 100%;
-			padding: 2%;
+			padding: 3%;
 			overflow-y: scroll;
 			overflow-x: hidden;
 		}
@@ -186,17 +186,6 @@
 				width: 100%;
 				padding: 16px 6px;
 			}
-//			&:before {
-//				content: '';
-//				position: absolute;
-//				left: 45%;
-//				top: 20px;
-//				width: 0; 
-//				height: 0; 
-//				border-top: 7px solid transparent;
-//				border-bottom: 7px solid transparent; 
-//				border-right: 7px solid $red; 
-//			}
 			
 		}
 	}
@@ -205,40 +194,6 @@
 		margin: 0 0 0 12px;
 		&:before {
 			left: 0;
-		}
-		.timeline-item {
-			margin-top: 0;
-			margin-bottom: 20px;
-			.timeline-content {
-				width: 90%;
-				float: right;
-				padding: 6px;
-				h2 {
-					padding: 12px 6px;
-					font-size: $m-font;
-					margin: -6px -6px 0 -6px;
-				}
-				&:before, &.right:before {
-					left: 10%;
-					margin-left: -6px;
-					border-left: 0;
-					border-right: 7px solid $red;
-				}
-			}
-			.timeline-icon {
-				left: -2px;
-				width: 32px;
-				height: 32px;
-				line-height: 32px;
-				font-size: $s-font;
-					&.year {
-						width: 50px;
-						height: 50px;
-						line-height: 50px;
-						margin-left: -31px;
-						font-size: $l-font;
-				}
-			}
 		}
 	}
 	@include respond-to (xxs-mobile){

@@ -562,6 +562,7 @@ a[data-toggle=modal] {
 	text-shadow: 0 0 5px rgba($black, .7);
 	@include border-radius(50%);
 	@include transition(color, .5s, ease-in);
+	z-index: 198;
 	&:hover {
 		background: $red;
 	}
@@ -597,12 +598,13 @@ a[data-toggle=modal] {
 		}
 	}
 	@include respond-to (xxs-mobile){
-		top: 15px;
-		a {
-			width: 30px;
-			height: 30px;
-			line-height: 26px;
-		}
+		left: 52px;
+//		top: 15px;
+//		a {
+//			width: 30px;
+//			height: 30px;
+//			line-height: 26px;
+//		}
 	}
 }
 
