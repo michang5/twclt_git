@@ -19,6 +19,14 @@ body {
 		color: $black;
 		padding: 40px 10% 100px;
 	}
+	&.contact {
+		.container {
+			width: 50%;
+		}
+		p {
+			margin-bottom: 40px;
+		}
+	}
 	@include respond-to (only-device){
 		height: auto;
 		max-height: none;
@@ -33,6 +41,11 @@ body {
 		}
 		.content-scroll {
 			padding-bottom: 20px;
+		}
+		&.contact {
+			.container {
+				width: 80%;
+			}
 		}
 	}
 	@include respond-to (xs-mobile){
@@ -111,6 +124,7 @@ body {
 		}
 	}
 }
+
 .dropdown-menu {
 	@include respond-to (only-desktop){
 		#navigation & , &.social-media {
