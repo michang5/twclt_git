@@ -457,16 +457,20 @@
 			overflow: hidden;
 		}
 		.col-md-4.carousel-caption {
-			padding-top: 0;
-			padding-bottom: 0;
 			position: static;
 			text-align: left;
+//          padding-top: 40px;
+            h2 {
+                clear: both;
+                line-height: $l-font;
+                margin-bottom: 10px;
+            }
 			span.cate-tab {
 //				@include inline-block;
 //				margin-bottom: 10px;
 				position: relative;
-				top: -4px;
-				right: 18px;
+				top: -20px;
+				left: 0;
 				padding: 10px 20px;
 				line-height: $xxxl-font;
 				background: $purple;
@@ -474,18 +478,8 @@
 				color: $white;
 				float: right;
 			}
-			h2 {
-				font-size: $xxl-font;
-				line-height: $xxl-font;
-				clear: both;
-			}
-			h3 {
-				padding-right: 4px;
-				font-size: $m-font;
-				color: $medium-gray;
-			}
 			p {
-				max-height: 142px;
+				max-height: 196px;
 				overflow: hidden;
 			}
 		}
@@ -503,7 +497,8 @@
 			}
 		}
 	}
-	.carousel-indicators {
+	
+    .carousel-indicators {
 		left: 98%;
 		width: 200px;
 		li {
