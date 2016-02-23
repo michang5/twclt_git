@@ -252,54 +252,6 @@
   }
 }
 
-.fixed {
-  z-index: 999;
-  position: fixed;
-}
-.fixed#year-menu {
-  top: 250px;
-}
-@media only screen and (max-width: 768px) {
-  .fixed#year-menu {
-    top: 350px;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .fixed#year-menu {
-    top: auto;
-    bottom: 80px;
-  }
-}
-.fixed.tabs {
-  top: 200px;
-  width: 86%;
-}
-@media only screen and (min-width: 1200px) {
-  .fixed.tabs {
-    width: 90%;
-  }
-}
-@media only screen and (min-width: 769px) and (max-width: 991px) {
-  .fixed.tabs {
-    width: 80%;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .fixed.tabs {
-    width: 96%;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .fixed .collapse-heading {
-    width: 90px;
-  }
-  .fixed.tabs {
-    top: 80px;
-    width: 96%;
-    left: 2.5%;
-  }
-}
-
 h2 span {
   font-size: 0.7em;
   font-weight: normal;

@@ -12,9 +12,6 @@ body {
 .content {
   position: relative;
 }
-.content .pic, .content .video-wrapper {
-  position: relative;
-}
 .content .collect, .content .social-share {
   position: absolute;
   top: -46px;

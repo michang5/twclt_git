@@ -109,7 +109,6 @@
 .tabs {
   padding: 0;
   border-bottom: none;
-  width: 100%;
 }
 .tabs > li {
   text-align: center;
@@ -331,6 +330,54 @@
   }
 }
 
+.fixed {
+  z-index: 999;
+  position: fixed;
+}
+.fixed#year-menu {
+  top: 250px;
+}
+@media only screen and (max-width: 768px) {
+  .fixed#year-menu {
+    top: 350px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .fixed#year-menu {
+    top: auto;
+    bottom: 80px;
+  }
+}
+.fixed.tabs {
+  top: 200px;
+  width: 86%;
+}
+@media only screen and (min-width: 1200px) {
+  .fixed.tabs {
+    width: 1140px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .fixed.tabs {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .fixed.tabs {
+    width: 96%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .fixed .collapse-heading {
+    width: 90px;
+  }
+  .fixed.tabs {
+    top: 80px;
+    width: 96%;
+    left: 2.5%;
+  }
+}
+
 .tab {
   -moz-border-radius: 40px;
   -webkit-border-radius: 40px;
@@ -512,15 +559,18 @@
   overflow: hidden;
 }
 #carousel-top .carousel-inner .col-md-4.carousel-caption {
-  padding-top: 0;
-  padding-bottom: 0;
   position: static;
   text-align: left;
 }
+#carousel-top .carousel-inner .col-md-4.carousel-caption h2 {
+  clear: both;
+  line-height: 1.125em;
+  margin-bottom: 10px;
+}
 #carousel-top .carousel-inner .col-md-4.carousel-caption span.cate-tab {
   position: relative;
-  top: -4px;
-  right: 18px;
+  top: -20px;
+  left: 0;
   padding: 10px 20px;
   line-height: 1.75em;
   background: #6d3c78;
@@ -530,18 +580,8 @@
   color: #fff;
   float: right;
 }
-#carousel-top .carousel-inner .col-md-4.carousel-caption h2 {
-  font-size: 1.5em;
-  line-height: 1.5em;
-  clear: both;
-}
-#carousel-top .carousel-inner .col-md-4.carousel-caption h3 {
-  padding-right: 4px;
-  font-size: 1em;
-  color: #7a7a7a;
-}
 #carousel-top .carousel-inner .col-md-4.carousel-caption p {
-  max-height: 142px;
+  max-height: 196px;
   overflow: hidden;
 }
 #carousel-top .carousel-inner button {
@@ -658,4 +698,11 @@
   #carousel-top .carousel-indicators {
     bottom: -20px;
   }
+}
+
+footer {
+  background: #b90f00;
+  margin-top: -100px;
+  position: relative;
+  z-index: 1000;
 }

@@ -684,6 +684,18 @@ a[data-toggle=modal] {
 		color: $white;
 		font-size: $xxxl-font;
 		text-shadow: 0 0 3px rgba($black, .7);
+		a {
+			color: $white;
+			&:nth-of-type(2) {
+				font-size: $xxs-font;
+				font-weight: normal;
+			}
+		}
+		i {
+			padding: 0 5px;
+			font-weight: normal;
+			font-size: $xxs-font;
+		}
 	}
 	h2 {
 		width: 220px;

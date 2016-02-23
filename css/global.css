@@ -467,8 +467,6 @@ a[data-toggle=modal] {
 .crazyad .close {
   top: 0;
   right: 0;
-  width: 22px;
-  height: 22px;
   background: #b90f00;
 }
 .crazyad .close::before, .crazyad .close::after {

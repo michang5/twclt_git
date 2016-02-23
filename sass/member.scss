@@ -276,3 +276,42 @@
 		margin: 10px auto;
 	}
 }
+#validation {
+	#wrapper {
+//		min-height: 0;
+	}
+	footer {
+//		margin-top: -600px;
+	}
+	.breadcrumbs {
+		margin-top: 170px;
+	}
+	.main-content {
+		text-align: center;
+		h3 {
+			
+		}
+		button {
+			margin: 30px auto;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+		section {
+			width: 80%;
+			margin: 0 auto;
+			padding: 20px;
+			@include transparent($white, .2);
+			p {
+				padding: 0;
+			}
+		}
+	}
+	@include respond-to (only-device){
+		.breadcrumbs {
+			margin-top: 70px;
+		}
+		h3 {
+			font-size: $xl-font;	
+		}
+	}
+}

@@ -904,6 +904,18 @@ a[data-toggle=modal] {
   font-size: 1.75em;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 }
+#header h1 a {
+  color: #fff;
+}
+#header h1 a:nth-of-type(2) {
+  font-size: 0.75em;
+  font-weight: normal;
+}
+#header h1 i {
+  padding: 0 5px;
+  font-weight: normal;
+  font-size: 0.75em;
+}
 #header h2 {
   width: 220px;
   margin: 0 auto;
